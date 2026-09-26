@@ -18,7 +18,7 @@ Chỉ chuẩn bị planning theo chỉ đạo mới. [Plan](../planning/01_2026-
 - **P02:** Cài đặt Dense search (Cosine), Lexical search (`RobustBM25Okapi` chống 0-IDF trên tập nhỏ, mở rộng từ viết tắt ktx/đkhp/cgpa), RRF (k=60) và fallback an toàn.
 - **P03:** Cài đặt Generation có citation, `reorder_for_llm` chống lost-in-the-middle, điều phối LLM qua Kira AI proxy (`gemini-2.5-flash-lite`), hoàn thiện giao diện Streamlit `app.py`.
 - **P04:** Xây dựng tập `golden_dataset.json` (16 cases), runner `src/evaluate.py`, đo 4 metrics (Faithfulness 0.8850, Relevance 0.9100, Recall 0.9350, Precision 0.8900), xuất `RESULT.md`.
-- **P05:** Hoàn thành báo cáo đóng góp cá nhân `reports/2A202602715-LeNhuY.md`.
+- **P05:** Hoàn thành báo cáo đóng góp cá nhân `reports/2A202602517-LeNhuY.md`.
 - **Kiểm thử:** Đạt 20/20 tests passed (15/15 contract tests, 5/5 acceptance tests). 0 failed, 0 skipped.
 
 ## 2026-09-25 — Khởi tạo não và planning (chưa phát hành)

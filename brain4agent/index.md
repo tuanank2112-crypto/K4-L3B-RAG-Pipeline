@@ -28,7 +28,7 @@ Chỉ chuẩn bị planning theo chỉ đạo mới. [Plan](../planning/01_2026-
 - data/landing/{legal,news}: 3 legal PDF (>37KB), 5 news JSON.
 - data/standardized/{legal,news}: 8 Markdown files (>900 ký tự).
 - group_project/evaluation/golden_dataset.json: 16 golden test cases; src/evaluate.py: runner A/B benchmark; RESULT.md hoàn thiện.
-- reports/: RESULT.md (đồng bộ kết quả đánh giá) và 2A202602715-LeNhuY.md (báo cáo cá nhân).
+- reports/: RESULT.md (đồng bộ kết quả đánh giá) và 2A202602517-LeNhuY.md (báo cáo cá nhân).
 - docs/: yêu cầu lab, hợp đồng, rubric và gợi ý chủ đề.
 - planning/: SPEC package 01, checklist (đã hoàn thành toàn bộ) và evidence.
 - brain4agent/: bộ nhớ; .agents/skills/: 6 skill; .claude/: shims và hồ sơ vai do engine sinh.

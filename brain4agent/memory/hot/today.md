@@ -49,7 +49,7 @@ Thực thi toàn diện kế hoạch RAG Pipeline theo planning trong não (`pla
    - Xuất báo cáo kết quả hoàn chỉnh không còn TODO tại `group_project/evaluation/RESULT.md` và `reports/RESULT.md`.
 
 6. **Gói P05 — Nghiệm thu & Báo cáo cá nhân:**
-   - Tạo báo cáo đóng góp cá nhân thành viên: `reports/2A202602715-LeNhuY.md`.
+   - Tạo báo cáo đóng góp cá nhân thành viên: `reports/2A202602517-LeNhuY.md`.
    - Toàn bộ test suite: `python -m pytest -q` đạt **20 passed / 20 tests** (0 failed, 0 skipped).
 
 ## Bàn giao
