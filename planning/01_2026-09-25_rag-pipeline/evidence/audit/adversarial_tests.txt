@@ -1,0 +1,12 @@
+﻿=== ADVERSARIAL TEST 1: Tampered Metadata & Golden ===
+PASS: validate_golden rejected fake source_id (Golden case 16: missing/unknown source_ids)
+=== ADVERSARIAL TEST 2: Dense Timeout in Evaluation ===
+dense_only case 1/1: error
+Status on failure: incomplete
+Metrics on failure: None
+PASS: Handled dense failure safely without fabricated score
+=== ADVERSARIAL TEST 3: Fake/Hallucinated Citation ===
+Answer on fake citation: 'T├┤i kh├┤ng thß╗â x├íc minh th├┤ng tin n├áy tß╗½ nguß╗ôn hiß╗çn c├│.'
+Sources on fake citation: []
+PASS: Safely refused fake citation
+exit: 0

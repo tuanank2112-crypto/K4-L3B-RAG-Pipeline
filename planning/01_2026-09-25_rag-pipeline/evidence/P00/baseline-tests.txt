@@ -1,0 +1,517 @@
+Command: C:\Users\lenku\AppData\Local\Programs\Python\Python313\python.exe -m pytest -q -p no:cacheprovider
+Exit: 1
+FFFFF......FFFFFFFF.                                                     [100%]
+================================== FAILURES ===================================
+__________________ test_corpus_has_required_legal_documents ___________________
+
+    def test_corpus_has_required_legal_documents():
+        files = visible_files(DATA / "landing" / "legal", {".pdf", ".doc", ".docx"})
+>       assert len(files) >= 3, "Collect at least 3 legal/policy documents"
+E       AssertionError: Collect at least 3 legal/policy documents
+E       assert 0 >= 3
+E        +  where 0 = len([])
+
+tests\test_acceptance.py:20: AssertionError
+_________________ test_corpus_has_required_news_with_metadata _________________
+
+    def test_corpus_has_required_news_with_metadata():
+        files = visible_files(DATA / "landing" / "news", {".json"})
+>       assert len(files) >= 5, "Collect at least 5 news/article JSON files"
+E       AssertionError: Collect at least 5 news/article JSON files
+E       assert 0 >= 5
+E        +  where 0 = len([])
+
+tests\test_acceptance.py:26: AssertionError
+______________ test_standardized_output_covers_both_source_types ______________
+
+    def test_standardized_output_covers_both_source_types():
+        legal = list((DATA / "standardized" / "legal").glob("*.md"))
+        news = list((DATA / "standardized" / "news").glob("*.md"))
+>       assert len(legal) >= 3, "Standardize all required legal documents"
+E       AssertionError: Standardize all required legal documents
+E       assert 0 >= 3
+E        +  where 0 = len([])
+
+tests\test_acceptance.py:37: AssertionError
+__________________ test_golden_dataset_has_15_grounded_cases __________________
+
+    def test_golden_dataset_has_15_grounded_cases():
+        path = EVALUATION / "golden_dataset.json"
+>       dataset = json.loads(path.read_text(encoding="utf-8"))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_acceptance.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\lenku\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py:352: in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\lenku\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py:345: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <json.decoder.JSONDecoder object at 0x000001FDB05E0050>, s = '', idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+    
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+    
+        """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+>           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+C:\Users\lenku\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py:363: JSONDecodeError
+_____________________ test_evaluation_report_is_completed _____________________
+
+    def test_evaluation_report_is_completed():
+>       report = (EVALUATION / "RESULT.md").read_text(encoding="utf-8")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_acceptance.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\lenku\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py:546: in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\lenku\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py:632: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/Vin_Lab/Lab08/K4-L3B-RAG-Pipeline/group_project/evaluation/RESULT.md')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Vin_Lab\\Lab08\\K4-L3B-RAG-Pipeline\\group_project\\evaluation\\RESULT.md'
+
+C:\Users\lenku\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py:537: FileNotFoundError
+____________ test_chunk_documents_preserves_identity_and_metadata _____________
+
+    def test_chunk_documents_preserves_identity_and_metadata():
+        from src.task4_chunking_indexing import CHUNK_SIZE, chunk_documents
+    
+        document = {
+            "id": "tuition",
+            "content": "Tuition policy. " * 100,
+            "metadata": {
+                "source": "tuition.md",
+                "title": "Tuition policy",
+                "doc_type": "legal",
+                "url": None,
+            },
+        }
+>       chunks = chunk_documents([document])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_contracts.py:105: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+documents = [{'id': 'tuition', 'content': 'Tuition policy. Tuition policy. Tuition policy. Tuition policy. Tuition policy. Tuition... Tuition policy. ', 'metadata': {'source': 'tuition.md', 'title': 'Tuition policy', 'doc_type': 'legal', 'url': None}}]
+
+    def chunk_documents(documents: list[dict]) -> list[dict]:
+        """Chia Document th�nh chunks c� id v� chunk_index."""
+        # TODO: Chunk b\u1eb1ng RecursiveCharacterTextSplitter.
+        #
+        # from langchain_text_splitters import RecursiveCharacterTextSplitter
+        # splitter = RecursiveCharacterTextSplitter(
+        #     chunk_size=CHUNK_SIZE,
+        #     chunk_overlap=CHUNK_OVERLAP,
+        #     separators=["\n\n", "\n", ". ", " ", ""],
+        # )
+        # chunks = []
+        # for document in documents:
+        #     for index, text in enumerate(splitter.split_text(document["content"])):
+        #         chunks.append({
+        #             "id": f"{document['id']}::chunk-{index}",
+        #             "content": text,
+        #             "metadata": {**document["metadata"], "chunk_index": index},
+        #         })
+        # return chunks
+>       raise NotImplementedError("Implement chunk_documents")
+E       NotImplementedError: Implement chunk_documents
+
+src\task4_chunking_indexing.py:95: NotImplementedError
+___________ test_semantic_search_uses_shared_embedding_and_contract ___________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FDB2D536F0>
+
+    def test_semantic_search_uses_shared_embedding_and_contract(monkeypatch):
+        import src.task5_semantic_search as semantic
+    
+        class FakeCollection:
+            def query(self, **kwargs):
+                assert kwargs["query_embeddings"] == [[0.1, 0.2]]
+                return {
+                    "ids": [["chunk-0", "chunk-1"]],
+                    "documents": [["Relevant tuition text", "Less relevant text"]],
+                    "metadatas": [[metadata(chunk_index=0), metadata(chunk_index=1)]],
+                    "distances": [[0.1, 0.4]],
+                }
+    
+        monkeypatch.setattr(semantic, "embed_texts", lambda texts: [[0.1, 0.2]])
+        monkeypatch.setattr(semantic, "get_collection", lambda: FakeCollection())
+>       output = semantic.semantic_search("tuition", top_k=2)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_contracts.py:131: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+query = 'tuition', top_k = 2
+
+    def semantic_search(query: str, top_k: int = 10) -> list[dict]:
+        """Tr\u1ea3 v\u1ec1 dense SearchResult theo score gi\u1ea3m d\u1ea7n."""
+        # TODO: Implement semantic search.
+        #
+        # query_vector = embed_texts([query])[0]
+        # response = get_collection().query(
+        #     query_embeddings=[query_vector],
+        #     n_results=top_k,
+        #     include=["documents", "metadatas", "distances"],
+        # )
+        # results = []
+        # for item_id, content, metadata, distance in zip(
+        #     response["ids"][0],
+        #     response["documents"][0],
+        #     response["metadatas"][0],
+        #     response["distances"][0],
+        # ):
+        #     results.append({
+        #         "id": item_id,
+        #         "content": content,
+        #         "score": max(0.0, 1.0 - distance),
+        #         "metadata": metadata,
+        #         "retrieval_method": "dense",
+        #     })
+        # return sorted(results, key=lambda item: item["score"], reverse=True)[:top_k]
+>       raise NotImplementedError("Implement semantic_search")
+E       NotImplementedError: Implement semantic_search
+
+src\task5_semantic_search.py:36: NotImplementedError
+__________________ test_lexical_search_returns_bm25_contract __________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FDB2D53950>
+
+    def test_lexical_search_returns_bm25_contract(monkeypatch):
+        import src.task6_lexical_search as lexical
+    
+        corpus = [
+            {
+                "id": "chunk-0",
+                "content": "tuition fee payment policy",
+                "metadata": metadata(chunk_index=0),
+            },
+            {
+                "id": "chunk-1",
+                "content": "library opening hours",
+                "metadata": metadata(source="library.md", chunk_index=1),
+            },
+        ]
+        monkeypatch.setattr(lexical, "CORPUS", corpus)
+>       output = lexical.lexical_search("tuition fee", top_k=2)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_contracts.py:151: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+query = 'tuition fee', top_k = 2
+
+    def lexical_search(query: str, top_k: int = 10) -> list[dict]:
+        """Tr\u1ea3 v\u1ec1 BM25 SearchResult theo score gi\u1ea3m d\u1ea7n."""
+        # TODO: T\xednh BM25 scores v\xe0 map l\u1ea1i corpus.
+        #
+        # import numpy as np
+        # bm25 = build_bm25_index(CORPUS)
+        # scores = bm25.get_scores(query.lower().split())
+        # indices = np.argsort(scores)[::-1][:top_k]
+        # results = []
+        # for index in indices:
+        #     if scores[index] <= 0:
+        #         continue
+        #     item = CORPUS[index]
+        #     results.append({
+        #         "id": item["id"],
+        #         "content": item["content"],
+        #         "score": float(scores[index]),
+        #         "metadata": item["metadata"],
+        #         "retrieval_method": "bm25",
+        #     })
+        # return results
+>       raise NotImplementedError("Implement lexical_search")
+E       NotImplementedError: Implement lexical_search
+
+src\task6_lexical_search.py:43: NotImplementedError
+______________ test_rrf_uses_rank_deduplicates_and_marks_hybrid _______________
+
+    def test_rrf_uses_rank_deduplicates_and_marks_hybrid():
+        from src.task7_reranking import rerank_rrf
+    
+        dense = [result("chunk-0", 0.9), result("chunk-1", 0.8)]
+        bm25 = [
+            result("chunk-1", 7.0, "bm25"),
+            result("chunk-2", 5.0, "bm25"),
+        ]
+>       fused = rerank_rrf([dense, bm25], top_k=3, k=60)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_contracts.py:164: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+ranked_lists = [[{'id': 'chunk-0', 'content': 'Tuition is paid per semester.', 'score': 0.9, 'metadata': {'source': 'tuition.md', 'ti...'tuition.md', 'title': 'Tuition policy', 'doc_type': 'legal', 'url': 'https://university.example/tuition', ...}, ...}]]
+top_k = 3, k = 60
+
+    def rerank_rrf(
+        ranked_lists: list[list[dict]],
+        top_k: int = 5,
+        k: int = 60,
+    ) -> list[dict]:
+        """Fuse nhi\u1ec1u ranked lists v\xe0 tr\u1ea3 hybrid SearchResult."""
+        # TODO: Implement RRF.
+        #
+        # scores = {}
+        # items = {}
+        # for ranked_list in ranked_lists:
+        #     for rank, item in enumerate(ranked_list, 1):
+        #         item_id = item["id"]
+        #         scores[item_id] = scores.get(item_id, 0.0) + 1 / (k + rank)
+        #         items[item_id] = item
+        #
+        # ranked_ids = sorted(scores, key=scores.get, reverse=True)
+        # results = []
+        # for item_id in ranked_ids[:top_k]:
+        #     result = items[item_id].copy()
+        #     result["score"] = scores[item_id]
+        #     result["retrieval_method"] = "hybrid"
+        #     results.append(result)
+        # return results
+>       raise NotImplementedError("Implement rerank_rrf")
+E       NotImplementedError: Implement rerank_rrf
+
+src\task7_reranking.py:37: NotImplementedError
+__________ test_reorder_is_non_mutating_and_context_contains_source ___________
+
+    def test_reorder_is_non_mutating_and_context_contains_source():
+        from src.task10_generation import format_context, reorder_for_llm
+    
+        chunks = [result(f"chunk-{index}", 1 - index / 10, "hybrid") for index in range(5)]
+        original_ids = [item["id"] for item in chunks]
+>       reordered = reorder_for_llm(chunks)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_contracts.py:177: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+chunks = [{'id': 'chunk-0', 'content': 'Tuition is paid per semester.', 'score': 1.0, 'metadata': {'source': 'tuition.md', 'tit... 'tuition.md', 'title': 'Tuition policy', 'doc_type': 'legal', 'url': 'https://university.example/tuition', ...}, ...}]
+
+    def reorder_for_llm(chunks: list[dict]) -> list[dict]:
+        """\u0110\u01b0a chunks quan tr\u1ecdng v\u1ec1 \u0111\u1ea7u v\xe0 cu\u1ed1i context."""
+        # TODO: Implement document reordering.
+        #
+        # if len(chunks) <= 2:
+        #     return list(chunks)
+        # front = chunks[::2]
+        # back = chunks[1::2]
+        # return front + back[::-1]
+>       raise NotImplementedError("Implement reorder_for_llm")
+E       NotImplementedError: Implement reorder_for_llm
+
+src\task10_generation.py:43: NotImplementedError
+_________________ test_retrieve_uses_dense_score_for_fallback _________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FDB2DE1EB0>
+
+    def test_retrieve_uses_dense_score_for_fallback(monkeypatch):
+        import src.task9_retrieval_pipeline as pipeline
+    
+        dense = [result("chunk-0", 0.2, "dense")]
+        sparse = [result("chunk-1", 4.0, "bm25")]
+        fallback = [result("chunk-2", 1.0, "pageindex")]
+    
+        monkeypatch.setattr(pipeline, "semantic_search", lambda query, top_k: dense)
+        monkeypatch.setattr(pipeline, "lexical_search", lambda query, top_k: sparse)
+        monkeypatch.setattr(pipeline, "rerank_rrf", lambda lists, top_k: [])
+        monkeypatch.setattr(pipeline, "pageindex_search", lambda query, top_k: fallback)
+    
+>       output = pipeline.retrieve("tuition", top_k=2, score_threshold=0.5)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_contracts.py:199: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+query = 'tuition', top_k = 2, score_threshold = 0.5, use_reranking = True
+
+    def retrieve(
+        query: str,
+        top_k: int = DEFAULT_TOP_K,
+        score_threshold: float = SCORE_THRESHOLD,
+        use_reranking: bool = True,
+    ) -> list[dict]:
+        """Tr\u1ea3 v\u1ec1 hybrid ho\u1eb7c pageindex SearchResult."""
+        # TODO: Implement full retrieval pipeline.
+        #
+        # dense = semantic_search(query, top_k=top_k * 2)
+        # sparse = lexical_search(query, top_k=top_k * 2)
+        # hybrid = (
+        #     rerank_rrf([dense, sparse], top_k=top_k)
+        #     if use_reranking else dense[:top_k]
+        # )
+        #
+        # best_dense_score = dense[0]["score"] if dense else 0.0
+        # if best_dense_score < score_threshold:
+        #     try:
+        #         fallback = pageindex_search(query, top_k=top_k)
+        #         if fallback:
+        #             return fallback
+        #     except Exception:
+        #         pass
+        # return hybrid[:top_k]
+>       raise NotImplementedError("Implement retrieve")
+E       NotImplementedError: Implement retrieve
+
+src\task9_retrieval_pipeline.py:49: NotImplementedError
+______________ test_retrieve_fuses_once_when_dense_is_confident _______________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FDB2CC3130>
+
+    def test_retrieve_fuses_once_when_dense_is_confident(monkeypatch):
+        import src.task9_retrieval_pipeline as pipeline
+    
+        dense = [result("chunk-0", 0.9, "dense")]
+        sparse = [result("chunk-1", 4.0, "bm25")]
+        fused = [result("chunk-0", 0.03, "hybrid")]
+        calls = {"rrf": 0, "fallback": 0}
+    
+        def fake_rrf(lists, top_k):
+            calls["rrf"] += 1
+            assert lists == [dense, sparse]
+            return fused
+    
+        def fake_fallback(query, top_k):
+            calls["fallback"] += 1
+            return []
+    
+        monkeypatch.setattr(pipeline, "semantic_search", lambda query, top_k: dense)
+        monkeypatch.setattr(pipeline, "lexical_search", lambda query, top_k: sparse)
+        monkeypatch.setattr(pipeline, "rerank_rrf", fake_rrf)
+        monkeypatch.setattr(pipeline, "pageindex_search", fake_fallback)
+    
+>       output = pipeline.retrieve("tuition", top_k=2, score_threshold=0.5)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_contracts.py:226: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+query = 'tuition', top_k = 2, score_threshold = 0.5, use_reranking = True
+
+    def retrieve(
+        query: str,
+        top_k: int = DEFAULT_TOP_K,
+        score_threshold: float = SCORE_THRESHOLD,
+        use_reranking: bool = True,
+    ) -> list[dict]:
+        """Tr\u1ea3 v\u1ec1 hybrid ho\u1eb7c pageindex SearchResult."""
+        # TODO: Implement full retrieval pipeline.
+        #
+        # dense = semantic_search(query, top_k=top_k * 2)
+        # sparse = lexical_search(query, top_k=top_k * 2)
+        # hybrid = (
+        #     rerank_rrf([dense, sparse], top_k=top_k)
+        #     if use_reranking else dense[:top_k]
+        # )
+        #
+        # best_dense_score = dense[0]["score"] if dense else 0.0
+        # if best_dense_score < score_threshold:
+        #     try:
+        #         fallback = pageindex_search(query, top_k=top_k)
+        #         if fallback:
+        #             return fallback
+        #     except Exception:
+        #         pass
+        # return hybrid[:top_k]
+>       raise NotImplementedError("Implement retrieve")
+E       NotImplementedError: Implement retrieve
+
+src\task9_retrieval_pipeline.py:49: NotImplementedError
+_______________ test_retrieve_survives_fallback_provider_error ________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FDB2CC3350>
+
+    def test_retrieve_survives_fallback_provider_error(monkeypatch):
+        import src.task9_retrieval_pipeline as pipeline
+    
+        dense = [result("chunk-0", 0.2, "dense")]
+        hybrid = [result("chunk-0", 0.02, "hybrid")]
+        monkeypatch.setattr(pipeline, "semantic_search", lambda query, top_k: dense)
+        monkeypatch.setattr(pipeline, "lexical_search", lambda query, top_k: [])
+        monkeypatch.setattr(pipeline, "rerank_rrf", lambda lists, top_k: hybrid)
+    
+        def unavailable(query, top_k):
+            raise RuntimeError("provider unavailable")
+    
+        monkeypatch.setattr(pipeline, "pageindex_search", unavailable)
+>       output = pipeline.retrieve("tuition", top_k=2, score_threshold=0.5)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_contracts.py:244: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+query = 'tuition', top_k = 2, score_threshold = 0.5, use_reranking = True
+
+    def retrieve(
+        query: str,
+        top_k: int = DEFAULT_TOP_K,
+        score_threshold: float = SCORE_THRESHOLD,
+        use_reranking: bool = True,
+    ) -> list[dict]:
+        """Tr\u1ea3 v\u1ec1 hybrid ho\u1eb7c pageindex SearchResult."""
+        # TODO: Implement full retrieval pipeline.
+        #
+        # dense = semantic_search(query, top_k=top_k * 2)
+        # sparse = lexical_search(query, top_k=top_k * 2)
+        # hybrid = (
+        #     rerank_rrf([dense, sparse], top_k=top_k)
+        #     if use_reranking else dense[:top_k]
+        # )
+        #
+        # best_dense_score = dense[0]["score"] if dense else 0.0
+        # if best_dense_score < score_threshold:
+        #     try:
+        #         fallback = pageindex_search(query, top_k=top_k)
+        #         if fallback:
+        #             return fallback
+        #     except Exception:
+        #         pass
+        # return hybrid[:top_k]
+>       raise NotImplementedError("Implement retrieve")
+E       NotImplementedError: Implement retrieve
+
+src\task9_retrieval_pipeline.py:49: NotImplementedError
+=========================== short test summary info ===========================
+FAILED tests/test_acceptance.py::test_corpus_has_required_legal_documents - A...
+FAILED tests/test_acceptance.py::test_corpus_has_required_news_with_metadata
+FAILED tests/test_acceptance.py::test_standardized_output_covers_both_source_types
+FAILED tests/test_acceptance.py::test_golden_dataset_has_15_grounded_cases - ...
+FAILED tests/test_acceptance.py::test_evaluation_report_is_completed - FileNo...
+FAILED tests/test_contracts.py::test_chunk_documents_preserves_identity_and_metadata
+FAILED tests/test_contracts.py::test_semantic_search_uses_shared_embedding_and_contract
+FAILED tests/test_contracts.py::test_lexical_search_returns_bm25_contract - N...
+FAILED tests/test_contracts.py::test_rrf_uses_rank_deduplicates_and_marks_hybrid
+FAILED tests/test_contracts.py::test_reorder_is_non_mutating_and_context_contains_source
+FAILED tests/test_contracts.py::test_retrieve_uses_dense_score_for_fallback
+FAILED tests/test_contracts.py::test_retrieve_fuses_once_when_dense_is_confident
+FAILED tests/test_contracts.py::test_retrieve_survives_fallback_provider_error
+13 failed, 7 passed in 0.21s

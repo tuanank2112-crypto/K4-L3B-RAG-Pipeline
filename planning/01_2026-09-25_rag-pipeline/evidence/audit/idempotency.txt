@@ -1,0 +1,7 @@
+﻿Initial Chroma count: 560
+Chunk count: 560
+Unique ID count: 560
+Duplicate count: 0
+All IDs exist in Chroma: True
+Idempotent: collection count matches unique IDs: True
+exit: 0

@@ -77,3 +77,6 @@ Chạy kiểm tra:
 ```bash
 pytest tests/test_contracts.py -q
 ```
+
+## Tiếp tục sau review 2026-09-26
+Contract public giữ nguyên. Provenance/header/golden/shared generation và gates tại [SPEC-P05-Completion](../planning/01_2026-09-25_rag-pipeline/specs/SPEC-P05-Completion.md). Đây là mục tiêu worker phải đạt, không phải xác nhận implementation; baseline 42 pass nhưng loader=0.

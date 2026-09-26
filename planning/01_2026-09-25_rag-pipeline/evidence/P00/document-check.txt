@@ -1,0 +1,13 @@
+{
+  "markdown_files": 16,
+  "local_links": 43,
+  "broken_links": [],
+  "kernel_lines": 41,
+  "spec_count": 8,
+  "project_version": "0.1.0",
+  "tracked_source_changes": "",
+  "engine_source_changes": "",
+  "brain_check_ok": true,
+  "baseline_confirmed": true,
+  "ok": true
+}

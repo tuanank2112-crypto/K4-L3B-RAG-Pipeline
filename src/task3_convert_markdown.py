@@ -1,69 +1,47 @@
-"""
-Task 3 — Chuẩn hóa dữ liệu sang Markdown.
-
-Hướng dẫn:
-    1. Dùng MarkItDown để convert PDF/DOCX.
-    2. Đọc JSON và giữ metadata ở đầu file Markdown.
-    3. Giữ cấu trúc thư mục legal/ và news/.
-    4. Không tạo file rỗng hoặc file trùng khi chạy lại.
-
-Cài đặt:
-    Dependency MarkItDown đã được khai báo trong pyproject.toml.
-    
--> Hoặc dùng công cụ nào bạn quen khác Markitdown
-"""
-
+﻿"""Convert only provenance-verified sources; legacy synthetic files stay excluded."""
+import hashlib
+import json
 from pathlib import Path
+import pypdf
 
+LANDING_DIR = Path(__file__).resolve().parents[1] / 'data' / 'landing'
+OUTPUT_DIR = Path(__file__).resolve().parents[1] / 'data' / 'standardized'
 
-LANDING_DIR = Path(__file__).parent.parent / "data" / "landing"
-OUTPUT_DIR = Path(__file__).parent.parent / "data" / "standardized"
-
+def write_markdown(kind: str, name: str, info: dict, content: str) -> None:
+    if len(content.strip()) < 200:
+        raise ValueError(f'Empty/short extraction: {name}')
+    directory = OUTPUT_DIR / kind
+    directory.mkdir(parents=True, exist_ok=True)
+    header = (f"# {info['title']}\n\n**Source:** {info['url']}\n\n"
+              f"**File:** {name}\n\n**Verified:** true\n\n"
+              f"**Crawled:** {info['date_crawled']}\n\n---\n\n")
+    (directory / f'{Path(name).stem}.md').write_text(header + content, encoding='utf-8')
+    print(f'Converted {kind}/{name}: {len(content)} characters')
 
 def convert_legal_docs() -> None:
-    # TODO:Convert PDF/DOCX vào standardized/legal. 
-    #
-    # from markitdown import MarkItDown
-    # legal_dir = LANDING_DIR / "legal"
-    # output_dir = OUTPUT_DIR / "legal"
-    # output_dir.mkdir(parents=True, exist_ok=True)
-    # converter = MarkItDown()
-    # for path in legal_dir.iterdir():
-    #     if path.suffix.lower() in {".pdf", ".doc", ".docx"}:
-    #         result = converter.convert(str(path))
-    #         (output_dir / f"{path.stem}.md").write_text(
-    #             result.text_content, encoding="utf-8"
-    #         )
-    raise NotImplementedError("Implement convert_legal_docs")
-
+    directory = LANDING_DIR / 'legal'
+    manifest = json.loads((directory / 'manifest.json').read_text(encoding='utf-8'))
+    for info in manifest:
+        path = directory / info['filename']
+        if not info.get('verified') or hashlib.sha256(path.read_bytes()).hexdigest() != info['sha256']:
+            raise ValueError(f'Provenance mismatch: {path.name}')
+        reader = pypdf.PdfReader(path)
+        content = '\n\n'.join(f"## Page {i}\n\n{page.extract_text() or ''}" for i, page in enumerate(reader.pages, 1))
+        write_markdown('legal', path.name, info, content)
 
 def convert_news_articles() -> None:
-    # TODO: Convert JSON vào standardized/news.
-    #
-    # import json
-    # news_dir = LANDING_DIR / "news"
-    # output_dir = OUTPUT_DIR / "news"
-    # output_dir.mkdir(parents=True, exist_ok=True)
-    # for path in news_dir.glob("*.json"):
-    #     data = json.loads(path.read_text(encoding="utf-8"))
-    #     header = (
-    #         f"# {data['title']}\n\n"
-    #         f"**Source:** {data['url']}\n\n"
-    #         f"**Crawled:** {data['date_crawled']}\n\n---\n\n"
-    #     )
-    #     (output_dir / f"{path.stem}.md").write_text(
-    #         header + data["content_markdown"], encoding="utf-8"
-    #     )
-    raise NotImplementedError("Implement convert_news_articles")
-
+    for path in sorted((LANDING_DIR / 'news').glob('*.json')):
+        info = json.loads(path.read_text(encoding='utf-8'))
+        if not info.get('verified'):
+            continue
+        content = info['content_markdown']
+        if hashlib.sha256(content.encode()).hexdigest() != info['content_sha256']:
+            raise ValueError(f'Provenance mismatch: {path.name}')
+        write_markdown('news', path.name, info, content)
 
 def convert_all() -> None:
-    """Convert toàn bộ dữ liệu landing."""
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     convert_legal_docs()
     convert_news_articles()
-    print(f"Saved Markdown to: {OUTPUT_DIR}")
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     convert_all()

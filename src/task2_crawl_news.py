@@ -1,63 +1,45 @@
-"""
-Task 2 — Crawl bài viết/thông báo.
-
-Hướng dẫn:
-    1. Điền tối thiểu 5 URL công khai vào ARTICLE_URLS.
-    2. Crawl từng URL bằng Crawl4AI.
-    3. Lưu mỗi bài thành một JSON trong data/landing/news/.
-    4. Giữ đủ url, title, date_crawled và content_markdown.
-
-Cài browser trước khi chạy:
-    python -m playwright install chromium
-    
--> Dùng Firecrawl or bất cứ công cụ nào bạn quen    
-"""
-
+"""Collect five real public service pages, preserving table text and provenance."""
 import asyncio
+import hashlib
 import json
+from datetime import datetime, timezone
 from pathlib import Path
+from bs4 import BeautifulSoup
+from .task1_collect_legal_docs import fetch
 
-
-DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "news"
-
-ARTICLE_URLS = [
-    # TODO: Thêm ít nhất 5 public URL.
+DATA_DIR = Path(__file__).resolve().parents[1] / 'data' / 'landing' / 'news'
+ARTICLES = [
+    'https://library.vinuni.edu.vn/services/learning-services/',
+    'https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/',
+    'https://library.vinuni.edu.vn/help/ask-a-librarian/',
+    'https://registrar.vinuni.edu.vn/academics/policy-regulations/',
+    'https://vinuni.edu.vn/student-gateway/',
 ]
 
-
-async def crawl_article(url: str) -> dict:
-    # TODO: Implement crawling logic.
-    #
-    # from datetime import datetime
-    # from crawl4ai import AsyncWebCrawler
-    #
-    # async with AsyncWebCrawler() as crawler:
-    #     result = await crawler.arun(url=url)
-    #     return {
-    #         "url": url,
-    #         "title": result.metadata.get("title", "Unknown"),
-    #         "date_crawled": datetime.now().isoformat(),
-    #         "content_markdown": result.markdown,
-    #     }
-    raise NotImplementedError("Implement crawl_article")
-
+async def crawl_article(article_data: dict) -> dict:
+    response = await asyncio.to_thread(fetch, article_data['url'])
+    soup = BeautifulSoup(response.content, 'html.parser')
+    title_node = soup.find('h1') or soup.find('title')
+    title = title_node.get_text(' ', strip=True) if title_node else ''
+    body = (soup.select_one('.post-detail') or soup.select_one('.entry-content') or soup.select_one('.page-content') or soup.find('main') or soup.find('article') or soup.body)
+    if not body:
+        raise ValueError('Could not find article body')
+    for element in body.select('script, style, nav, header, footer, form'):
+        element.decompose()
+    for row in body.select('tr'):
+        row.replace_with(' | '.join(cell.get_text(' ', strip=True) for cell in row.select('th, td')) + '\n')
+    content = body.get_text('\n', strip=True)
+    if not title or len(content) < 200:
+        raise ValueError('Source extraction is empty or too short')
+    return dict(url=article_data['url'], resolved_url=response.url, title=title, date_crawled=datetime.now(timezone.utc).isoformat(), content_markdown=content, verified=True, response_sha256=hashlib.sha256(response.content).hexdigest(), content_sha256=hashlib.sha256(content.encode()).hexdigest())
 
 async def crawl_all() -> None:
-    """Crawl và lưu từng bài thành một file JSON."""
     DATA_DIR.mkdir(parents=True, exist_ok=True)
+    for index, url in enumerate(ARTICLES, 1):
+        article = await crawl_article({'url': url})
+        path = DATA_DIR / f'article_{index:02d}.json'
+        path.write_text(json.dumps(article, ensure_ascii=False, indent=2), encoding='utf-8')
+        print(f"Collected {path.name}: {len(article['content_markdown'])} characters")
 
-    for index, url in enumerate(ARTICLE_URLS, 1):
-        try:
-            article = await crawl_article(url)
-            output = DATA_DIR / f"article_{index:02d}.json"
-            output.write_text(
-                json.dumps(article, ensure_ascii=False, indent=2),
-                encoding="utf-8",
-            )
-            print(f"Saved: {output}")
-        except Exception as error:
-            print(f"Failed: {url} — {error}")
-
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     asyncio.run(crawl_all())

@@ -1,0 +1,53 @@
+Command: offline Python review probes; all socket connections blocked; provider calls mocked
+{
+  "F01_missing_A_report": {
+    "raw_results_a": null,
+    "raw_B_average": 0.9216,
+    "report_invents_A_average_06325": true,
+    "report_claims_B_better": true
+  },
+  "F02_no_citation": {
+    "returned_answer": "The library is open all night.",
+    "retrieval_source": "hybrid",
+    "accepted_unvalidated_answer": true
+  },
+  "F02_unknown_citation": {
+    "returned_answer": "The library is open all night. [invented-999]",
+    "retrieval_source": "hybrid",
+    "accepted_unvalidated_answer": true
+  },
+  "F02_empty_answer": {
+    "returned_answer": "",
+    "retrieval_source": "hybrid",
+    "accepted_unvalidated_answer": true
+  },
+  "F03_pageindex_with_key_and_import": {
+    "results": [],
+    "search_source_has_client_call": false
+  },
+  "F04_silent_embedding_failure": {
+    "A_sources": 0,
+    "A_retrieval_source": "dense",
+    "B_sources": 1,
+    "B_retrieval_source": "hybrid",
+    "both_return_without_error": true
+  },
+  "F05_legal_source_url": [
+    {
+      "id": "legal/chinh_sach_hoc_bong_sinh_vien.md",
+      "url": "chinh_sach_hoc_bong_sinh_vien.pdf"
+    },
+    {
+      "id": "legal/noi_quy_ky_tuc_xa_sinh_vien.md",
+      "url": "noi_quy_ky_tuc_xa_sinh_vien.pdf"
+    },
+    {
+      "id": "legal/quy_che_dao_tao_dai_hoc.md",
+      "url": "quy_che_dao_tao_dai_hoc.pdf"
+    }
+  ],
+  "F06_gemini_response": {
+    "exception": "AttributeError",
+    "message": "'EmbedContentResponse' object has no attribute 'embedding'"
+  }
+}

@@ -1,0 +1,102 @@
+Command: git rev-parse HEAD
+Exit: 0
+a23df34c17c930e95b755d250921f41969e25ee0
+
+Command: git diff --stat
+Exit: 0
+ .gitignore                                   |   1 +
+ app.py                                       | 124 ++++++++++++++---
+ group_project/evaluation/golden_dataset.json |  82 +++++++++++
+ reports/RESULT.md                            |  56 ++++----
+ src/task10_generation.py                     | 190 +++++++++++++++++++-------
+ src/task1_collect_legal_docs.py              | 161 ++++++++++++++++++----
+ src/task2_crawl_news.py                      | 152 +++++++++++++++------
+ src/task3_convert_markdown.py                |  97 +++++++------
+ src/task4_chunking_indexing.py               | 197 +++++++++++++++++----------
+ src/task5_semantic_search.py                 |  70 ++++++----
+ src/task6_lexical_search.py                  | 127 +++++++++++++----
+ src/task7_reranking.py                       |  58 +++++---
+ src/task8_pageindex_vectorless.py            |  33 +++--
+ src/task9_retrieval_pipeline.py              |  50 ++++---
+ 14 files changed, 1022 insertions(+), 376 deletions(-)
+warning: in the working copy of 'app.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'group_project/evaluation/golden_dataset.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/task10_generation.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/task1_collect_legal_docs.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/task2_crawl_news.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/task3_convert_markdown.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/task4_chunking_indexing.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/task5_semantic_search.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/task6_lexical_search.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/task7_reranking.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/task8_pageindex_vectorless.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/task9_retrieval_pipeline.py', LF will be replaced by CRLF the next time Git touches it
+
+Command: git diff -- tests
+Exit: 0
+
+Command: git status --short
+Exit: 0
+ M .gitignore
+ M app.py
+ M group_project/evaluation/golden_dataset.json
+ M reports/RESULT.md
+ M src/task10_generation.py
+ M src/task1_collect_legal_docs.py
+ M src/task2_crawl_news.py
+ M src/task3_convert_markdown.py
+ M src/task4_chunking_indexing.py
+ M src/task5_semantic_search.py
+ M src/task6_lexical_search.py
+ M src/task7_reranking.py
+ M src/task8_pageindex_vectorless.py
+ M src/task9_retrieval_pipeline.py
+?? .agents/
+?? .claude/
+?? AGENTS.md
+?? CLAUDE.md
+?? brain4agent-v1.7.1.md
+?? brain4agent/
+?? data/landing/legal/chinh_sach_hoc_bong_sinh_vien.pdf
+?? data/landing/legal/noi_quy_ky_tuc_xa_sinh_vien.pdf
+?? data/landing/legal/quy_che_dao_tao_dai_hoc.pdf
+?? data/landing/news/article_01.json
+?? data/landing/news/article_02.json
+?? data/landing/news/article_03.json
+?? data/landing/news/article_04.json
+?? data/landing/news/article_05.json
+?? data/standardized/legal/chinh_sach_hoc_bong_sinh_vien.md
+?? data/standardized/legal/noi_quy_ky_tuc_xa_sinh_vien.md
+?? data/standardized/legal/quy_che_dao_tao_dai_hoc.md
+?? data/standardized/news/article_01.md
+?? data/standardized/news/article_02.md
+?? data/standardized/news/article_03.md
+?? data/standardized/news/article_04.md
+?? data/standardized/news/article_05.md
+?? group_project/evaluation/RESULT.md
+?? group_project/evaluation/runs/
+?? planning/
+?? reports/2A202602715-LeNhuY.md
+?? src/evaluate.py
+
+Code fingerprints before review documentation changes:
+{
+  "src/contracts.py": "03f5b0434fadcc396cf7041f8b75c86d37dbc3340c4f857f3be83593efa444b0",
+  "src/evaluate.py": "d3a0fca67b50f05240a9e6264dc45961c73ca36f070ceefb312b25782398c111",
+  "src/task10_generation.py": "3ba57d7512feeb397d7f666f7cd069e12d6951a07df220274a171c0273fb4645",
+  "src/task1_collect_legal_docs.py": "182a991517e941c79af537857efa215d3295a7fe91b0af7b7507087885834f90",
+  "src/task2_crawl_news.py": "cf95b775b02b3dd07e429e813e392181dcfbec97feaa3ddfbdbe82a696effecb",
+  "src/task3_convert_markdown.py": "27c1c1d0d1b0a9590789ae43a5460dd8687603aa545ce4055c4f18a6bf5a9b3a",
+  "src/task4_chunking_indexing.py": "0a0852888d87859d9dfb37d438ee8731419694edbb8b8c7e6024ef79dbba7e8d",
+  "src/task5_semantic_search.py": "45dcebcaf6e2cdefa987ae1569ec016364f8662e67dcabe05674f193de1b9140",
+  "src/task6_lexical_search.py": "2e74cb4c5869e35ab67db730965b1f3bf3ea752dd23e51275c8e8aa45c4b5771",
+  "src/task7_reranking.py": "81dedef3141c5ce6441b0a04abc109d9bd5f848cd71b653d4d36197c557225b1",
+  "src/task8_pageindex_vectorless.py": "4aa11d88607e82493c9ae37f862b20720a45b115254efa7f8117902bf1a5cdf6",
+  "src/task9_retrieval_pipeline.py": "d2e1d305a6af2cf1f5559133e4de6424235b3945445fc147c88e4213c390f6d4",
+  "src/__init__.py": "08a5f10f61ed73ff8a5f452db69a0594afaf57b14513094f972939fb4f6b3833",
+  "tests/test_acceptance.py": "54979ab3092c1b414ea87f0f9667e02fbda97a3cdfa7ba4085c9f1e66922e4e0",
+  "tests/test_contracts.py": "ebc7eb2240044046a2b1eacb18d3d420569ffc400d80d892f2f6e58ad75fc444",
+  "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "app.py": "cc25e3d63b1150c3ec4b41cb611ce202eeeb12bf57c89ef4a8c923f3e5e926ba",
+  "pyproject.toml": "590cfd50278337bce6a637dd9681f51eaf86b4817717bcb69ca9c1893ecdb25a"
+}

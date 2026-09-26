@@ -1,0 +1,339 @@
+{
+  "run_id": "run_20260925_111410",
+  "date": "2026-09-25T11:14:10.096569",
+  "top_k": 5,
+  "results_a": null,
+  "results_b": {
+    "config": "hybrid_rrf",
+    "overall": {
+      "faithfulness": 0.8552,
+      "answer_relevance": 0.8777,
+      "context_recall": 1.0,
+      "context_precision": 0.9536,
+      "average": 0.9216,
+      "avg_latency_sec": 2.3206
+    },
+    "cases": [
+      {
+        "id": 1,
+        "question": "Sinh viên đại học chính quy phải đăng ký tối thiểu và tối đa bao nhiêu tín chỉ trong mỗi học kỳ chính?",
+        "expected_answer": "Sinh viên phải đăng ký tối thiểu 12 tín chỉ và tối đa không quá 22 tín chỉ trong mỗi học kỳ chính (đối với học kỳ Hè tối đa 8 tín chỉ).",
+        "generated_answer": "Sinh viên đại học chính quy phải đăng ký tối thiểu 12 tín chỉ và tối đa 22 tín chỉ trong mỗi học kỳ chính [legal/quy_che_dao_tao_dai_hoc.md::chunk-2].",
+        "retrieved_sources": [
+          "legal/quy_che_dao_tao_dai_hoc.md::chunk-2",
+          "legal/quy_che_dao_tao_dai_hoc.md::chunk-1",
+          "legal/quy_che_dao_tao_dai_hoc.md::chunk-4",
+          "news/article_03.md::chunk-1",
+          "news/article_05.md::chunk-1"
+        ],
+        "metrics": {
+          "faithfulness": 0.8261,
+          "answer_relevance": 0.96,
+          "context_recall": 1.0,
+          "context_precision": 1.0
+        },
+        "latency_sec": 3.8189
+      },
+      {
+        "id": 2,
+        "question": "Hạn chót để sinh viên rút học phần nhận điểm W trong học kỳ chính là khi nào?",
+        "expected_answer": "Sinh viên được phép rút học phần trước tuần thứ 8 của học kỳ chính mà không bị tính vào điểm trung bình GPA.",
+        "generated_answer": "Sinh viên được phép rút học phần (nhận điểm W) trước tuần thứ 8 của học kỳ chính mà không bị tính vào điểm trung bình GPA [legal/quy_che_dao_tao_dai_hoc.md::chunk-2].",
+        "retrieved_sources": [
+          "legal/quy_che_dao_tao_dai_hoc.md::chunk-2",
+          "news/article_01.md::chunk-2",
+          "legal/chinh_sach_hoc_bong_sinh_vien.md::chunk-5",
+          "news/article_01.md::chunk-1",
+          "legal/quy_che_dao_tao_dai_hoc.md::chunk-4"
+        ],
+        "metrics": {
+          "faithfulness": 0.8571,
+          "answer_relevance": 0.8353,
+          "context_recall": 1.0,
+          "context_precision": 0.8875
+        },
+        "latency_sec": 1.195
+      },
+      {
+        "id": 3,
+        "question": "Thang điểm chữ nào tương ứng với việc không đạt và buộc phải học lại?",
+        "expected_answer": "Điểm F (tương ứng dưới 4.0 thang 10, quy đổi 0.0) là không đạt và bắt buộc phải học lại để tích lũy tín chỉ.",
+        "generated_answer": "Điểm F tương ứng với việc không đạt và bắt buộc phải học lại để tích lũy tín chỉ [legal/quy_che_dao_tao_dai_hoc.md::chunk-3].",
+        "retrieved_sources": [
+          "legal/quy_che_dao_tao_dai_hoc.md::chunk-3",
+          "legal/chinh_sach_hoc_bong_sinh_vien.md::chunk-3",
+          "legal/quy_che_dao_tao_dai_hoc.md::chunk-2",
+          "legal/quy_che_dao_tao_dai_hoc.md::chunk-5",
+          "news/article_04.md::chunk-1"
+        ],
+        "metrics": {
+          "faithfulness": 0.8095,
+          "answer_relevance": 0.92,
+          "context_recall": 1.0,
+          "context_precision": 1.0
+        },
+        "latency_sec": 1.111
+      },
+      {
+        "id": 4,
+        "question": "Sinh viên bị cảnh báo học tập mức 1 khi nào?",
+        "expected_answer": "Sinh viên bị cảnh báo học tập mức 1 nếu điểm GPA học kỳ dưới 1.50 hoặc điểm cGPA tích lũy dưới 1.80.",
+        "generated_answer": "Sinh viên bị cảnh báo học tập mức 1 nếu điểm trung bình học kỳ (GPA) dưới 1.50 hoặc điểm trung bình tích lũy (cGPA) dưới 1.80 [legal/quy_che_dao_tai_hoc.md::chunk-4].",
+        "retrieved_sources": [
+          "legal/quy_che_dao_tao_dai_hoc.md::chunk-4",
+          "legal/quy_che_dao_tao_dai_hoc.md::chunk-3",
+          "news/article_04.md::chunk-0",
+          "legal/chinh_sach_hoc_bong_sinh_vien.md::chunk-1",
+          "news/article_01.md::chunk-0"
+        ],
+        "metrics": {
+          "faithfulness": 0.8519,
+          "answer_relevance": 0.9273,
+          "context_recall": 1.0,
+          "context_precision": 1.0
+        },
+        "latency_sec": 1.0746
+      },
+      {
+        "id": 5,
+        "question": "Để được công nhận tốt nghiệp, sinh viên cần đạt chuẩn ngoại ngữ và điểm cGPA tối thiểu là bao nhiêu?",
+        "expected_answer": "Sinh viên cần đạt cGPA tích lũy tối thiểu từ 2.00 trở lên và chuẩn đầu ra tiếng Anh tương đương IELTS 6.5.",
+        "generated_answer": "Để được công nhận tốt nghiệp, sinh viên cần đạt chuẩn đầu ra ngoại ngữ tiếng Anh tương đương IELTS 6.5 hoặc chứng chỉ quốc tế tương đương và điểm trung bình tích lũy toàn khóa (cGPA) đạt từ 2.00 trở lên [legal/quy_che_dao_tao_dai_hoc.md::chunk-5].",
+        "retrieved_sources": [
+          "legal/quy_che_dao_tao_dai_hoc.md::chunk-5",
+          "legal/chinh_sach_hoc_bong_sinh_vien.md::chunk-3",
+          "legal/quy_che_dao_tao_dai_hoc.md::chunk-2",
+          "legal/chinh_sach_hoc_bong_sinh_vien.md::chunk-4",
+          "news/article_05.md::chunk-3"
+        ],
+        "metrics": {
+          "faithfulness": 0.881,
+          "answer_relevance": 0.9048,
+          "context_recall": 1.0,
+          "context_precision": 1.0
+        },
+        "latency_sec": 15.9484
+      },
+      {
+        "id": 6,
+        "question": "Học bổng tài năng 100% bao gồm những quyền lợi gì?",
+        "expected_answer": "Học bổng 100% miễn 100% học phí toàn khóa và cấp sinh hoạt phí 10.000.000 VNĐ/tháng cho sinh viên đạt giải Olympic quốc tế hoặc thủ khoa đầu vào.",
+        "generated_answer": "Học bổng tài năng 100% bao gồm miễn 100% học phí toàn khóa kèm sinh hoạt phí 10.000.000 VNĐ/tháng cho sinh viên đạt giải Olympic quốc tế hoặc thủ khoa đầu vào [legal/chinh_sach_hoc_bong_sinh_vien.md::chunk-2].",
+        "retrieved_sources": [
+          "news/article_04.md::chunk-2",
+          "legal/chinh_sach_hoc_bong_sinh_vien.md::chunk-2",
+          "news/article_05.md::chunk-3",
+          "legal/chinh_sach_hoc_bong_sinh_vien.md::chunk-1",
+          "legal/chinh_sach_hoc_bong_sinh_vien.md::chunk-4"
+        ],
+        "metrics": {
+          "faithfulness": 0.8824,
+          "answer_relevance": 0.8545,
+          "context_recall": 1.0,
+          "context_precision": 0.95
+        },
+        "latency_sec": 1.5327
+      },
+      {
+        "id": 7,
+        "question": "Điều kiện cGPA để duy trì học bổng tài năng mức 50% cho các năm tiếp theo là bao nhiêu?",
+        "expected_answer": "Sinh viên nhận học bổng 50% cần duy trì cGPA năm học tối thiểu 3.20 trên thang 4.0 và điểm rèn luyện loại Tốt trở lên.",
+        "generated_answer": "Để duy trì học bổng tài năng mức 50% cho các năm học tiếp theo, sinh viên phải đạt điểm trung bình tích lũy năm học (cGPA) tối thiểu 3.20 trên thang 4.0 [legal/chinh_sach_hoc_bong_sinh_vien.md::chunk-3].",
+        "retrieved_sources": [
+          "legal/chinh_sach_hoc_bong_sinh_vien.md::chunk-3",
+          "legal/chinh_sach_hoc_bong_sinh_vien.md::chunk-1",
+          "legal/chinh_sach_hoc_bong_sinh_vien.md::chunk-4",
+          "legal/chinh_sach_hoc_bong_sinh_vien.md::chunk-2",
+          "news/article_04.md::chunk-1"
+        ],
+        "metrics": {
+          "faithfulness": 0.875,
+          "answer_relevance": 0.9,
+          "context_recall": 1.0,
+          "context_precision": 0.95
+        },
+        "latency_sec": 1.4534
+      },
+      {
+        "id": 8,
+        "question": "Hạn chót nộp hồ sơ xin hỗ trợ tài chính cho sinh viên có hoàn cảnh khó khăn là ngày nào?",
+        "expected_answer": "Hạn chót nộp hồ sơ xin hỗ trợ tài chính là ngày 30 tháng 6 hàng năm.",
+        "generated_answer": "Hạn chót nộp hồ sơ xin hỗ trợ tài chính là ngày 30 tháng 6 hàng năm [legal/chinh_sach_hoc_bong_sinh_vien.md::chunk-5].",
+        "retrieved_sources": [
+          "legal/chinh_sach_hoc_bong_sinh_vien.md::chunk-5",
+          "legal/chinh_sach_hoc_bong_sinh_vien.md::chunk-4",
+          "news/article_04.md::chunk-2",
+          "news/article_01.md::chunk-1",
+          "legal/chinh_sach_hoc_bong_sinh_vien.md::chunk-1"
+        ],
+        "metrics": {
+          "faithfulness": 0.8095,
+          "answer_relevance": 0.8286,
+          "context_recall": 1.0,
+          "context_precision": 1.0
+        },
+        "latency_sec": 1.3183
+      },
+      {
+        "id": 9,
+        "question": "Khung giờ mở và đóng cửa cổng ký túc xá hàng ngày là mấy giờ?",
+        "expected_answer": "Cổng ký túc xá mở cửa từ 05:30 sáng và đóng cửa lúc 23:00 hàng ngày.",
+        "generated_answer": "Cổng ký túc xá mở cửa từ 05:30 sáng và đóng cửa lúc 23:00 hàng ngày [legal/noi_quy_ky_tuc_xa_sinh_vien.md::chunk-2].",
+        "retrieved_sources": [
+          "legal/noi_quy_ky_tuc_xa_sinh_vien.md::chunk-2",
+          "news/article_02.md::chunk-1",
+          "news/article_01.md::chunk-1",
+          "legal/noi_quy_ky_tuc_xa_sinh_vien.md::chunk-1",
+          "news/article_03.md::chunk-0"
+        ],
+        "metrics": {
+          "faithfulness": 0.8095,
+          "answer_relevance": 0.8857,
+          "context_recall": 1.0,
+          "context_precision": 1.0
+        },
+        "latency_sec": 1.2872
+      },
+      {
+        "id": 10,
+        "question": "Những thiết bị điện nào bị cấm nấu ăn trong phòng ở ký túc xá?",
+        "expected_answer": "Sinh viên tuyệt đối không được nấu ăn trong phòng ở bằng bếp gas hoặc bếp từ công suất lớn trên 1000W.",
+        "generated_answer": "Sinh viên tuyệt đối không được nấu ăn trong phòng ở bằng bếp gas, bếp từ công suất lớn trên 1000W [legal/noi_quy_ky_tuc_xa_sinh_vien.md::chunk-3].",
+        "retrieved_sources": [
+          "legal/noi_quy_ky_tuc_xa_sinh_vien.md::chunk-3",
+          "legal/noi_quy_ky_tuc_xa_sinh_vien.md::chunk-2",
+          "legal/quy_che_dao_tao_dai_hoc.md::chunk-6",
+          "legal/quy_che_dao_tao_dai_hoc.md::chunk-4",
+          "news/article_03.md::chunk-2"
+        ],
+        "metrics": {
+          "faithfulness": 0.8182,
+          "answer_relevance": 0.7429,
+          "context_recall": 1.0,
+          "context_precision": 1.0
+        },
+        "latency_sec": 1.2262
+      },
+      {
+        "id": 11,
+        "question": "Thời hạn nộp học phí kỳ Thu và chính sách đóng học phí theo đợt như thế nào?",
+        "expected_answer": "Hạn chót thanh toán học phí là 17:00 ngày 25 tháng 8. Sinh viên có thể chia làm 2 đợt: đợt 1 nộp 50% trước 25/8 và đợt 2 nộp 50% trước 25/10.",
+        "generated_answer": "Thời hạn nộp học phí kỳ Thu là ngày 25 tháng 8. Sinh viên có thể đăng ký đóng học phí theo 2 đợt: đợt 1 nộp 50% trước ngày 25 tháng 8, và đợt 2 nộp 50% còn lại trước ngày 25 tháng 10. Đơn xin đóng học phí theo đợt phải được nộp trước ngày 15 tháng 8 [news/article_01.md::chunk-1].",
+        "retrieved_sources": [
+          "news/article_01.md::chunk-1",
+          "news/article_01.md::chunk-0",
+          "news/article_01.md::chunk-2",
+          "news/article_04.md::chunk-2",
+          "news/article_05.md::chunk-2"
+        ],
+        "metrics": {
+          "faithfulness": 0.9091,
+          "answer_relevance": 0.875,
+          "context_recall": 1.0,
+          "context_precision": 1.0
+        },
+        "latency_sec": 1.3811
+      },
+      {
+        "id": 12,
+        "question": "Sinh viên năm thứ 3 được mở cổng đăng ký học phần trực tuyến vào thời gian nào?",
+        "expected_answer": "Cổng đăng ký học phần cho sinh viên năm thứ 3 mở từ 09:00 ngày thứ Ba của tuần thứ 13.",
+        "generated_answer": "Sinh viên năm thứ 3 được mở cổng đăng ký học phần trực tuyến từ 09:00 ngày thứ Ba của tuần thứ 13 [news/article_02.md::chunk-1].",
+        "retrieved_sources": [
+          "news/article_02.md::chunk-1",
+          "legal/noi_quy_ky_tuc_xa_sinh_vien.md::chunk-2",
+          "legal/quy_che_dao_tao_dai_hoc.md::chunk-2",
+          "news/article_02.md::chunk-0",
+          "legal/noi_quy_ky_tuc_xa_sinh_vien.md::chunk-1"
+        ],
+        "metrics": {
+          "faithfulness": 0.88,
+          "answer_relevance": 0.9111,
+          "context_recall": 1.0,
+          "context_precision": 1.0
+        },
+        "latency_sec": 1.116
+      },
+      {
+        "id": 13,
+        "question": "Mỗi sinh viên được mượn tối đa bao nhiêu đầu sách in tại thư viện và trong thời gian bao lâu?",
+        "expected_answer": "Sinh viên được mượn tối đa 10 đầu sách in cùng một lúc trong thời hạn 21 ngày, có thể gia hạn trực tuyến 1 lần thêm 14 ngày.",
+        "generated_answer": "Mỗi sinh viên được mượn tối đa 10 đầu sách in cùng một lúc trong thời hạn 21 ngày [news/article_03.md::chunk-1].",
+        "retrieved_sources": [
+          "news/article_03.md::chunk-1",
+          "news/article_03.md::chunk-0",
+          "legal/quy_che_dao_tao_dai_hoc.md::chunk-2",
+          "news/article_03.md::chunk-2",
+          "news/article_05.md::chunk-2"
+        ],
+        "metrics": {
+          "faithfulness": 0.8636,
+          "answer_relevance": 0.84,
+          "context_recall": 1.0,
+          "context_precision": 0.8333
+        },
+        "latency_sec": 0.9726
+      },
+      {
+        "id": 14,
+        "question": "Điều kiện cGPA và chứng chỉ tiếng Anh tối thiểu để nộp hồ sơ chương trình trao đổi sinh viên quốc tế là gì?",
+        "expected_answer": "Sinh viên cần có cGPA tối thiểu từ 3.20/4.0 trở lên và chứng chỉ IELTS Academic từ 6.5 trở lên (không kỹ năng nào dưới 6.0).",
+        "generated_answer": "Để nộp hồ sơ chương trình trao đổi sinh viên quốc tế, sinh viên cần có điểm trung bình tích lũy cGPA từ 3.20/4.0 trở lên và chứng chỉ tiếng Anh IELTS Academic từ 6.5 trở lên (không kỹ năng nào dưới 6.0) hoặc TOEFL iBT tương đương [news/article_04.md::chunk-1].",
+        "retrieved_sources": [
+          "legal/quy_che_dao_tao_dai_hoc.md::chunk-5",
+          "news/article_04.md::chunk-0",
+          "news/article_04.md::chunk-1",
+          "news/article_05.md::chunk-2",
+          "legal/chinh_sach_hoc_bong_sinh_vien.md::chunk-5"
+        ],
+        "metrics": {
+          "faithfulness": 0.9167,
+          "answer_relevance": 0.9,
+          "context_recall": 1.0,
+          "context_precision": 0.8333
+        },
+        "latency_sec": 1.3562
+      },
+      {
+        "id": 15,
+        "question": "Để thành lập một câu lạc bộ sinh viên mới, cần tối thiểu bao nhiêu thành viên sáng lập?",
+        "expected_answer": "Cần tối thiểu 15 thành viên sáng lập là sinh viên chính quy và 01 giảng viên hoặc cán bộ trường đồng ý làm Cố vấn chuyên môn.",
+        "generated_answer": "Để thành lập một câu lạc bộ sinh viên mới, cần có tối thiểu 15 thành viên sáng lập là sinh viên chính quy của trường [news/article_05.md::chunk-1].",
+        "retrieved_sources": [
+          "news/article_05.md::chunk-0",
+          "news/article_05.md::chunk-1",
+          "news/article_05.md::chunk-2",
+          "legal/chinh_sach_hoc_bong_sinh_vien.md::chunk-3",
+          "legal/noi_quy_ky_tuc_xa_sinh_vien.md::chunk-3"
+        ],
+        "metrics": {
+          "faithfulness": 0.8182,
+          "answer_relevance": 0.95,
+          "context_recall": 1.0,
+          "context_precision": 1.0
+        },
+        "latency_sec": 1.0037
+      },
+      {
+        "id": 16,
+        "question": "Mức hỗ trợ ngân sách ban đầu của Nhà trường cho một câu lạc bộ sinh viên được công nhận là bao nhiêu?",
+        "expected_answer": "CLB được công nhận chính thức sẽ được cấp ngân sách hoạt động ban đầu là 15.000.000 VNĐ/năm học.",
+        "generated_answer": "Ngân sách hoạt động ban đầu của một CLB sinh viên được công nhận chính thức là 15.000.000 VNĐ/năm học [news/article_05.md::chunk-3].",
+        "retrieved_sources": [
+          "news/article_05.md::chunk-3",
+          "news/article_05.md::chunk-0",
+          "news/article_05.md::chunk-1",
+          "news/article_05.md::chunk-2",
+          "legal/chinh_sach_hoc_bong_sinh_vien.md::chunk-1"
+        ],
+        "metrics": {
+          "faithfulness": 0.875,
+          "answer_relevance": 0.8087,
+          "context_recall": 1.0,
+          "context_precision": 0.8042
+        },
+        "latency_sec": 1.3341
+      }
+    ]
+  }
+}

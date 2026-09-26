@@ -1,0 +1,4 @@
+Command: python -c "from src.task4_chunking_indexing import load_documents; print('verified_loaded_documents=', len(load_documents()))"
+verified_loaded_documents= 8
+
+Exit code: 0

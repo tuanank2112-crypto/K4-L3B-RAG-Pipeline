@@ -1,0 +1,9 @@
+﻿Golden case count: 16
+validate_golden: PASSED (all cases grounded in verified sources)
+Run ID: run_20260926_032209_492532
+Run status: complete
+Config A successful cases: 16 / 16
+Config B successful cases: 16 / 16
+Config A avg score: 0.42000019430134683
+Config B avg score: 0.473245546943856
+exit: 0

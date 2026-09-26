@@ -1,0 +1,2589 @@
+{
+  "run_id": "run_20260926_030812_602675",
+  "date": "2026-09-26T03:08:12.603117+00:00",
+  "status": "incomplete",
+  "top_k": 5,
+  "fingerprints": {
+    "corpus_sha256": "691e3c4dca6a4fdf5e6bd3b1c88ad142e7fc612a2daf1e83a1b0286a74edf529",
+    "golden_sha256": "a049524fa373911088533d32aa9b354f879477fa48205a925d7fb0fda88efc84",
+    "generation_sha256": "4b17bf5463ea6dea649994303d052b1491c26e3dd43f214b23799e4b096d07bc",
+    "prompt_sha256": "354138efc5de1ee96e76e17b26e7287138789afbfd8af26fc30acd960701e654",
+    "evaluator_sha256": "7dd875e9676b4cf0ee3c0e5889182cd121f4d42ad7f34901ad6f82d85c96729e",
+    "git_commit": "a23df34c17c930e95b755d250921f41969e25ee0",
+    "embedding_provider": "jina",
+    "embedding_model": "jina-embeddings-v3",
+    "generator_provider": "gemini",
+    "generator_model": "gemini-3.5-flash-lite",
+    "temperature": 0.3,
+    "seed": null,
+    "top_k": 5,
+    "fallback_enabled": false,
+    "rrf_k": 60,
+    "python": "3.13.15",
+    "sdk_versions": {
+      "openai": "3.13.0",
+      "google-genai": "2.23.0",
+      "anthropic": "1.5.0",
+      "chromadb": "1.5.9",
+      "rank-bm25": "0.2.2",
+      "sentence-transformers": null
+    },
+    "source_count": 8,
+    "evaluator": "token-overlap-v2 (not semantic RAGAS)"
+  },
+  "fingerprints_after": {
+    "corpus_sha256": "691e3c4dca6a4fdf5e6bd3b1c88ad142e7fc612a2daf1e83a1b0286a74edf529",
+    "golden_sha256": "a049524fa373911088533d32aa9b354f879477fa48205a925d7fb0fda88efc84",
+    "generation_sha256": "4b17bf5463ea6dea649994303d052b1491c26e3dd43f214b23799e4b096d07bc",
+    "prompt_sha256": "354138efc5de1ee96e76e17b26e7287138789afbfd8af26fc30acd960701e654",
+    "evaluator_sha256": "7dd875e9676b4cf0ee3c0e5889182cd121f4d42ad7f34901ad6f82d85c96729e",
+    "git_commit": "a23df34c17c930e95b755d250921f41969e25ee0",
+    "embedding_provider": "jina",
+    "embedding_model": "jina-embeddings-v3",
+    "generator_provider": "gemini",
+    "generator_model": "gemini-3.5-flash-lite",
+    "temperature": 0.3,
+    "seed": null,
+    "top_k": 5,
+    "fallback_enabled": false,
+    "rrf_k": 60,
+    "python": "3.13.15",
+    "sdk_versions": {
+      "openai": "3.13.0",
+      "google-genai": "2.23.0",
+      "anthropic": "1.5.0",
+      "chromadb": "1.5.9",
+      "rank-bm25": "0.2.2",
+      "sentence-transformers": null
+    },
+    "source_count": 8,
+    "evaluator": "token-overlap-v2 (not semantic RAGAS)"
+  },
+  "inputs_unchanged": true,
+  "results_a": {
+    "config": "dense_only",
+    "status": "incomplete",
+    "successful_cases": 14,
+    "total_cases": 16,
+    "overall": null,
+    "cases": [
+      {
+        "id": 1,
+        "question": "Theo Quy chế đào tạo đại học năm 2024, số tín chỉ tối thiểu để một sinh viên được xếp loại sinh viên toàn thời gian trong một học kỳ chính là bao nhiêu?",
+        "expected_answer": "Sinh viên phải đăng ký tối thiểu 80% khối lượng học tập toàn thời gian bình thường trong học kỳ chính, tương đương 12 tín chỉ.",
+        "expected_context": "To be classified as a full-time student, s/he must be enrolled in at a minimum, 80% of a normal full-time load in a regular Semester (equivalent to 12 credits).",
+        "source_ids": [
+          "legal/academic_regulations.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.05263157894736842,
+          "answer_relevance": 0.7666666666666667,
+          "context_recall": 1.0,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Theo Quy chế đào tạo đại học, để được phân loại là sinh viên toàn thời gian, sinh viên phải đăng ký tối thiểu 80% khối lượng học tập thông thường của một học kỳ chính, tương đương với 12 tín chỉ [legal/academic_regulations.md::chunk-77].",
+        "sources": [
+          {
+            "id": "legal/academic_regulations.md::chunk-77",
+            "content": "2. To be classified as a full-time student, s/he must be enrolled in at a minimum, \n80% of a normal full-time load in a regular Semester (equivalent to 12 credits). \n 3. The study load variation in the regular semester is specified as follows:  \nVariation Academic load per regular \nSemester \nRemarks \nNormal load At least 14 credits (applicable \nfor first-semester students, and \nstudents with good academic \nstanding or higher in the \nprevious semester; not \napplicable for the final \nsemester).",
+            "score": 0.6286082863807678,
+            "metadata": {
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "chunk_index": 77,
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "doc_type": "legal",
+              "source": "academic_regulations.pdf"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-107",
+            "content": "possible, confidentiality and privacy.  \n \nArticle 16. Student Classification and Academic Standing  \n \n 1. After each regular semester, based on the accumulative number of credits, the \nclass standing of students (except for transfer students) is determined as follows: \nClass standing applies to College of Business and Management, College of Engineering \nand Computer Science, College of Arts and Sciences: \nClass Standing Number of accumulated credits \nFreshman  Below 30 \nSophomore 30 – 59",
+            "score": 0.6164621710777283,
+            "metadata": {
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "source": "academic_regulations.pdf",
+              "chunk_index": 107,
+              "doc_type": "legal"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-110",
+            "content": "16 \n \nClass Standing Number of accumulated credits \nFreshman  Below 35 \nSophomore 35– 70 \nJunior 71 – 105 \nSenior 106 - 140 \nFifth-year senior 141 - 175 \nSixth-year senior 176 - 255 \n \nThe University may use class standing to determine a student’s eligibility for \nreceiving financial aid and scholarships, applying for degree programs, enrolling in \ncourses, and evaluating progress.  \n \n 2. After each regular semester, based on the cumulative GPA, students are",
+            "score": 0.6121583580970764,
+            "metadata": {
+              "doc_type": "legal",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "chunk_index": 110,
+              "source": "academic_regulations.pdf",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-176",
+            "content": "in common, such courses may be co-listed with different departmental designations, so \nstudents from their respective majors can apply it toward their degree requirements. \n \nArticle 25. Grading System  \n \n 1. The University grading system is composed of letter grades with pluses and \nminuses. Passing grades range from A to D –; F is a fail. \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n Based on the cumulative grade point average (GPA), students’ academic \nstanding is assigned according to Article 16.",
+            "score": 0.5999449491500854,
+            "metadata": {
+              "chunk_index": 176,
+              "doc_type": "legal",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "source": "academic_regulations.pdf",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-18",
+            "content": "Article 22. Final Exam Format and Schedule  ................................ ................................ .. 24 \nArticle 23. Marking and Retaking the Final Exam  ................................ ..........................  24 \nCHAPTER IV GRADING POLICY  ................................ ................................ ................  26 \nArticle 24. General Principles  ................................ ................................ .........................  26",
+            "score": 0.5900048017501831,
+            "metadata": {
+              "source": "academic_regulations.pdf",
+              "doc_type": "legal",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "chunk_index": 18,
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf"
+            },
+            "retrieval_method": "dense"
+          }
+        ],
+        "retrieved_sources": [
+          "legal/academic_regulations.md::chunk-77",
+          "legal/academic_regulations.md::chunk-107",
+          "legal/academic_regulations.md::chunk-110",
+          "legal/academic_regulations.md::chunk-176",
+          "legal/academic_regulations.md::chunk-18"
+        ],
+        "latency_sec": 5.517520100009278
+      },
+      {
+        "id": 2,
+        "question": "Theo Quy chế đào tạo đại học năm 2024, hạn chót để sinh viên thêm một học phần (add course) vào thời khóa biểu học kỳ chính là khi nào?",
+        "expected_answer": "Hạn chót thêm học phần là trước khi kết thúc ngày làm việc thứ 10 của học kỳ chính và ngày làm việc thứ 5 của học kỳ rút gọn (mini semester).",
+        "expected_context": "Students are allowed to add a course to their schedule no later than the close of the 10 th business day of the regular semester and no later than the close of the 5 th business day of the mini semesters (Fall A/B, or Spring A/B).",
+        "source_ids": [
+          "legal/academic_regulations.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.030303030303030304,
+          "answer_relevance": 0.6785714285714286,
+          "context_recall": 1.0,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Theo Quy chế đào tạo đại học, sinh viên được phép thêm một học phần vào thời khóa biểu của học kỳ chính chậm nhất là vào thời điểm kết thúc ngày làm việc thứ 10 của học kỳ chính đó [legal/academic_regulations.md::chunk-82].",
+        "sources": [
+          {
+            "id": "legal/academic_regulations.md::chunk-82",
+            "content": "requirements of each course and academic sequences of a particular program. \nExemptions from prerequisites require the approval of the Program Director.  \n \nArticle 12. Course Add, Drop, and Withdrawal  \n \n 1. Students are allowed to add a course to their schedule no later than the close \nof the 10 th business day of the regular semester and no later than the close of the 5 th \nbusiness day of the mini semesters (Fall A/B, or Spring A/B).",
+            "score": 0.6635151505470276,
+            "metadata": {
+              "chunk_index": 82,
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "doc_type": "legal",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "source": "academic_regulations.pdf"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "legal/student_handbook.md::chunk-31",
+            "content": "Last day to apply for credit transfer/course exemption (if any)  12-Nov \nRelease of Semester 1| examination schedule 8-Jan \nLast day of Teaching 22-Jan \nExamination period 25 Jan – 5 Feb \nRelease of Semester 1| course grades 19-Feb \nSemester Break 8 – 21 Feb \nSemester 2 - Spring 2020/2021 \nRelease of Master Class Schedule for the Academic Year 25-Jan \nClasses begin 22-Feb \nFirst Day for add/drop 22-Feb \nLast day for course add/drop 5 Mar (add)/ 11 Mar (drop)",
+            "score": 0.5846874713897705,
+            "metadata": {
+              "title": "VinUni Undergraduate Student Handbook (2020 historical edition)",
+              "doc_type": "legal",
+              "source": "student_handbook.pdf",
+              "chunk_index": 31,
+              "url": "https://vinuni.edu.vn/wp-content/uploads/2020/10/201001_VinUni_Undergraduate_Student_Handbook.pdf"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "legal/assessment_guidelines.md::chunk-21",
+            "content": "• Extension of assignments \n• Withdrawal from program \n• Changes to the final grade in a course \n• Supplemental Assessment.",
+            "score": 0.5743747353553772,
+            "metadata": {
+              "chunk_index": 21,
+              "doc_type": "legal",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VUNI.39_240612_Assessment-policy-for-Undergrade_CHS.pdf",
+              "source": "assessment_guidelines.pdf",
+              "title": "Assessment Guidelines for Undergraduate Programs (2024-06-12)"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-84",
+            "content": "Withdrawal. Students may withdraw from a course after the add/drop period has ended \nwith no grade penalty. Students will receive a \"Withdrawal - W\" grade on their transcript \nfor the course when they withdraw.  \n 4. Students who wish to add a course after the add/drop period has ended, need \nto petition with approval from their academic advisor/Office of Registrar. The instructor \nmay allow the addition upon her/his discretion. \n5. Course withdrawal policy:",
+            "score": 0.5693416595458984,
+            "metadata": {
+              "doc_type": "legal",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "source": "academic_regulations.pdf",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "chunk_index": 84
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-66",
+            "content": "10 \n \n 2. The m aximum time to earn an undergraduate degree includes the  planned \neducation duration plus four main semesters for a four-year program or plus six main \nsemesters for a five- to six-year program.  \n 3. On a case-by-case basis, the Provost can, upon petition of the student and the \nDean’s recommendation,  extend the duration of study for students facing unusual \ncircumstances (e.g. sickness, maternity, civil service , etc.).",
+            "score": 0.5647514462471008,
+            "metadata": {
+              "chunk_index": 66,
+              "doc_type": "legal",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "source": "academic_regulations.pdf"
+            },
+            "retrieval_method": "dense"
+          }
+        ],
+        "retrieved_sources": [
+          "legal/academic_regulations.md::chunk-82",
+          "legal/student_handbook.md::chunk-31",
+          "legal/assessment_guidelines.md::chunk-21",
+          "legal/academic_regulations.md::chunk-84",
+          "legal/academic_regulations.md::chunk-66"
+        ],
+        "latency_sec": 3.077644999997574
+      },
+      {
+        "id": 3,
+        "question": "Thời hạn rút học phần không bị ghi vào hồ sơ học tập (drop deadline) trong học kỳ chính là ngày làm việc thứ mấy?",
+        "expected_answer": "Hạn drop học phần là trước khi kết thúc ngày làm việc thứ 15 của học kỳ chính (và ngày thứ 10 của kỳ Hè), các thay đổi trong giai đoạn này không bị lưu vào hồ sơ học tập.",
+        "expected_context": "The drop deadline for a regular semester is no later than the close of the 15th business day of the semester and no later than the close of the 10th business day of the Summer semester. Changes made in this period will not be included in the academic record of the students.",
+        "source_ids": [
+          "legal/academic_regulations.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.08333333333333333,
+          "answer_relevance": 0.8695652173913043,
+          "context_recall": 1.0,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Dựa trên tài liệu được cung cấp, thời hạn rút học phần (drop deadline) trong học kỳ chính (regular semester) là chậm nhất là vào thời điểm kết thúc ngày làm việc thứ 15 của học kỳ [legal/academic_regulations.md::chunk-83]. Những thay đổi được thực hiện trong khoảng thời gian này sẽ không được đưa vào hồ sơ học tập của sinh viên [legal/academic_regulations.md::chunk-83].",
+        "sources": [
+          {
+            "id": "legal/academic_regulations.md::chunk-83",
+            "content": "2. Students are allowed to drop a class within the drop deadline that is published \nin the academic calendar for that  semester. The drop deadline for a regular semester is \nno later than the close of the 15th business day of the semester and no later than the close \nof the 10th business day of the Summer semester. Changes made in this period will not \nbe included in the academic record of the students. \n 3. Dropping a class  after the add /drop period has ended is considered a",
+            "score": 0.7258073687553406,
+            "metadata": {
+              "chunk_index": 83,
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "doc_type": "legal",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "source": "academic_regulations.pdf"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-86",
+            "content": "occur before completing no more than 30% of the study time for that course. After that \ndate, withdrawals will no longer be permitted, and students will be graded according \nto their course performance. If the student withdraws before the “Drop Date” for each \nsemester, no W grade should be recorded on the transcript. \nc) The withdrawal limit policy allows students to withdraw from a maximum of 18",
+            "score": 0.6943737268447876,
+            "metadata": {
+              "doc_type": "legal",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "chunk_index": 86,
+              "source": "academic_regulations.pdf",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-84",
+            "content": "Withdrawal. Students may withdraw from a course after the add/drop period has ended \nwith no grade penalty. Students will receive a \"Withdrawal - W\" grade on their transcript \nfor the course when they withdraw.  \n 4. Students who wish to add a course after the add/drop period has ended, need \nto petition with approval from their academic advisor/Office of Registrar. The instructor \nmay allow the addition upon her/his discretion. \n5. Course withdrawal policy:",
+            "score": 0.6526055932044983,
+            "metadata": {
+              "doc_type": "legal",
+              "chunk_index": 84,
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "source": "academic_regulations.pdf"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-167",
+            "content": "Registrar, who will then inform all instructors and propose arrangements for extra time. \n 5. The due date of take-home finals or a culminating project report for a class can \nbe no earlier than the date promulgated by the Registrar for the final day of that class. \nThe due date of an independent project can be no earlier than the last day of classes and \nno later than the last day of final exams. \n \nArticle 23. Marking and Retaking the Final Exam",
+            "score": 0.6435466408729553,
+            "metadata": {
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "chunk_index": 167,
+              "doc_type": "legal",
+              "source": "academic_regulations.pdf"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "legal/student_handbook.md::chunk-31",
+            "content": "Last day to apply for credit transfer/course exemption (if any)  12-Nov \nRelease of Semester 1| examination schedule 8-Jan \nLast day of Teaching 22-Jan \nExamination period 25 Jan – 5 Feb \nRelease of Semester 1| course grades 19-Feb \nSemester Break 8 – 21 Feb \nSemester 2 - Spring 2020/2021 \nRelease of Master Class Schedule for the Academic Year 25-Jan \nClasses begin 22-Feb \nFirst Day for add/drop 22-Feb \nLast day for course add/drop 5 Mar (add)/ 11 Mar (drop)",
+            "score": 0.6296801567077637,
+            "metadata": {
+              "source": "student_handbook.pdf",
+              "chunk_index": 31,
+              "title": "VinUni Undergraduate Student Handbook (2020 historical edition)",
+              "url": "https://vinuni.edu.vn/wp-content/uploads/2020/10/201001_VinUni_Undergraduate_Student_Handbook.pdf",
+              "doc_type": "legal"
+            },
+            "retrieval_method": "dense"
+          }
+        ],
+        "retrieved_sources": [
+          "legal/academic_regulations.md::chunk-83",
+          "legal/academic_regulations.md::chunk-86",
+          "legal/academic_regulations.md::chunk-84",
+          "legal/academic_regulations.md::chunk-167",
+          "legal/student_handbook.md::chunk-31"
+        ],
+        "latency_sec": 3.524060900002951
+      },
+      {
+        "id": 4,
+        "question": "Khối lượng học tập toàn thời gian thông thường (normal full-time load) trải đều trong một năm học là bao nhiêu tín chỉ?",
+        "expected_answer": "Khối lượng học tập toàn thời gian bình thường là 30 tín chỉ trải đều trong một năm học.",
+        "expected_context": "A normal full-time load is 30 credits spread over an academic year. The student may be able to increase or decrease his/her study load to help meet his/her academic goals.",
+        "source_ids": [
+          "legal/academic_regulations.md"
+        ],
+        "status": "error",
+        "metrics": null,
+        "generated_answer": null,
+        "sources": [],
+        "retrieved_sources": [],
+        "latency_sec": 3.879260499990778,
+        "error": {
+          "code": "pipeline_error",
+          "message": "Retrieval or generation failed; check provider/configuration."
+        }
+      },
+      {
+        "id": 5,
+        "question": "Sinh viên thuộc đối tượng nào được áp dụng khối lượng học tập ít nhất 10 tín chỉ và không quá 14 tín chỉ trong học kỳ chính?",
+        "expected_answer": "Sinh viên có học lực yếu kém (poor academic standing) trong học kỳ trước đó.",
+        "expected_context": "At least 10 credits and no more than 14 credits, applicable to students with poor academic standing in the previous semester.",
+        "source_ids": [
+          "legal/academic_regulations.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.0,
+          "answer_relevance": 0.04,
+          "context_recall": 0.0,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có.",
+        "sources": [],
+        "retrieved_sources": [],
+        "latency_sec": 3.0866213999979664
+      },
+      {
+        "id": 6,
+        "question": "Hướng dẫn đánh giá VUNI.39 ban hành ngày 12/06/2024 áp dụng cho các chương trình đào tạo đại học nào của VinUni?",
+        "expected_answer": "Áp dụng cho các chương trình đại học bao gồm Bác sĩ Y khoa (Medical Doctor) và Cử nhân Điều dưỡng (Bachelor of Nursing) tại Viện Khoa học Sức khỏe (College of Health Sciences).",
+        "expected_context": "This guideline specifies the assessment policy for courses offered for undergraduate programs (including the Medical Doctor and Bachelor of Nursing) at the College of Health Sciences.",
+        "source_ids": [
+          "legal/assessment_guidelines.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.0,
+          "answer_relevance": 0.0,
+          "context_recall": 0.0,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có.",
+        "sources": [],
+        "retrieved_sources": [],
+        "latency_sec": 3.0937457000109134
+      },
+      {
+        "id": 7,
+        "question": "Văn bản Assessment Guidelines của Viện Khoa học Sức khỏe được phê duyệt bởi ai trong phiên bản V2.0 ngày 23/01/2024?",
+        "expected_answer": "Được phê duyệt bởi Hiệu trưởng Viện Khoa học Sức khỏe (Dean of College of Health Sciences) và Phó Hiệu trưởng Đào tạo (Provost).",
+        "expected_context": "Approved by: Dean of College of Health Sciences, Provost",
+        "source_ids": [
+          "legal/assessment_guidelines.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.5151515151515151,
+          "answer_relevance": 0.6521739130434783,
+          "context_recall": 1.0,
+          "context_precision": 1.0
+        },
+        "generated_answer": "Dựa trên tài liệu được cung cấp, phiên bản V2.0 (ngày 23/01/2024) của \"Assessment Guidelines for Undergraduate Programs at College of Health Sciences\" đã được phê duyệt bởi Dean of College of Health Sciences và Provost [legal/assessment_guidelines.md::chunk-2].",
+        "sources": [
+          {
+            "id": "legal/assessment_guidelines.md::chunk-2",
+            "content": "V2.0 Jan 23, 2024 \nDeveloped by: MD, BN team \nReviewed by: MD & BN Program Committee, Office \nof Registrar \nApproved by: Dean of College of Health Sciences, \nProvost \nRevision & \nupdate \n  \nAssessment Guidelines for Undergraduate Programs  \nat College of Health Sciences",
+            "score": 0.6661273241043091,
+            "metadata": {
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VUNI.39_240612_Assessment-policy-for-Undergrade_CHS.pdf",
+              "source": "assessment_guidelines.pdf",
+              "doc_type": "legal",
+              "chunk_index": 2,
+              "title": "Assessment Guidelines for Undergraduate Programs (2024-06-12)"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "legal/assessment_guidelines.md::chunk-33",
+            "content": "regulation from MOET.  \n \n17b. The Assessment Policy and Guidelines shall be applied to the undergraduate courses in the \nCollege of Health Sciences unless an exemption is received from the relevant curriculum \ncommittee or delegations.",
+            "score": 0.6188801527023315,
+            "metadata": {
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VUNI.39_240612_Assessment-policy-for-Undergrade_CHS.pdf",
+              "source": "assessment_guidelines.pdf",
+              "title": "Assessment Guidelines for Undergraduate Programs (2024-06-12)",
+              "chunk_index": 33,
+              "doc_type": "legal"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-2",
+            "content": "Committee \nApproved by: Provost  \nRevised Article 5, Article 6, \nArticle 16, Article 17, Article 18, \nArticle 19, Article 22, Article 23, \nArticle 25, Article 26, Article 29. \nV4.0 5/10/2020 Reviewed by: Registrar and Vice -Provost \nOffice \nApproved by: Provost  \nArticle 4, Article 6, Ar ticle 7, Article 10, \nArticle 11, Article 12, Article 13, Article 14, \nArticle 15, Article 16, Article 17, Article 19, \nArticle 20, Article 21, Article 22, Article 24, \nArticle 28, Chapter VI",
+            "score": 0.6149038076400757,
+            "metadata": {
+              "source": "academic_regulations.pdf",
+              "chunk_index": 2,
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "doc_type": "legal",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-3",
+            "content": "Article 28, Chapter VI  \nV5.0 24/08/2021 Reviewed by: Registrar, Deans/Vice -Deans, \nProgram Directors  \nApproved by: Provost  \nArticles \n4,5,7,9,10,11,13,14,15,16, 17,18,19,20,21,22,23,24,\n25,26 \nV5.1a 01/09/2022 Reviewed by: Registrar, Deans/Vice -Deans, \nProgram Directors  \nApproved by: Provost  \nArticle 12:  point 5 \nArticle 21 : point 3, 4, 5, 6 \n \nV5.1 07/4/2023 Reviewed by: Registrar, Deans/Vice -Deans, \nProgram Directors  \nApproved by: Provost",
+            "score": 0.6102718114852905,
+            "metadata": {
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "source": "academic_regulations.pdf",
+              "chunk_index": 3,
+              "doc_type": "legal"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "legal/assessment_guidelines.md::chunk-0",
+            "content": "# Assessment Guidelines for Undergraduate Programs (2024-06-12)\n\n**Source:** https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VUNI.39_240612_Assessment-policy-for-Undergrade_CHS.pdf\n\n**File:** assessment_guidelines.pdf\n\n**Verified:** true\n\n**Crawled:** 2026-09-26T02:28:31.685061+00:00\n\n---\n\n## Page 1",
+            "score": 0.6080350875854492,
+            "metadata": {
+              "doc_type": "legal",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VUNI.39_240612_Assessment-policy-for-Undergrade_CHS.pdf",
+              "source": "assessment_guidelines.pdf",
+              "title": "Assessment Guidelines for Undergraduate Programs (2024-06-12)",
+              "chunk_index": 0
+            },
+            "retrieval_method": "dense"
+          }
+        ],
+        "retrieved_sources": [
+          "legal/assessment_guidelines.md::chunk-2",
+          "legal/assessment_guidelines.md::chunk-33",
+          "legal/academic_regulations.md::chunk-2",
+          "legal/academic_regulations.md::chunk-3",
+          "legal/assessment_guidelines.md::chunk-0"
+        ],
+        "latency_sec": 3.2395220000034897
+      },
+      {
+        "id": 8,
+        "question": "Sổ tay sinh viên VinUni (Student Handbook) phiên bản lịch sử năm 2020 đưa ra lưu ý gì về tính chính xác và thay đổi của thông tin?",
+        "expected_answer": "Thông tin được xem là chính xác tại thời điểm xuất bản và có thể thay đổi theo thời gian.",
+        "expected_context": "Please note that the information is believed to be accurate as of the date of publication and is subject to change.",
+        "source_ids": [
+          "legal/student_handbook.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.08571428571428572,
+          "answer_relevance": 0.75,
+          "context_recall": 0.5294117647058824,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Dựa trên tài liệu được cung cấp, Sổ tay sinh viên VinUni (VinUni Undergraduate Student Handbook) phiên bản lịch sử năm 2020 lưu ý rằng nội dung của sổ tay có thể được thay đổi vào bất kỳ lúc nào [legal/student_handbook.md::chunk-241]. VinUniversity bảo lưu quyền sửa đổi, điều chỉnh, bổ sung hoặc xóa bỏ các quy tắc, chính sách và thủ tục của mình mà không cần báo trước [legal/student_handbook.md::chunk-241]. Ngoài ra, sổ tay này không được coi là một hợp đồng giữa VinUniversity và sinh viên [legal/student_handbook.md::chunk-241].",
+        "sources": [
+          {
+            "id": "legal/student_handbook.md::chunk-0",
+            "content": "# VinUni Undergraduate Student Handbook (2020 historical edition)\n\n**Source:** https://vinuni.edu.vn/wp-content/uploads/2020/10/201001_VinUni_Undergraduate_Student_Handbook.pdf\n\n**File:** student_handbook.pdf\n\n**Verified:** true\n\n**Crawled:** 2026-09-26T02:28:32.812244+00:00\n\n---\n\n## Page 1\n\n \n   \n\n\n## Page 2",
+            "score": 0.7288765907287598,
+            "metadata": {
+              "chunk_index": 0,
+              "url": "https://vinuni.edu.vn/wp-content/uploads/2020/10/201001_VinUni_Undergraduate_Student_Handbook.pdf",
+              "doc_type": "legal",
+              "title": "VinUni Undergraduate Student Handbook (2020 historical edition)",
+              "source": "student_handbook.pdf"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "legal/student_handbook.md::chunk-1",
+            "content": "STUDENT HANDBOOK \n2 \n \nWELCOME, STUDENTS 2020 \n \nThe Faculty and Staff welcome you to VinUniversity. This Undergraduate  Student Handbook presents \ninformation on subjects of immediate interest and concern to you as a full-time student at the University. \nPlease read all of the Handbook carefully to get an overall picture of the policies and procedures affecting \nyour study at the University. We encourage you to check this Handbook for relevant information whenever",
+            "score": 0.6591216325759888,
+            "metadata": {
+              "source": "student_handbook.pdf",
+              "url": "https://vinuni.edu.vn/wp-content/uploads/2020/10/201001_VinUni_Undergraduate_Student_Handbook.pdf",
+              "chunk_index": 1,
+              "title": "VinUni Undergraduate Student Handbook (2020 historical edition)",
+              "doc_type": "legal"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "legal/student_handbook.md::chunk-19",
+            "content": "STUDENT HANDBOOK \n4 \nWelcome to VinUniversity! \n \nDear VinUni Student, \n \nI am truly excited to welcome you to VinUniversity. You have persisted through all the challenges to find \nyourself here where you dreamed to be . You certainly deserve con gratulations and so do the wonderful \npeople who have invested their time and efforts in you. I hope you take some time to thank those who made \nit possible for you to begin your journey at VinUniversity.",
+            "score": 0.6519045829772949,
+            "metadata": {
+              "url": "https://vinuni.edu.vn/wp-content/uploads/2020/10/201001_VinUni_Undergraduate_Student_Handbook.pdf",
+              "chunk_index": 19,
+              "title": "VinUni Undergraduate Student Handbook (2020 historical edition)",
+              "source": "student_handbook.pdf",
+              "doc_type": "legal"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_05.md::chunk-1",
+            "content": "Gateway for VinUnians\nYour journey at VinUni, in one place\nEmail\nAccess Your VinUni Email\nCanvas\nLearning Management System\nSIS\nStudent Information System\nCampus Services\nEssential Services And Facilities\nVinUni Legacy: HONORING THE PAST, SHAPING THE FUTURE\nAn e-book created by students of the VinUni Legacy Project\nGENERAL ACADEMIC RESOURCES\nAcademic Calendar\nKey academic dates and important milestones\nAcademic Catalog\nInformation on degrees and requirements\nAcademic Integrity",
+            "score": 0.6500995755195618,
+            "metadata": {
+              "source": "article_05.json",
+              "title": "Gateway for VinUnians",
+              "chunk_index": 1,
+              "url": "https://vinuni.edu.vn/student-gateway/",
+              "doc_type": "news"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "legal/student_handbook.md::chunk-241",
+            "content": "## Page 40\n\n \n \n \n \nQuestions? \nOur Contact Team is here to help  \nEmail: registrar@vinuni.edu.vn and studentaffairs@vinuni.edu.vn  \n \n \n \nAuthorization \n \nThis Handbook is not intended to be a contract between VinUniversity and the Student. The Student \nHandbook is available online at https://vinuni.edu.vn/handbook/. Changes in the content may be made at \nany time. VinUniversity reserves the right to amend, modify, add to, or delete from its rules, policies, and \nprocedures without notice.",
+            "score": 0.6498701572418213,
+            "metadata": {
+              "chunk_index": 241,
+              "title": "VinUni Undergraduate Student Handbook (2020 historical edition)",
+              "doc_type": "legal",
+              "url": "https://vinuni.edu.vn/wp-content/uploads/2020/10/201001_VinUni_Undergraduate_Student_Handbook.pdf",
+              "source": "student_handbook.pdf"
+            },
+            "retrieval_method": "dense"
+          }
+        ],
+        "retrieved_sources": [
+          "legal/student_handbook.md::chunk-0",
+          "legal/student_handbook.md::chunk-1",
+          "legal/student_handbook.md::chunk-19",
+          "news/article_05.md::chunk-1",
+          "legal/student_handbook.md::chunk-241"
+        ],
+        "latency_sec": 3.7109242000005906
+      },
+      {
+        "id": 9,
+        "question": "Thư viện VinUni cung cấp những dịch vụ gì trong phòng media studio?",
+        "expected_answer": "Thư viện có 2 phòng media studio bao gồm One Button Studio hỗ trợ thiết bị công nghệ tạo dự án số, quay video, làm podcast và số hóa nội dung.",
+        "expected_context": "Two media studios, including a One Button Studio provides access to state-of-the-art technology required for the creation of digital projects. Library staff are here to support you in the development of digital literacy and media creation skills, including videos, digital storytelling, podcasts, blogging and more.",
+        "source_ids": [
+          "news/article_01.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.10606060606060606,
+          "answer_relevance": 0.6153846153846154,
+          "context_recall": 1.0,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Dựa trên tài liệu được cung cấp, trong phòng media studio (bao gồm cả One Button Studio), sinh viên được cung cấp quyền tiếp cận công nghệ hiện đại cần thiết để tạo ra các dự án kỹ thuật số [news/article_01.md::chunk-3]. \n\nNgoài ra, nhân viên thư viện ở đây sẽ hỗ trợ bạn phát triển các kỹ năng sáng tạo truyền thông và kỹ năng số, bao gồm:\n- Làm video [news/article_01.md::chunk-3]\n- Kể chuyện kỹ thuật số (digital storytelling) [news/article_01.md::chunk-3]\n- Làm podcast [news/article_01.md::chunk-3]\n- Viết blog (blogging) và các hình thức khác [news/article_01.md::chunk-3].",
+        "sources": [
+          {
+            "id": "news/article_01.md::chunk-3",
+            "content": "Drop-in support\nStudent can access the Student Affairs Office in the Library for drop-in support.\nMedia studio\nTwo media studios, including a One Button Studio provides access to state-of-the-art technology required for the creation of digital projects. Library staff are here to support you in the development of digital literacy and media creation skills, including videos, digital storytelling, podcasts, blogging and more.",
+            "score": 0.6692219972610474,
+            "metadata": {
+              "chunk_index": 3,
+              "url": "https://library.vinuni.edu.vn/services/learning-services/",
+              "doc_type": "news",
+              "source": "article_01.json",
+              "title": "Learning support - Library"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_01.md::chunk-1",
+            "content": "VinUni Library will provide the following services to support the learners:\nWorkshops and tours\nAcademic librarians present workshops and library tours for interested students, faculty, and staff to help you to enhance your research skills and knowledge of the Library. To request a workshop or tour, please contact the Director, Library and Learning Resources\nCourse reserves",
+            "score": 0.6601434350013733,
+            "metadata": {
+              "url": "https://library.vinuni.edu.vn/services/learning-services/",
+              "chunk_index": 1,
+              "source": "article_01.json",
+              "doc_type": "news",
+              "title": "Learning support - Library"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "legal/student_handbook.md::chunk-47",
+            "content": "• Community spac e: VinUniversity students can participate in  regular activities such as talks, \npresentations, book discussions, exhibitions, poetry reading, etc. in the open amphitheater, and \nclosed training rooms with a movable partition to fulfill the needs for a sense of belonging to a larger \ncommunity. \n \nStudents can have access to books, journals, online databases, and more in all academic areas on-campus",
+            "score": 0.6256346106529236,
+            "metadata": {
+              "url": "https://vinuni.edu.vn/wp-content/uploads/2020/10/201001_VinUni_Undergraduate_Student_Handbook.pdf",
+              "source": "student_handbook.pdf",
+              "chunk_index": 47,
+              "doc_type": "legal",
+              "title": "VinUni Undergraduate Student Handbook (2020 historical edition)"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_02.md::chunk-8",
+            "content": "Research Guides:\nProvides resources and tips for students to complete their research.\nE-journals:\nAccess the library’s subscription e-journals on a variety of subjects.\nNew Arrivals:\nFind resources to access current and older news sources.\nRemote Access to Resources:\nCurrent students, faculty, staff, and certain community users may access online resources from anywhere.\nTo log into resources from off campus you must use your VinUni ID.",
+            "score": 0.6242444515228271,
+            "metadata": {
+              "title": "Undergraduate students and staff - Library",
+              "doc_type": "news",
+              "chunk_index": 8,
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "source": "article_02.json"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_02.md::chunk-15",
+            "content": ",\nconsultation spaces\n,\nsanctuary spaces\n,\ncommunity engagement spaces\n.\nLocation:\nThe library is located at the center of campus. Find what you are looking for with\nlibrary VR tour\nand\nUniversity campus map.\nHours:\nMain Entrance:\nMon – Friday: 8 a.m – 9 p.m\nSat – Sun: 9 a.m – 5 p.m\nSecond Floor Entrance:\nMon – Friday: 8:30 a.m – 5:30 p.m\nSat – Sun: closed\n24/7 learning space: Always opened.\nHolidays: closed\nGroup study rooms:",
+            "score": 0.6185411810874939,
+            "metadata": {
+              "doc_type": "news",
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "title": "Undergraduate students and staff - Library",
+              "source": "article_02.json",
+              "chunk_index": 15
+            },
+            "retrieval_method": "dense"
+          }
+        ],
+        "retrieved_sources": [
+          "news/article_01.md::chunk-3",
+          "news/article_01.md::chunk-1",
+          "legal/student_handbook.md::chunk-47",
+          "news/article_02.md::chunk-8",
+          "news/article_02.md::chunk-15"
+        ],
+        "latency_sec": 3.5232266999955755
+      },
+      {
+        "id": 10,
+        "question": "Sinh viên đại học được mượn tối đa bao nhiêu tài liệu thư viện và trong thời hạn bao lâu mỗi tài liệu?",
+        "expected_answer": "Sinh viên đại học được mượn tối đa 3 tài liệu trong 2 tuần mỗi tài liệu, và được gia hạn 1 lần thêm 1 tuần nếu chưa quá hạn và chưa có người khác yêu cầu.",
+        "expected_context": "Undergraduate students may borrow up to 3 items during two weeks per item. Books may be renewed once for one week if they are not overdue and there has been no request for them by any other patrons.",
+        "source_ids": [
+          "news/article_02.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.1111111111111111,
+          "answer_relevance": 0.7,
+          "context_recall": 1.0,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Sinh viên đại học được mượn tối đa 3 tài liệu trong thời hạn 2 tuần cho mỗi tài liệu [news/article_02.md::chunk-3].",
+        "sources": [
+          {
+            "id": "news/article_02.md::chunk-3",
+            "content": "Borrowing privileges:\nUndergraduate students may borrow up to 3 items during two weeks per item. Books may be renewed once for one week if they are not overdue and there has been no request for them by any other patrons. Books can be renewed online through library’s website or onsite with Self-check machines at 1st floor or 2nd floor in library.\nPolicy | Borrowed items | Borrowing time | Renewal\nUndergraduate student | 3 | 2 weeks | 1 week (one time only)\nRequests and Holds",
+            "score": 0.6630511283874512,
+            "metadata": {
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "doc_type": "news",
+              "title": "Undergraduate students and staff - Library",
+              "chunk_index": 3,
+              "source": "article_02.json"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_02.md::chunk-0",
+            "content": "# Undergraduate students and staff - Library\n\n**Source:** https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/\n\n**File:** article_02.json\n\n**Verified:** true\n\n**Crawled:** 2026-09-26T02:29:10.510573+00:00\n\n---",
+            "score": 0.611181914806366,
+            "metadata": {
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "title": "Undergraduate students and staff - Library",
+              "source": "article_02.json",
+              "doc_type": "news",
+              "chunk_index": 0
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_02.md::chunk-1",
+            "content": "Information for Undergraduate students and Staff\nBorrowing | Resources\nMy library card | Find resources\nBorrowing privileges | Remote access to resource\nRequest and holds | Use online resources\nFines and other charges | Suggest a purchase\nEquipment loans |\nServices | Spaces\nAccessibility services | Spaces\nPrinting, copying, and scanning | Location\nComputers | Hours\n| Group study Rooms\nGet Help | Contact us\nAsk a librarian | Contact us\nResearch guides | News and Events",
+            "score": 0.6016757488250732,
+            "metadata": {
+              "source": "article_02.json",
+              "chunk_index": 1,
+              "doc_type": "news",
+              "title": "Undergraduate students and staff - Library",
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_02.md::chunk-5",
+            "content": "Equipment loans:\nEquipment can be borrowed during 1 working day. Due time is 15 minutes before library’s closing time.\nEquipment overdue for more than 05 days will be considered lost, and the borrower will be charged for a replacement.\nEquipment must be returned directly to the library and received by a library staff at the circulation desk on the first floor. The library reserves the right to recall equipment for regular maintenance or for any reason the librarian may deem appropriate.",
+            "score": 0.5904589891433716,
+            "metadata": {
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "source": "article_02.json",
+              "title": "Undergraduate students and staff - Library",
+              "doc_type": "news",
+              "chunk_index": 5
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_02.md::chunk-4",
+            "content": "Requests and Holds\nYou can request books from the VinUni Library online library catalogue. Requests will take one to two business days. You will be notified by e-mail when your items are ready for pick up. Up-to-date status reports are also available in your library account. You can borrow the books from the VinUni Library circulation counter. Two Self-check machines are also available for borrowing books.\nRequested items will be held for two days for you to pick up.\nEquipment loans:",
+            "score": 0.5581611394882202,
+            "metadata": {
+              "source": "article_02.json",
+              "title": "Undergraduate students and staff - Library",
+              "doc_type": "news",
+              "chunk_index": 4,
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/"
+            },
+            "retrieval_method": "dense"
+          }
+        ],
+        "retrieved_sources": [
+          "news/article_02.md::chunk-3",
+          "news/article_02.md::chunk-0",
+          "news/article_02.md::chunk-1",
+          "news/article_02.md::chunk-5",
+          "news/article_02.md::chunk-4"
+        ],
+        "latency_sec": 2.986187999995309
+      },
+      {
+        "id": 11,
+        "question": "Tài liệu yêu cầu mượn trước (holds) sẽ được lưu giữ tại quầy lưu hành trong bao lâu để người mượn đến nhận?",
+        "expected_answer": "Tài liệu được giữ trong 2 ngày để người mượn đến lấy.",
+        "expected_context": "Requested items will be held for two days for you to pick up.",
+        "source_ids": [
+          "news/article_02.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.1111111111111111,
+          "answer_relevance": 0.5714285714285714,
+          "context_recall": 1.0,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Các tài liệu yêu cầu (requested items) sẽ được lưu giữ trong hai ngày để bạn đến nhận [news/article_02.md::chunk-4].",
+        "sources": [
+          {
+            "id": "news/article_02.md::chunk-5",
+            "content": "Equipment loans:\nEquipment can be borrowed during 1 working day. Due time is 15 minutes before library’s closing time.\nEquipment overdue for more than 05 days will be considered lost, and the borrower will be charged for a replacement.\nEquipment must be returned directly to the library and received by a library staff at the circulation desk on the first floor. The library reserves the right to recall equipment for regular maintenance or for any reason the librarian may deem appropriate.",
+            "score": 0.6228752732276917,
+            "metadata": {
+              "source": "article_02.json",
+              "chunk_index": 5,
+              "doc_type": "news",
+              "title": "Undergraduate students and staff - Library",
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_02.md::chunk-3",
+            "content": "Borrowing privileges:\nUndergraduate students may borrow up to 3 items during two weeks per item. Books may be renewed once for one week if they are not overdue and there has been no request for them by any other patrons. Books can be renewed online through library’s website or onsite with Self-check machines at 1st floor or 2nd floor in library.\nPolicy | Borrowed items | Borrowing time | Renewal\nUndergraduate student | 3 | 2 weeks | 1 week (one time only)\nRequests and Holds",
+            "score": 0.6054213047027588,
+            "metadata": {
+              "source": "article_02.json",
+              "title": "Undergraduate students and staff - Library",
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "doc_type": "news",
+              "chunk_index": 3
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_02.md::chunk-4",
+            "content": "Requests and Holds\nYou can request books from the VinUni Library online library catalogue. Requests will take one to two business days. You will be notified by e-mail when your items are ready for pick up. Up-to-date status reports are also available in your library account. You can borrow the books from the VinUni Library circulation counter. Two Self-check machines are also available for borrowing books.\nRequested items will be held for two days for you to pick up.\nEquipment loans:",
+            "score": 0.5883198976516724,
+            "metadata": {
+              "chunk_index": 4,
+              "title": "Undergraduate students and staff - Library",
+              "doc_type": "news",
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "source": "article_02.json"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_03.md::chunk-8",
+            "content": "Items of lesser value such as notebooks, umbrellas, and articles of clothing are not required to be placed in a locked location. However, these items will be kept in a controlled area accessible to library staff only.\nLibrary staff will take unclaimed IDs to Student Affair Management once a week on Friday.",
+            "score": 0.5870422720909119,
+            "metadata": {
+              "doc_type": "news",
+              "title": "Ask a librarian - Library",
+              "chunk_index": 8,
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/",
+              "source": "article_03.json"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_03.md::chunk-3",
+            "content": "Out-of-office messages for phone and email will refer to an appropriate alternate contact\nEmail inquiries and feedback will receive an acknowledgement within 24 hours\nLibrary staff are courteous, approachable, engaged, and respectful to privacy and confidentiality\nPatrons will wait no longer than two minutes in line at the desk for circulation service when the desk is open\nChat requests will be acknowledged within five minutes during chat operating hours",
+            "score": 0.5626251101493835,
+            "metadata": {
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/",
+              "source": "article_03.json",
+              "chunk_index": 3,
+              "doc_type": "news",
+              "title": "Ask a librarian - Library"
+            },
+            "retrieval_method": "dense"
+          }
+        ],
+        "retrieved_sources": [
+          "news/article_02.md::chunk-5",
+          "news/article_02.md::chunk-3",
+          "news/article_02.md::chunk-4",
+          "news/article_03.md::chunk-8",
+          "news/article_03.md::chunk-3"
+        ],
+        "latency_sec": 2.9912479000049643
+      },
+      {
+        "id": 12,
+        "question": "Thiết bị mượn tại thư viện nếu quá hạn bao nhiêu ngày thì bị coi là mất và người mượn phải thanh toán chi phí thay thế?",
+        "expected_answer": "Thiết bị quá hạn hơn 5 ngày sẽ bị coi là mất và người mượn phải thanh toán chi phí thay thế.",
+        "expected_context": "Equipment overdue for more than 05 days will be considered lost, and the borrower will be charged for a replacement.",
+        "source_ids": [
+          "news/article_02.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.037037037037037035,
+          "answer_relevance": 0.88,
+          "context_recall": 1.0,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Thiết bị mượn tại thư viện nếu quá hạn hơn 05 ngày sẽ được coi là mất và người mượn sẽ phải thanh toán chi phí để thay thế [news/article_02.md::chunk-5].",
+        "sources": [
+          {
+            "id": "news/article_02.md::chunk-5",
+            "content": "Equipment loans:\nEquipment can be borrowed during 1 working day. Due time is 15 minutes before library’s closing time.\nEquipment overdue for more than 05 days will be considered lost, and the borrower will be charged for a replacement.\nEquipment must be returned directly to the library and received by a library staff at the circulation desk on the first floor. The library reserves the right to recall equipment for regular maintenance or for any reason the librarian may deem appropriate.",
+            "score": 0.619190514087677,
+            "metadata": {
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "title": "Undergraduate students and staff - Library",
+              "doc_type": "news",
+              "chunk_index": 5,
+              "source": "article_02.json"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_02.md::chunk-6",
+            "content": "All mercies regarding fines and loan periods need to be approved by university senior leaders.\nThe following equipment is available for loan from the Circulation desk at 1st floor:\nLatop\nIPad\nCharger\nMouse\nHeadphone\nAdapter\nPointer\nMarker and Eraser\nLocker\nFines and other charges:\nPatrons will be charged fines for overdue materials/equipment or material/equipment repair and replacement fees. For more detailed, please read it in\nLibrary Policies for users\n.\nThese fines and fees are regulated in",
+            "score": 0.5498226881027222,
+            "metadata": {
+              "source": "article_02.json",
+              "doc_type": "news",
+              "title": "Undergraduate students and staff - Library",
+              "chunk_index": 6,
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_02.md::chunk-3",
+            "content": "Borrowing privileges:\nUndergraduate students may borrow up to 3 items during two weeks per item. Books may be renewed once for one week if they are not overdue and there has been no request for them by any other patrons. Books can be renewed online through library’s website or onsite with Self-check machines at 1st floor or 2nd floor in library.\nPolicy | Borrowed items | Borrowing time | Renewal\nUndergraduate student | 3 | 2 weeks | 1 week (one time only)\nRequests and Holds",
+            "score": 0.5292814373970032,
+            "metadata": {
+              "chunk_index": 3,
+              "doc_type": "news",
+              "title": "Undergraduate students and staff - Library",
+              "source": "article_02.json",
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_03.md::chunk-8",
+            "content": "Items of lesser value such as notebooks, umbrellas, and articles of clothing are not required to be placed in a locked location. However, these items will be kept in a controlled area accessible to library staff only.\nLibrary staff will take unclaimed IDs to Student Affair Management once a week on Friday.",
+            "score": 0.5020599365234375,
+            "metadata": {
+              "chunk_index": 8,
+              "source": "article_03.json",
+              "doc_type": "news",
+              "title": "Ask a librarian - Library",
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_03.md::chunk-6",
+            "content": "Turn lost items in to Lost and Found as soon as possible, but not later than the end of the business day on which they were found. Until lost items are turned in to Lost and Found they will be kept in a controlled holding area accessible to library staff only.",
+            "score": 0.47906917333602905,
+            "metadata": {
+              "doc_type": "news",
+              "chunk_index": 6,
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/",
+              "source": "article_03.json",
+              "title": "Ask a librarian - Library"
+            },
+            "retrieval_method": "dense"
+          }
+        ],
+        "retrieved_sources": [
+          "news/article_02.md::chunk-5",
+          "news/article_02.md::chunk-6",
+          "news/article_02.md::chunk-3",
+          "news/article_03.md::chunk-8",
+          "news/article_03.md::chunk-6"
+        ],
+        "latency_sec": 3.1599821999989217
+      },
+      {
+        "id": 13,
+        "question": "Các đồ vật bị bỏ quên (Lost and Found) có giá trị trên 500.000 VNĐ tại thư viện được quy định bảo quản như thế nào?",
+        "expected_answer": "Các đồ vật có giá trị trên 500.000 VNĐ như ví, ba lô, thiết bị điện tử bắt buộc phải được đặt ở vị trí có khóa an toàn.",
+        "expected_context": "Items of value > 500.000 VNĐ such as wallets, purses, backpacks, and electronic devices are required to be placed in a locked location.",
+        "source_ids": [
+          "news/article_03.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.08823529411764706,
+          "answer_relevance": 0.5555555555555556,
+          "context_recall": 1.0,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Theo tài liệu, các đồ vật có giá trị trên 500.000 VNĐ (như ví, túi xách, ba lô và các thiết bị điện tử) được quy định phải được đặt ở một vị trí có khóa [news/article_03.md::chunk-7].",
+        "sources": [
+          {
+            "id": "news/article_03.md::chunk-7",
+            "content": "Record items in the online Lost & Found Logbook at the time they are turned in. Information in it will help to ensure items are accounted for and returned to the rightful owners. Fill out the online Lost and Found Logbook completely and accurately.\nItems of value > 500.000 VNĐ such as wallets, purses, backpacks, and electronic devices are required to be placed in a locked location.",
+            "score": 0.6544074416160583,
+            "metadata": {
+              "chunk_index": 7,
+              "doc_type": "news",
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/",
+              "title": "Ask a librarian - Library",
+              "source": "article_03.json"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_03.md::chunk-6",
+            "content": "Turn lost items in to Lost and Found as soon as possible, but not later than the end of the business day on which they were found. Until lost items are turned in to Lost and Found they will be kept in a controlled holding area accessible to library staff only.",
+            "score": 0.6366696953773499,
+            "metadata": {
+              "title": "Ask a librarian - Library",
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/",
+              "chunk_index": 6,
+              "source": "article_03.json",
+              "doc_type": "news"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_03.md::chunk-8",
+            "content": "Items of lesser value such as notebooks, umbrellas, and articles of clothing are not required to be placed in a locked location. However, these items will be kept in a controlled area accessible to library staff only.\nLibrary staff will take unclaimed IDs to Student Affair Management once a week on Friday.",
+            "score": 0.6325839757919312,
+            "metadata": {
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/",
+              "doc_type": "news",
+              "chunk_index": 8,
+              "title": "Ask a librarian - Library",
+              "source": "article_03.json"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_03.md::chunk-5",
+            "content": "*The library’s Circulation Desk is located near the main entrance on the first floor.\nAll lost and found items will be kept in a secure location until they are either claimed by the owners or turned over to Student Affair Management, Operation Department. Listed below are procedures to be followed:",
+            "score": 0.5937497615814209,
+            "metadata": {
+              "source": "article_03.json",
+              "doc_type": "news",
+              "title": "Ask a librarian - Library",
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/",
+              "chunk_index": 5
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_03.md::chunk-9",
+            "content": "To attempt to ensure lost items are returned to the rightful owners, persons claiming items will be asked to describe the items and to provide identification. Claimants must sign for items that have been entered into the Lost and Found logbook before the items will be released to them.\nItems in Lost and Found which are not claimed after 30 days are transferred to the Operation Department.",
+            "score": 0.5855400562286377,
+            "metadata": {
+              "title": "Ask a librarian - Library",
+              "source": "article_03.json",
+              "doc_type": "news",
+              "chunk_index": 9,
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/"
+            },
+            "retrieval_method": "dense"
+          }
+        ],
+        "retrieved_sources": [
+          "news/article_03.md::chunk-7",
+          "news/article_03.md::chunk-6",
+          "news/article_03.md::chunk-8",
+          "news/article_03.md::chunk-5",
+          "news/article_03.md::chunk-9"
+        ],
+        "latency_sec": 3.1088546999963
+      },
+      {
+        "id": 14,
+        "question": "Sau bao nhiêu ngày đồ thất lạc không có người nhận sẽ được chuyển giao từ thư viện sang Phòng Vận hành (Operation Department)?",
+        "expected_answer": "Đồ thất lạc không được nhận sau 30 ngày sẽ được chuyển giao cho Phòng Vận hành.",
+        "expected_context": "Items in Lost and Found which are not claimed after 30 days are transferred to the Operation Department.",
+        "source_ids": [
+          "news/article_03.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.15,
+          "answer_relevance": 0.7916666666666666,
+          "context_recall": 1.0,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Đồ thất lạc không có người nhận sau 30 ngày sẽ được chuyển giao sang Phòng Vận hành (Operation Department) [news/article_03.md::chunk-9].",
+        "sources": [
+          {
+            "id": "news/article_03.md::chunk-6",
+            "content": "Turn lost items in to Lost and Found as soon as possible, but not later than the end of the business day on which they were found. Until lost items are turned in to Lost and Found they will be kept in a controlled holding area accessible to library staff only.",
+            "score": 0.7373766899108887,
+            "metadata": {
+              "doc_type": "news",
+              "source": "article_03.json",
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/",
+              "title": "Ask a librarian - Library",
+              "chunk_index": 6
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_03.md::chunk-9",
+            "content": "To attempt to ensure lost items are returned to the rightful owners, persons claiming items will be asked to describe the items and to provide identification. Claimants must sign for items that have been entered into the Lost and Found logbook before the items will be released to them.\nItems in Lost and Found which are not claimed after 30 days are transferred to the Operation Department.",
+            "score": 0.7297486066818237,
+            "metadata": {
+              "doc_type": "news",
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/",
+              "chunk_index": 9,
+              "title": "Ask a librarian - Library",
+              "source": "article_03.json"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_03.md::chunk-5",
+            "content": "*The library’s Circulation Desk is located near the main entrance on the first floor.\nAll lost and found items will be kept in a secure location until they are either claimed by the owners or turned over to Student Affair Management, Operation Department. Listed below are procedures to be followed:",
+            "score": 0.7121309041976929,
+            "metadata": {
+              "doc_type": "news",
+              "title": "Ask a librarian - Library",
+              "source": "article_03.json",
+              "chunk_index": 5,
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_03.md::chunk-8",
+            "content": "Items of lesser value such as notebooks, umbrellas, and articles of clothing are not required to be placed in a locked location. However, these items will be kept in a controlled area accessible to library staff only.\nLibrary staff will take unclaimed IDs to Student Affair Management once a week on Friday.",
+            "score": 0.6641594767570496,
+            "metadata": {
+              "chunk_index": 8,
+              "doc_type": "news",
+              "title": "Ask a librarian - Library",
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/",
+              "source": "article_03.json"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_03.md::chunk-10",
+            "content": "Items in Lost and Found such as food and beverages that will be kept for 1 day before being sorted and thrown away. Opened food and beverages will be discarded at the end of the business day.",
+            "score": 0.6611424684524536,
+            "metadata": {
+              "doc_type": "news",
+              "chunk_index": 10,
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/",
+              "title": "Ask a librarian - Library",
+              "source": "article_03.json"
+            },
+            "retrieval_method": "dense"
+          }
+        ],
+        "retrieved_sources": [
+          "news/article_03.md::chunk-6",
+          "news/article_03.md::chunk-9",
+          "news/article_03.md::chunk-5",
+          "news/article_03.md::chunk-8",
+          "news/article_03.md::chunk-10"
+        ],
+        "latency_sec": 2.968981600002735
+      },
+      {
+        "id": 15,
+        "question": "Theo trang Policy & Regulations của Phòng Đào tạo VinUni, quy chế Academic Regulations for Full-time Undergraduate Programs định nghĩa những nội dung gì?",
+        "expected_answer": "Định nghĩa cơ cấu, hệ thống tín chỉ, thang điểm, quy tắc tiến độ học tập, xếp loại học lực và yêu cầu tốt nghiệp cho sinh viên đại học chính quy.",
+        "expected_context": "Defines the structure, credit system, grading scale, progression rules, academic standing, and graduation requirements for all full-time undergraduate students.",
+        "source_ids": [
+          "news/article_04.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.19047619047619047,
+          "answer_relevance": 0.6086956521739131,
+          "context_recall": 1.0,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Theo trang Policy & Regulations, quy chế \"Academic Regulations for Full-time Undergraduate Programs\" định nghĩa cấu trúc, hệ thống tín chỉ, thang điểm, quy định về tiến độ học tập, tình trạng học tập và các yêu cầu tốt nghiệp cho tất cả sinh viên đại học chính quy [news/article_04.md::chunk-3].",
+        "sources": [
+          {
+            "id": "news/article_04.md::chunk-3",
+            "content": "Defines the structure, credit system, grading scale, progression rules, academic standing, and graduation requirements for all full-time undergraduate students.\nRead more\n2. Academic Regulations for Master’s Program\nOutlines the academic framework, credit and grading system, progression requirements, and graduation criteria applicable to all full-time Master’s students at VinUni.\nRead more\n3. Academic Regulations for Doctoral Degree Program",
+            "score": 0.8215575814247131,
+            "metadata": {
+              "source": "article_04.json",
+              "doc_type": "news",
+              "chunk_index": 3,
+              "url": "https://registrar.vinuni.edu.vn/academics/policy-regulations/",
+              "title": "Policy & Regulations"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-0",
+            "content": "# Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)\n\n**Source:** https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf\n\n**File:** academic_regulations.pdf\n\n**Verified:** true\n\n**Crawled:** 2026-09-26T02:28:30.755639+00:00\n\n---\n\n## Page 1",
+            "score": 0.8142215609550476,
+            "metadata": {
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "chunk_index": 0,
+              "doc_type": "legal",
+              "source": "academic_regulations.pdf"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_04.md::chunk-2",
+            "content": "This section provides all key policies and regulations that guide your academic life at VinUni. We’ve gathered all student-related policies in one place for easy access.\nKey Student Policies:\nBelow is the list of policies you may need throughout your studies. Click to view the full policy document:\n1. Academic Regulations for Full-time Undergraduate Programs",
+            "score": 0.7995445132255554,
+            "metadata": {
+              "doc_type": "news",
+              "source": "article_04.json",
+              "url": "https://registrar.vinuni.edu.vn/academics/policy-regulations/",
+              "title": "Policy & Regulations",
+              "chunk_index": 2
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-30",
+            "content": "5 \n \nCHAPTER I  \nGENERAL PROVISION \n \n \nArticle 1. Governing Scope and Regulated Entities  \n \nThis document specifies rules and regulations that govern educational \narrangements, examinations, assessment, grading, and graduation requirements based \non an academic credit system for full-time undergraduate students at VinUniversity. \nThese rules and regulations also apply to exchange and visiting students. \n \nArticle 2. Medium of Instruction  and Assessment",
+            "score": 0.7919608354568481,
+            "metadata": {
+              "source": "academic_regulations.pdf",
+              "chunk_index": 30,
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "doc_type": "legal",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)"
+            },
+            "retrieval_method": "dense"
+          },
+          {
+            "id": "news/article_04.md::chunk-1",
+            "content": "Policy & Regulations\nHome\nAcademics\nPolicy & Regulations\nPolicy & Regulations\nPolicy & Regulations\nRequest Transcripts & Certifications\nClass Schedule & Course Registration\nTransfer Credit\nExams & Grades\nProgram Change\nTime Away from VinUni: Leave, Withdraw, Return\nGraduation\nForms & Petitions\nPolicies & Academic Regulations for VinUniversity students",
+            "score": 0.7697031497955322,
+            "metadata": {
+              "chunk_index": 1,
+              "title": "Policy & Regulations",
+              "url": "https://registrar.vinuni.edu.vn/academics/policy-regulations/",
+              "source": "article_04.json",
+              "doc_type": "news"
+            },
+            "retrieval_method": "dense"
+          }
+        ],
+        "retrieved_sources": [
+          "news/article_04.md::chunk-3",
+          "legal/academic_regulations.md::chunk-0",
+          "news/article_04.md::chunk-2",
+          "legal/academic_regulations.md::chunk-30",
+          "news/article_04.md::chunk-1"
+        ],
+        "latency_sec": 3.0991795000009006
+      },
+      {
+        "id": 16,
+        "question": "Cổng thông tin Gateway for VinUnians liệt kê các nguồn tài nguyên học thuật chung (General Academic Resources) nào?",
+        "expected_answer": "Bao gồm Lịch học thuật (Academic Calendar), Danh mục học thuật (Academic Catalog), Liêm chính học thuật (Academic Integrity), Thư viện (Library), Dịch vụ đăng ký (Registry services & forms) và Chính sách từ A đến Z.",
+        "expected_context": "GENERAL ACADEMIC RESOURCES Academic Calendar Key academic dates and important milestones Academic Catalog Information on degrees and requirements Academic Integrity Principles, policies, and expectations for academic honesty Library Collections, study spaces, learning resources, and support services Registry services & forms Enrollment, academic records, and registry services Policy from A - Z Quick access to all regulations, policies, and guidelines",
+        "source_ids": [
+          "news/article_05.md"
+        ],
+        "status": "error",
+        "metrics": null,
+        "generated_answer": null,
+        "sources": [],
+        "retrieved_sources": [],
+        "latency_sec": 1.923502699995879,
+        "error": {
+          "code": "pipeline_error",
+          "message": "Retrieval or generation failed; check provider/configuration."
+        }
+      }
+    ]
+  },
+  "results_b": {
+    "config": "hybrid_rrf",
+    "status": "incomplete",
+    "successful_cases": 14,
+    "total_cases": 16,
+    "overall": null,
+    "cases": [
+      {
+        "id": 1,
+        "question": "Theo Quy chế đào tạo đại học năm 2024, số tín chỉ tối thiểu để một sinh viên được xếp loại sinh viên toàn thời gian trong một học kỳ chính là bao nhiêu?",
+        "expected_answer": "Sinh viên phải đăng ký tối thiểu 80% khối lượng học tập toàn thời gian bình thường trong học kỳ chính, tương đương 12 tín chỉ.",
+        "expected_context": "To be classified as a full-time student, s/he must be enrolled in at a minimum, 80% of a normal full-time load in a regular Semester (equivalent to 12 credits).",
+        "source_ids": [
+          "legal/academic_regulations.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.08571428571428572,
+          "answer_relevance": 0.7,
+          "context_recall": 1.0,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Theo quy chế, để được phân loại là sinh viên toàn thời gian trong một học kỳ chính, sinh viên phải đăng ký tối thiểu 80% khối lượng học tập chuẩn của một sinh viên toàn thời gian, tương đương với 12 tín chỉ [legal/academic_regulations.md::chunk-77].",
+        "sources": [
+          {
+            "id": "legal/academic_regulations.md::chunk-77",
+            "content": "2. To be classified as a full-time student, s/he must be enrolled in at a minimum, \n80% of a normal full-time load in a regular Semester (equivalent to 12 credits). \n 3. The study load variation in the regular semester is specified as follows:  \nVariation Academic load per regular \nSemester \nRemarks \nNormal load At least 14 credits (applicable \nfor first-semester students, and \nstudents with good academic \nstanding or higher in the \nprevious semester; not \napplicable for the final \nsemester).",
+            "score": 0.01639344262295082,
+            "metadata": {
+              "source": "academic_regulations.pdf",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "doc_type": "legal",
+              "chunk_index": 77
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/student_handbook.md::chunk-100",
+            "content": "your faculty and advisor are \nconfident that you are mentally, \n \n1 For tuition policies related to the study load, refer to the VinUniversity financial regulations https://vinuni.edu.vn/quy-dinh-tai-\nchinh-va-bieu-phi/",
+            "score": 0.01639344262295082,
+            "metadata": {
+              "source": "student_handbook.pdf",
+              "title": "VinUni Undergraduate Student Handbook (2020 historical edition)",
+              "doc_type": "legal",
+              "url": "https://vinuni.edu.vn/wp-content/uploads/2020/10/201001_VinUni_Undergraduate_Student_Handbook.pdf",
+              "chunk_index": 100
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-107",
+            "content": "possible, confidentiality and privacy.  \n \nArticle 16. Student Classification and Academic Standing  \n \n 1. After each regular semester, based on the accumulative number of credits, the \nclass standing of students (except for transfer students) is determined as follows: \nClass standing applies to College of Business and Management, College of Engineering \nand Computer Science, College of Arts and Sciences: \nClass Standing Number of accumulated credits \nFreshman  Below 30 \nSophomore 30 – 59",
+            "score": 0.016129032258064516,
+            "metadata": {
+              "doc_type": "legal",
+              "chunk_index": 107,
+              "source": "academic_regulations.pdf",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/assessment_guidelines.md::chunk-1",
+            "content": "1 \n \n \nReference number \nPublished date. \nApplicable department \n: VUNI.39 \n: 12/06/2024 \n: College of Health Sciences – Undergraduate Programs \nAccess level : Public  \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nRevision Date Author / Editor Description \nV1.0 Dec 15, 2022 \nDeveloped by: MD Education team \nReviewed by: Office of Registrar \nApproved by: Dean of College of Health Sciences, \nProvost \n1st released \nV2.0 Jan 23, 2024 \nDeveloped by: MD, BN team",
+            "score": 0.016129032258064516,
+            "metadata": {
+              "source": "assessment_guidelines.pdf",
+              "title": "Assessment Guidelines for Undergraduate Programs (2024-06-12)",
+              "doc_type": "legal",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VUNI.39_240612_Assessment-policy-for-Undergrade_CHS.pdf",
+              "chunk_index": 1
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-110",
+            "content": "16 \n \nClass Standing Number of accumulated credits \nFreshman  Below 35 \nSophomore 35– 70 \nJunior 71 – 105 \nSenior 106 - 140 \nFifth-year senior 141 - 175 \nSixth-year senior 176 - 255 \n \nThe University may use class standing to determine a student’s eligibility for \nreceiving financial aid and scholarships, applying for degree programs, enrolling in \ncourses, and evaluating progress.  \n \n 2. After each regular semester, based on the cumulative GPA, students are",
+            "score": 0.015873015873015872,
+            "metadata": {
+              "doc_type": "legal",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "source": "academic_regulations.pdf",
+              "chunk_index": 110
+            },
+            "retrieval_method": "hybrid"
+          }
+        ],
+        "retrieved_sources": [
+          "legal/academic_regulations.md::chunk-77",
+          "legal/student_handbook.md::chunk-100",
+          "legal/academic_regulations.md::chunk-107",
+          "legal/assessment_guidelines.md::chunk-1",
+          "legal/academic_regulations.md::chunk-110"
+        ],
+        "latency_sec": 3.2870923000009498
+      },
+      {
+        "id": 2,
+        "question": "Theo Quy chế đào tạo đại học năm 2024, hạn chót để sinh viên thêm một học phần (add course) vào thời khóa biểu học kỳ chính là khi nào?",
+        "expected_answer": "Hạn chót thêm học phần là trước khi kết thúc ngày làm việc thứ 10 của học kỳ chính và ngày làm việc thứ 5 của học kỳ rút gọn (mini semester).",
+        "expected_context": "Students are allowed to add a course to their schedule no later than the close of the 10 th business day of the regular semester and no later than the close of the 5 th business day of the mini semesters (Fall A/B, or Spring A/B).",
+        "source_ids": [
+          "legal/academic_regulations.md"
+        ],
+        "status": "error",
+        "metrics": null,
+        "generated_answer": null,
+        "sources": [],
+        "retrieved_sources": [],
+        "latency_sec": 2.20632040000055,
+        "error": {
+          "code": "pipeline_error",
+          "message": "Retrieval or generation failed; check provider/configuration."
+        }
+      },
+      {
+        "id": 3,
+        "question": "Thời hạn rút học phần không bị ghi vào hồ sơ học tập (drop deadline) trong học kỳ chính là ngày làm việc thứ mấy?",
+        "expected_answer": "Hạn drop học phần là trước khi kết thúc ngày làm việc thứ 15 của học kỳ chính (và ngày thứ 10 của kỳ Hè), các thay đổi trong giai đoạn này không bị lưu vào hồ sơ học tập.",
+        "expected_context": "The drop deadline for a regular semester is no later than the close of the 15th business day of the semester and no later than the close of the 10th business day of the Summer semester. Changes made in this period will not be included in the academic record of the students.",
+        "source_ids": [
+          "legal/academic_regulations.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.05,
+          "answer_relevance": 0.7391304347826086,
+          "context_recall": 1.0,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Thời hạn rút học phần trong học kỳ chính (regular semester) không muộn hơn thời điểm kết thúc ngày làm việc thứ 15 của học kỳ đó [legal/academic_regulations.md::chunk-83]. Các thay đổi được thực hiện trong khoảng thời gian này sẽ không được đưa vào hồ sơ học tập của sinh viên [legal/academic_regulations.md::chunk-83].",
+        "sources": [
+          {
+            "id": "legal/academic_regulations.md::chunk-83",
+            "content": "2. Students are allowed to drop a class within the drop deadline that is published \nin the academic calendar for that  semester. The drop deadline for a regular semester is \nno later than the close of the 15th business day of the semester and no later than the close \nof the 10th business day of the Summer semester. Changes made in this period will not \nbe included in the academic record of the students. \n 3. Dropping a class  after the add /drop period has ended is considered a",
+            "score": 0.03278688524590164,
+            "metadata": {
+              "chunk_index": 83,
+              "doc_type": "legal",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "source": "academic_regulations.pdf",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-84",
+            "content": "Withdrawal. Students may withdraw from a course after the add/drop period has ended \nwith no grade penalty. Students will receive a \"Withdrawal - W\" grade on their transcript \nfor the course when they withdraw.  \n 4. Students who wish to add a course after the add/drop period has ended, need \nto petition with approval from their academic advisor/Office of Registrar. The instructor \nmay allow the addition upon her/his discretion. \n5. Course withdrawal policy:",
+            "score": 0.03125763125763126,
+            "metadata": {
+              "doc_type": "legal",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "chunk_index": 84,
+              "source": "academic_regulations.pdf"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/student_handbook.md::chunk-31",
+            "content": "Last day to apply for credit transfer/course exemption (if any)  12-Nov \nRelease of Semester 1| examination schedule 8-Jan \nLast day of Teaching 22-Jan \nExamination period 25 Jan – 5 Feb \nRelease of Semester 1| course grades 19-Feb \nSemester Break 8 – 21 Feb \nSemester 2 - Spring 2020/2021 \nRelease of Master Class Schedule for the Academic Year 25-Jan \nClasses begin 22-Feb \nFirst Day for add/drop 22-Feb \nLast day for course add/drop 5 Mar (add)/ 11 Mar (drop)",
+            "score": 0.03125763125763126,
+            "metadata": {
+              "chunk_index": 31,
+              "source": "student_handbook.pdf",
+              "doc_type": "legal",
+              "title": "VinUni Undergraduate Student Handbook (2020 historical edition)",
+              "url": "https://vinuni.edu.vn/wp-content/uploads/2020/10/201001_VinUni_Undergraduate_Student_Handbook.pdf"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-86",
+            "content": "occur before completing no more than 30% of the study time for that course. After that \ndate, withdrawals will no longer be permitted, and students will be graded according \nto their course performance. If the student withdraws before the “Drop Date” for each \nsemester, no W grade should be recorded on the transcript. \nc) The withdrawal limit policy allows students to withdraw from a maximum of 18",
+            "score": 0.030621785881252923,
+            "metadata": {
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "source": "academic_regulations.pdf",
+              "chunk_index": 86,
+              "doc_type": "legal"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-182",
+            "content": "within six months from the time it is granted.  \n \nThe student must request the Registrar (who then notifies the  \ncourse instructor ), together with relevant supporting documents \n(such as official medical records). Upon assigning an \nincomplete grade, the instructor must specify a period (deadline) \nfor made -up work.  The final decision as to whether an \nincomplete may be given rests with th e instructor; however, the \nmaximum time limit is subject to University policy. If the work",
+            "score": 0.029411764705882353,
+            "metadata": {
+              "source": "academic_regulations.pdf",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "chunk_index": 182,
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "doc_type": "legal"
+            },
+            "retrieval_method": "hybrid"
+          }
+        ],
+        "retrieved_sources": [
+          "legal/academic_regulations.md::chunk-83",
+          "legal/academic_regulations.md::chunk-84",
+          "legal/student_handbook.md::chunk-31",
+          "legal/academic_regulations.md::chunk-86",
+          "legal/academic_regulations.md::chunk-182"
+        ],
+        "latency_sec": 3.2531958000035957
+      },
+      {
+        "id": 4,
+        "question": "Khối lượng học tập toàn thời gian thông thường (normal full-time load) trải đều trong một năm học là bao nhiêu tín chỉ?",
+        "expected_answer": "Khối lượng học tập toàn thời gian bình thường là 30 tín chỉ trải đều trong một năm học.",
+        "expected_context": "A normal full-time load is 30 credits spread over an academic year. The student may be able to increase or decrease his/her study load to help meet his/her academic goals.",
+        "source_ids": [
+          "legal/academic_regulations.md"
+        ],
+        "status": "error",
+        "metrics": null,
+        "generated_answer": null,
+        "sources": [],
+        "retrieved_sources": [],
+        "latency_sec": 3.197571999990032,
+        "error": {
+          "code": "pipeline_error",
+          "message": "Retrieval or generation failed; check provider/configuration."
+        }
+      },
+      {
+        "id": 5,
+        "question": "Sinh viên thuộc đối tượng nào được áp dụng khối lượng học tập ít nhất 10 tín chỉ và không quá 14 tín chỉ trong học kỳ chính?",
+        "expected_answer": "Sinh viên có học lực yếu kém (poor academic standing) trong học kỳ trước đó.",
+        "expected_context": "At least 10 credits and no more than 14 credits, applicable to students with poor academic standing in the previous semester.",
+        "source_ids": [
+          "legal/academic_regulations.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.13157894736842105,
+          "answer_relevance": 0.84,
+          "context_recall": 1.0,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Dựa trên tài liệu được cung cấp, khối lượng học tập ít nhất 10 tín chỉ và không quá 14 tín chỉ trong học kỳ chính được áp dụng cho các sinh viên có kết quả học tập kém (poor academic standing) ở học kỳ trước [legal/academic_regulations.md::chunk-78].",
+        "sources": [
+          {
+            "id": "legal/academic_regulations.md::chunk-78",
+            "content": "applicable for the final \nsemester). \n \nAt least 10 credits and no more \nthan 14 credits, applicable to \nstudents with poor academic \nstanding in the previous \nsemester.  \nThis is to complete the degree \nrequirements within a normal \nspecified duration of study.  \nAutomatic \nOverload \n18-22 credits, subject to \nreviewed by the Academic \nAdvisor/Program Director.  \nThis enables students to pursue \ntheir studies at a pace \ncommensurate with their needs \nand/or capabilities",
+            "score": 0.03007688828584351,
+            "metadata": {
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "chunk_index": 78,
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "doc_type": "legal",
+              "source": "academic_regulations.pdf"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-15",
+            "content": "Article 11. Study Load  ................................ ................................ ................................ .... 11 \nArticle 12. Course Add, Drop, and Withdrawal  ................................ ..............................  12 \nArticle 13. Transfer of Credit and Course Exemption  ................................ .....................  13 \nArticle 14. Re-Study/Improvement Study  ................................ ................................ ....... 14",
+            "score": 0.02877846790890269,
+            "metadata": {
+              "source": "academic_regulations.pdf",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "doc_type": "legal",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "chunk_index": 15
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-2",
+            "content": "Committee \nApproved by: Provost  \nRevised Article 5, Article 6, \nArticle 16, Article 17, Article 18, \nArticle 19, Article 22, Article 23, \nArticle 25, Article 26, Article 29. \nV4.0 5/10/2020 Reviewed by: Registrar and Vice -Provost \nOffice \nApproved by: Provost  \nArticle 4, Article 6, Ar ticle 7, Article 10, \nArticle 11, Article 12, Article 13, Article 14, \nArticle 15, Article 16, Article 17, Article 19, \nArticle 20, Article 21, Article 22, Article 24, \nArticle 28, Chapter VI",
+            "score": 0.01639344262295082,
+            "metadata": {
+              "source": "academic_regulations.pdf",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "doc_type": "legal",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "chunk_index": 2
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-77",
+            "content": "2. To be classified as a full-time student, s/he must be enrolled in at a minimum, \n80% of a normal full-time load in a regular Semester (equivalent to 12 credits). \n 3. The study load variation in the regular semester is specified as follows:  \nVariation Academic load per regular \nSemester \nRemarks \nNormal load At least 14 credits (applicable \nfor first-semester students, and \nstudents with good academic \nstanding or higher in the \nprevious semester; not \napplicable for the final \nsemester).",
+            "score": 0.01639344262295082,
+            "metadata": {
+              "source": "academic_regulations.pdf",
+              "doc_type": "legal",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "chunk_index": 77,
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-14",
+            "content": "Article 8. Program Enrolment  ................................ ................................ .........................  10 \nArticle 9. Class Arrangements  ................................ ................................ .........................  10 \nArticle 10. Course Registration  ................................ ................................ .......................  11",
+            "score": 0.016129032258064516,
+            "metadata": {
+              "source": "academic_regulations.pdf",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "doc_type": "legal",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "chunk_index": 14
+            },
+            "retrieval_method": "hybrid"
+          }
+        ],
+        "retrieved_sources": [
+          "legal/academic_regulations.md::chunk-78",
+          "legal/academic_regulations.md::chunk-15",
+          "legal/academic_regulations.md::chunk-2",
+          "legal/academic_regulations.md::chunk-77",
+          "legal/academic_regulations.md::chunk-14"
+        ],
+        "latency_sec": 3.194657100000768
+      },
+      {
+        "id": 6,
+        "question": "Hướng dẫn đánh giá VUNI.39 ban hành ngày 12/06/2024 áp dụng cho các chương trình đào tạo đại học nào của VinUni?",
+        "expected_answer": "Áp dụng cho các chương trình đại học bao gồm Bác sĩ Y khoa (Medical Doctor) và Cử nhân Điều dưỡng (Bachelor of Nursing) tại Viện Khoa học Sức khỏe (College of Health Sciences).",
+        "expected_context": "This guideline specifies the assessment policy for courses offered for undergraduate programs (including the Medical Doctor and Bachelor of Nursing) at the College of Health Sciences.",
+        "source_ids": [
+          "legal/assessment_guidelines.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.2619047619047619,
+          "answer_relevance": 0.8,
+          "context_recall": 0.6818181818181818,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Dựa trên tài liệu được cung cấp, hướng dẫn đánh giá có số tham chiếu VUNI.39 ban hành ngày 12/06/2024 áp dụng cho **College of Health Sciences – Undergraduate Programs** (Khối ngành Khoa học Sức khỏe – Các chương trình Đại học) [legal/assessment_guidelines.md::chunk-1].",
+        "sources": [
+          {
+            "id": "legal/assessment_guidelines.md::chunk-0",
+            "content": "# Assessment Guidelines for Undergraduate Programs (2024-06-12)\n\n**Source:** https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VUNI.39_240612_Assessment-policy-for-Undergrade_CHS.pdf\n\n**File:** assessment_guidelines.pdf\n\n**Verified:** true\n\n**Crawled:** 2026-09-26T02:28:31.685061+00:00\n\n---\n\n## Page 1",
+            "score": 0.03252247488101534,
+            "metadata": {
+              "title": "Assessment Guidelines for Undergraduate Programs (2024-06-12)",
+              "chunk_index": 0,
+              "source": "assessment_guidelines.pdf",
+              "doc_type": "legal",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VUNI.39_240612_Assessment-policy-for-Undergrade_CHS.pdf"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_04.md::chunk-13",
+            "content": "Read more\n20. VinUni Graduation Diploma Templates\nDefines and standardizes the formal diploma templates used for Bachelor’s, Master’s, Doctoral, and Medical Doctor degrees, fully compliant with Vietnamese Ministry of Education regulations (Circular 21/2019 and 27/2019), approved via Decision No. 262/2024/QĐ‑VUNI by the Provost.\nRead more\n🔍Looking for something specific?\nCheck the complete\nVinUni Policy Handbook.\nUse the search bar to find policy keywords.",
+            "score": 0.030158730158730156,
+            "metadata": {
+              "url": "https://registrar.vinuni.edu.vn/academics/policy-regulations/",
+              "doc_type": "news",
+              "source": "article_04.json",
+              "chunk_index": 13,
+              "title": "Policy & Regulations"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/assessment_guidelines.md::chunk-1",
+            "content": "1 \n \n \nReference number \nPublished date. \nApplicable department \n: VUNI.39 \n: 12/06/2024 \n: College of Health Sciences – Undergraduate Programs \nAccess level : Public  \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nRevision Date Author / Editor Description \nV1.0 Dec 15, 2022 \nDeveloped by: MD Education team \nReviewed by: Office of Registrar \nApproved by: Dean of College of Health Sciences, \nProvost \n1st released \nV2.0 Jan 23, 2024 \nDeveloped by: MD, BN team",
+            "score": 0.01639344262295082,
+            "metadata": {
+              "source": "assessment_guidelines.pdf",
+              "title": "Assessment Guidelines for Undergraduate Programs (2024-06-12)",
+              "doc_type": "legal",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VUNI.39_240612_Assessment-policy-for-Undergrade_CHS.pdf",
+              "chunk_index": 1
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/student_handbook.md::chunk-107",
+            "content": "receiving the request, evaluations will be made to determine the number of equivalent VinUniversity \ncredits and the equivalent VinUniversity grades. \n \n5.4. Student Classification \n \nYour classification is  not determined by the number of years you have taken but by the number \nof accumulative credits you have earned per an academic year.",
+            "score": 0.016129032258064516,
+            "metadata": {
+              "chunk_index": 107,
+              "url": "https://vinuni.edu.vn/wp-content/uploads/2020/10/201001_VinUni_Undergraduate_Student_Handbook.pdf",
+              "source": "student_handbook.pdf",
+              "doc_type": "legal",
+              "title": "VinUni Undergraduate Student Handbook (2020 historical edition)"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_04.md::chunk-3",
+            "content": "Defines the structure, credit system, grading scale, progression rules, academic standing, and graduation requirements for all full-time undergraduate students.\nRead more\n2. Academic Regulations for Master’s Program\nOutlines the academic framework, credit and grading system, progression requirements, and graduation criteria applicable to all full-time Master’s students at VinUni.\nRead more\n3. Academic Regulations for Doctoral Degree Program",
+            "score": 0.015873015873015872,
+            "metadata": {
+              "title": "Policy & Regulations",
+              "doc_type": "news",
+              "chunk_index": 3,
+              "source": "article_04.json",
+              "url": "https://registrar.vinuni.edu.vn/academics/policy-regulations/"
+            },
+            "retrieval_method": "hybrid"
+          }
+        ],
+        "retrieved_sources": [
+          "legal/assessment_guidelines.md::chunk-0",
+          "news/article_04.md::chunk-13",
+          "legal/assessment_guidelines.md::chunk-1",
+          "legal/student_handbook.md::chunk-107",
+          "news/article_04.md::chunk-3"
+        ],
+        "latency_sec": 3.1808386000047904
+      },
+      {
+        "id": 7,
+        "question": "Văn bản Assessment Guidelines của Viện Khoa học Sức khỏe được phê duyệt bởi ai trong phiên bản V2.0 ngày 23/01/2024?",
+        "expected_answer": "Được phê duyệt bởi Hiệu trưởng Viện Khoa học Sức khỏe (Dean of College of Health Sciences) và Phó Hiệu trưởng Đào tạo (Provost).",
+        "expected_context": "Approved by: Dean of College of Health Sciences, Provost",
+        "source_ids": [
+          "legal/assessment_guidelines.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.5,
+          "answer_relevance": 0.7391304347826086,
+          "context_recall": 1.0,
+          "context_precision": 1.0
+        },
+        "generated_answer": "Trong phiên bản V2.0 ngày 23/01/2024 của văn bản Assessment Guidelines (thuộc College of Health Sciences), tài liệu được phê duyệt bởi:\n- Dean of College of Health Sciences\n- Provost \n[legal/assessment_guidelines.md::chunk-2]",
+        "sources": [
+          {
+            "id": "legal/assessment_guidelines.md::chunk-2",
+            "content": "V2.0 Jan 23, 2024 \nDeveloped by: MD, BN team \nReviewed by: MD & BN Program Committee, Office \nof Registrar \nApproved by: Dean of College of Health Sciences, \nProvost \nRevision & \nupdate \n  \nAssessment Guidelines for Undergraduate Programs  \nat College of Health Sciences",
+            "score": 0.03278688524590164,
+            "metadata": {
+              "doc_type": "legal",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VUNI.39_240612_Assessment-policy-for-Undergrade_CHS.pdf",
+              "chunk_index": 2,
+              "title": "Assessment Guidelines for Undergraduate Programs (2024-06-12)",
+              "source": "assessment_guidelines.pdf"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/assessment_guidelines.md::chunk-1",
+            "content": "1 \n \n \nReference number \nPublished date. \nApplicable department \n: VUNI.39 \n: 12/06/2024 \n: College of Health Sciences – Undergraduate Programs \nAccess level : Public  \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nRevision Date Author / Editor Description \nV1.0 Dec 15, 2022 \nDeveloped by: MD Education team \nReviewed by: Office of Registrar \nApproved by: Dean of College of Health Sciences, \nProvost \n1st released \nV2.0 Jan 23, 2024 \nDeveloped by: MD, BN team",
+            "score": 0.03128054740957967,
+            "metadata": {
+              "title": "Assessment Guidelines for Undergraduate Programs (2024-06-12)",
+              "source": "assessment_guidelines.pdf",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VUNI.39_240612_Assessment-policy-for-Undergrade_CHS.pdf",
+              "chunk_index": 1,
+              "doc_type": "legal"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/assessment_guidelines.md::chunk-0",
+            "content": "# Assessment Guidelines for Undergraduate Programs (2024-06-12)\n\n**Source:** https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VUNI.39_240612_Assessment-policy-for-Undergrade_CHS.pdf\n\n**File:** assessment_guidelines.pdf\n\n**Verified:** true\n\n**Crawled:** 2026-09-26T02:28:31.685061+00:00\n\n---\n\n## Page 1",
+            "score": 0.031009615384615385,
+            "metadata": {
+              "doc_type": "legal",
+              "title": "Assessment Guidelines for Undergraduate Programs (2024-06-12)",
+              "source": "assessment_guidelines.pdf",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VUNI.39_240612_Assessment-policy-for-Undergrade_CHS.pdf",
+              "chunk_index": 0
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-3",
+            "content": "Article 28, Chapter VI  \nV5.0 24/08/2021 Reviewed by: Registrar, Deans/Vice -Deans, \nProgram Directors  \nApproved by: Provost  \nArticles \n4,5,7,9,10,11,13,14,15,16, 17,18,19,20,21,22,23,24,\n25,26 \nV5.1a 01/09/2022 Reviewed by: Registrar, Deans/Vice -Deans, \nProgram Directors  \nApproved by: Provost  \nArticle 12:  point 5 \nArticle 21 : point 3, 4, 5, 6 \n \nV5.1 07/4/2023 Reviewed by: Registrar, Deans/Vice -Deans, \nProgram Directors  \nApproved by: Provost",
+            "score": 0.030776515151515152,
+            "metadata": {
+              "chunk_index": 3,
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "doc_type": "legal",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "source": "academic_regulations.pdf"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-1",
+            "content": "1 \n \n \n \n \nRecord of Changes  \nRevision Date Author / Editor  Description of Changes  \nv1.0 22/5/2020 Prepared by:  Head of Registrar  \nReviewed by:  Dean and Senior Faculty  \nApproved by: Provost \nSubmitted to MOET for legal procedure  \nv2.0 25/5/2020 Prepared by: Head of Registrar  \nReviewed by: Dean and Senior Faculty  \nApproved by: Provost  \nRevised version for the academic year \nimplementation  \nV3.0 26/8/2020 Reviewed by: Educational Affairs \nCommittee \nApproved by: Provost",
+            "score": 0.029850746268656716,
+            "metadata": {
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "source": "academic_regulations.pdf",
+              "doc_type": "legal",
+              "chunk_index": 1,
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf"
+            },
+            "retrieval_method": "hybrid"
+          }
+        ],
+        "retrieved_sources": [
+          "legal/assessment_guidelines.md::chunk-2",
+          "legal/assessment_guidelines.md::chunk-1",
+          "legal/assessment_guidelines.md::chunk-0",
+          "legal/academic_regulations.md::chunk-3",
+          "legal/academic_regulations.md::chunk-1"
+        ],
+        "latency_sec": 3.31029250001302
+      },
+      {
+        "id": 8,
+        "question": "Sổ tay sinh viên VinUni (Student Handbook) phiên bản lịch sử năm 2020 đưa ra lưu ý gì về tính chính xác và thay đổi của thông tin?",
+        "expected_answer": "Thông tin được xem là chính xác tại thời điểm xuất bản và có thể thay đổi theo thời gian.",
+        "expected_context": "Please note that the information is believed to be accurate as of the date of publication and is subject to change.",
+        "source_ids": [
+          "legal/student_handbook.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.0641025641025641,
+          "answer_relevance": 0.8928571428571429,
+          "context_recall": 0.7058823529411765,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Dựa trên tài liệu được cung cấp, Sổ tay sinh viên VinUni (Student Handbook) phiên bản lịch sử năm 2020 đưa ra các lưu ý về thông tin như sau:\n\n* Sổ tay này không có ý định trở thành một hợp đồng giữa Trường Đại học VinUniversity và sinh viên [legal/student_handbook.md::chunk-241].\n* Các thay đổi về nội dung có thể được thực hiện bất cứ lúc nào [legal/student_handbook.md::chunk-241].\n* Trường Đại học VinUniversity bảo lưu quyền sửa đổi, điều chỉnh, bổ sung hoặc xóa bỏ các quy tắc, chính sách và thủ tục của mình mà không cần báo trước [legal/student_handbook.md::chunk-241].",
+        "sources": [
+          {
+            "id": "legal/student_handbook.md::chunk-0",
+            "content": "# VinUni Undergraduate Student Handbook (2020 historical edition)\n\n**Source:** https://vinuni.edu.vn/wp-content/uploads/2020/10/201001_VinUni_Undergraduate_Student_Handbook.pdf\n\n**File:** student_handbook.pdf\n\n**Verified:** true\n\n**Crawled:** 2026-09-26T02:28:32.812244+00:00\n\n---\n\n## Page 1\n\n \n   \n\n\n## Page 2",
+            "score": 0.03278688524590164,
+            "metadata": {
+              "source": "student_handbook.pdf",
+              "doc_type": "legal",
+              "chunk_index": 0,
+              "title": "VinUni Undergraduate Student Handbook (2020 historical edition)",
+              "url": "https://vinuni.edu.vn/wp-content/uploads/2020/10/201001_VinUni_Undergraduate_Student_Handbook.pdf"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/student_handbook.md::chunk-1",
+            "content": "STUDENT HANDBOOK \n2 \n \nWELCOME, STUDENTS 2020 \n \nThe Faculty and Staff welcome you to VinUniversity. This Undergraduate  Student Handbook presents \ninformation on subjects of immediate interest and concern to you as a full-time student at the University. \nPlease read all of the Handbook carefully to get an overall picture of the policies and procedures affecting \nyour study at the University. We encourage you to check this Handbook for relevant information whenever",
+            "score": 0.03200204813108039,
+            "metadata": {
+              "title": "VinUni Undergraduate Student Handbook (2020 historical edition)",
+              "doc_type": "legal",
+              "source": "student_handbook.pdf",
+              "chunk_index": 1,
+              "url": "https://vinuni.edu.vn/wp-content/uploads/2020/10/201001_VinUni_Undergraduate_Student_Handbook.pdf"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/student_handbook.md::chunk-241",
+            "content": "## Page 40\n\n \n \n \n \nQuestions? \nOur Contact Team is here to help  \nEmail: registrar@vinuni.edu.vn and studentaffairs@vinuni.edu.vn  \n \n \n \nAuthorization \n \nThis Handbook is not intended to be a contract between VinUniversity and the Student. The Student \nHandbook is available online at https://vinuni.edu.vn/handbook/. Changes in the content may be made at \nany time. VinUniversity reserves the right to amend, modify, add to, or delete from its rules, policies, and \nprocedures without notice.",
+            "score": 0.031009615384615385,
+            "metadata": {
+              "url": "https://vinuni.edu.vn/wp-content/uploads/2020/10/201001_VinUni_Undergraduate_Student_Handbook.pdf",
+              "title": "VinUni Undergraduate Student Handbook (2020 historical edition)",
+              "doc_type": "legal",
+              "chunk_index": 241,
+              "source": "student_handbook.pdf"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/student_handbook.md::chunk-34",
+            "content": "STUDENT HANDBOOK \n9 \n*Important Note: The University reserves the right to change the calendar when necessary. You will need to \ntake the initiative and responsibility to get updated on the timeline via the Student Information System (SIS) \nand VinUni’s website. \n \n2. Academic Resources \n \n2.1. Academic Advising \n \nAcademic advising is a student-centered process that allows you to reach your full academic potential and",
+            "score": 0.029211087420042643,
+            "metadata": {
+              "url": "https://vinuni.edu.vn/wp-content/uploads/2020/10/201001_VinUni_Undergraduate_Student_Handbook.pdf",
+              "doc_type": "legal",
+              "source": "student_handbook.pdf",
+              "chunk_index": 34,
+              "title": "VinUni Undergraduate Student Handbook (2020 historical edition)"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/student_handbook.md::chunk-4",
+            "content": "STUDENT HANDBOOK \n3 \nContents \n \nWELCOME, STUDENTS 2020 ................................ ................................ ................................ ................................ ........................  2 \nContents ................................ ................................ ................................ ................................ ................................ ................................  3",
+            "score": 0.016129032258064516,
+            "metadata": {
+              "source": "student_handbook.pdf",
+              "title": "VinUni Undergraduate Student Handbook (2020 historical edition)",
+              "doc_type": "legal",
+              "url": "https://vinuni.edu.vn/wp-content/uploads/2020/10/201001_VinUni_Undergraduate_Student_Handbook.pdf",
+              "chunk_index": 4
+            },
+            "retrieval_method": "hybrid"
+          }
+        ],
+        "retrieved_sources": [
+          "legal/student_handbook.md::chunk-0",
+          "legal/student_handbook.md::chunk-1",
+          "legal/student_handbook.md::chunk-241",
+          "legal/student_handbook.md::chunk-34",
+          "legal/student_handbook.md::chunk-4"
+        ],
+        "latency_sec": 3.326703099999577
+      },
+      {
+        "id": 9,
+        "question": "Thư viện VinUni cung cấp những dịch vụ gì trong phòng media studio?",
+        "expected_answer": "Thư viện có 2 phòng media studio bao gồm One Button Studio hỗ trợ thiết bị công nghệ tạo dự án số, quay video, làm podcast và số hóa nội dung.",
+        "expected_context": "Two media studios, including a One Button Studio provides access to state-of-the-art technology required for the creation of digital projects. Library staff are here to support you in the development of digital literacy and media creation skills, including videos, digital storytelling, podcasts, blogging and more.",
+        "source_ids": [
+          "news/article_01.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.06349206349206349,
+          "answer_relevance": 0.6153846153846154,
+          "context_recall": 1.0,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Dựa trên tài liệu được cung cấp, trong phòng media studio (bao gồm cả One Button Studio), Thư viện cung cấp quyền tiếp cận công nghệ hiện đại cần thiết để tạo ra các dự án kỹ thuật số. Nhân viên thư viện luôn sẵn sàng hỗ trợ bạn phát triển kỹ năng đọc viết kỹ thuật số và sáng tạo truyền thông, bao gồm làm video, kể chuyện kỹ thuật số, làm podcast, viết blog và nhiều hoạt động khác [news/article_01.md::chunk-3].",
+        "sources": [
+          {
+            "id": "news/article_01.md::chunk-3",
+            "content": "Drop-in support\nStudent can access the Student Affairs Office in the Library for drop-in support.\nMedia studio\nTwo media studios, including a One Button Studio provides access to state-of-the-art technology required for the creation of digital projects. Library staff are here to support you in the development of digital literacy and media creation skills, including videos, digital storytelling, podcasts, blogging and more.",
+            "score": 0.03278688524590164,
+            "metadata": {
+              "url": "https://library.vinuni.edu.vn/services/learning-services/",
+              "chunk_index": 3,
+              "source": "article_01.json",
+              "doc_type": "news",
+              "title": "Learning support - Library"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_02.md::chunk-2",
+            "content": "Research guides | News and Events\nWorkshops and tours | Social media\nBorrowing:\nMy library card:\nYour VinUniversity ID serves as your library card to borrow library materials or equipment.\nBorrowing privileges:",
+            "score": 0.031054405392392875,
+            "metadata": {
+              "doc_type": "news",
+              "title": "Undergraduate students and staff - Library",
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "source": "article_02.json",
+              "chunk_index": 2
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_01.md::chunk-1",
+            "content": "VinUni Library will provide the following services to support the learners:\nWorkshops and tours\nAcademic librarians present workshops and library tours for interested students, faculty, and staff to help you to enhance your research skills and knowledge of the Library. To request a workshop or tour, please contact the Director, Library and Learning Resources\nCourse reserves",
+            "score": 0.016129032258064516,
+            "metadata": {
+              "source": "article_01.json",
+              "title": "Learning support - Library",
+              "chunk_index": 1,
+              "doc_type": "news",
+              "url": "https://library.vinuni.edu.vn/services/learning-services/"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/student_handbook.md::chunk-218",
+            "content": "Activities that are considered harassment may include but are not limited to: \n• Verbal abuse, ridicule, offensive jokes or comments \n• Threatening, intimidating, or hostile acts \n• Displaying or distributing offensive materials, writings, or images \n• Harassment may also include conducts carried out over the internet, through email, social media, \nor other electronic means. \n \nVinUniversity encourages anyone who believes that they have been the object of harassment to seek",
+            "score": 0.015873015873015872,
+            "metadata": {
+              "source": "student_handbook.pdf",
+              "title": "VinUni Undergraduate Student Handbook (2020 historical edition)",
+              "doc_type": "legal",
+              "url": "https://vinuni.edu.vn/wp-content/uploads/2020/10/201001_VinUni_Undergraduate_Student_Handbook.pdf",
+              "chunk_index": 218
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/student_handbook.md::chunk-47",
+            "content": "• Community spac e: VinUniversity students can participate in  regular activities such as talks, \npresentations, book discussions, exhibitions, poetry reading, etc. in the open amphitheater, and \nclosed training rooms with a movable partition to fulfill the needs for a sense of belonging to a larger \ncommunity. \n \nStudents can have access to books, journals, online databases, and more in all academic areas on-campus",
+            "score": 0.015873015873015872,
+            "metadata": {
+              "source": "student_handbook.pdf",
+              "title": "VinUni Undergraduate Student Handbook (2020 historical edition)",
+              "chunk_index": 47,
+              "url": "https://vinuni.edu.vn/wp-content/uploads/2020/10/201001_VinUni_Undergraduate_Student_Handbook.pdf",
+              "doc_type": "legal"
+            },
+            "retrieval_method": "hybrid"
+          }
+        ],
+        "retrieved_sources": [
+          "news/article_01.md::chunk-3",
+          "news/article_02.md::chunk-2",
+          "news/article_01.md::chunk-1",
+          "legal/student_handbook.md::chunk-218",
+          "legal/student_handbook.md::chunk-47"
+        ],
+        "latency_sec": 3.3817215000017313
+      },
+      {
+        "id": 10,
+        "question": "Sinh viên đại học được mượn tối đa bao nhiêu tài liệu thư viện và trong thời hạn bao lâu mỗi tài liệu?",
+        "expected_answer": "Sinh viên đại học được mượn tối đa 3 tài liệu trong 2 tuần mỗi tài liệu, và được gia hạn 1 lần thêm 1 tuần nếu chưa quá hạn và chưa có người khác yêu cầu.",
+        "expected_context": "Undergraduate students may borrow up to 3 items during two weeks per item. Books may be renewed once for one week if they are not overdue and there has been no request for them by any other patrons.",
+        "source_ids": [
+          "news/article_02.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.10526315789473684,
+          "answer_relevance": 0.7,
+          "context_recall": 1.0,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Sinh viên đại học được phép mượn tối đa 3 tài liệu trong thời hạn 2 tuần cho mỗi tài liệu [news/article_02.md::chunk-3].",
+        "sources": [
+          {
+            "id": "news/article_02.md::chunk-3",
+            "content": "Borrowing privileges:\nUndergraduate students may borrow up to 3 items during two weeks per item. Books may be renewed once for one week if they are not overdue and there has been no request for them by any other patrons. Books can be renewed online through library’s website or onsite with Self-check machines at 1st floor or 2nd floor in library.\nPolicy | Borrowed items | Borrowing time | Renewal\nUndergraduate student | 3 | 2 weeks | 1 week (one time only)\nRequests and Holds",
+            "score": 0.01639344262295082,
+            "metadata": {
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "source": "article_02.json",
+              "title": "Undergraduate students and staff - Library",
+              "chunk_index": 3,
+              "doc_type": "news"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_02.md::chunk-0",
+            "content": "# Undergraduate students and staff - Library\n\n**Source:** https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/\n\n**File:** article_02.json\n\n**Verified:** true\n\n**Crawled:** 2026-09-26T02:29:10.510573+00:00\n\n---",
+            "score": 0.016129032258064516,
+            "metadata": {
+              "chunk_index": 0,
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "doc_type": "news",
+              "source": "article_02.json",
+              "title": "Undergraduate students and staff - Library"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_02.md::chunk-1",
+            "content": "Information for Undergraduate students and Staff\nBorrowing | Resources\nMy library card | Find resources\nBorrowing privileges | Remote access to resource\nRequest and holds | Use online resources\nFines and other charges | Suggest a purchase\nEquipment loans |\nServices | Spaces\nAccessibility services | Spaces\nPrinting, copying, and scanning | Location\nComputers | Hours\n| Group study Rooms\nGet Help | Contact us\nAsk a librarian | Contact us\nResearch guides | News and Events",
+            "score": 0.015873015873015872,
+            "metadata": {
+              "chunk_index": 1,
+              "source": "article_02.json",
+              "doc_type": "news",
+              "title": "Undergraduate students and staff - Library",
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_02.md::chunk-5",
+            "content": "Equipment loans:\nEquipment can be borrowed during 1 working day. Due time is 15 minutes before library’s closing time.\nEquipment overdue for more than 05 days will be considered lost, and the borrower will be charged for a replacement.\nEquipment must be returned directly to the library and received by a library staff at the circulation desk on the first floor. The library reserves the right to recall equipment for regular maintenance or for any reason the librarian may deem appropriate.",
+            "score": 0.015625,
+            "metadata": {
+              "title": "Undergraduate students and staff - Library",
+              "chunk_index": 5,
+              "source": "article_02.json",
+              "doc_type": "news",
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_02.md::chunk-4",
+            "content": "Requests and Holds\nYou can request books from the VinUni Library online library catalogue. Requests will take one to two business days. You will be notified by e-mail when your items are ready for pick up. Up-to-date status reports are also available in your library account. You can borrow the books from the VinUni Library circulation counter. Two Self-check machines are also available for borrowing books.\nRequested items will be held for two days for you to pick up.\nEquipment loans:",
+            "score": 0.015384615384615385,
+            "metadata": {
+              "title": "Undergraduate students and staff - Library",
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "doc_type": "news",
+              "chunk_index": 4,
+              "source": "article_02.json"
+            },
+            "retrieval_method": "hybrid"
+          }
+        ],
+        "retrieved_sources": [
+          "news/article_02.md::chunk-3",
+          "news/article_02.md::chunk-0",
+          "news/article_02.md::chunk-1",
+          "news/article_02.md::chunk-5",
+          "news/article_02.md::chunk-4"
+        ],
+        "latency_sec": 2.939177100008237
+      },
+      {
+        "id": 11,
+        "question": "Tài liệu yêu cầu mượn trước (holds) sẽ được lưu giữ tại quầy lưu hành trong bao lâu để người mượn đến nhận?",
+        "expected_answer": "Tài liệu được giữ trong 2 ngày để người mượn đến lấy.",
+        "expected_context": "Requested items will be held for two days for you to pick up.",
+        "source_ids": [
+          "news/article_02.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.09523809523809523,
+          "answer_relevance": 0.6190476190476191,
+          "context_recall": 1.0,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Các tài liệu yêu cầu mượn (requested items) sẽ được lưu giữ trong thời gian hai ngày để bạn đến nhận [news/article_02.md::chunk-4].",
+        "sources": [
+          {
+            "id": "news/article_02.md::chunk-3",
+            "content": "Borrowing privileges:\nUndergraduate students may borrow up to 3 items during two weeks per item. Books may be renewed once for one week if they are not overdue and there has been no request for them by any other patrons. Books can be renewed online through library’s website or onsite with Self-check machines at 1st floor or 2nd floor in library.\nPolicy | Borrowed items | Borrowing time | Renewal\nUndergraduate student | 3 | 2 weeks | 1 week (one time only)\nRequests and Holds",
+            "score": 0.03225806451612903,
+            "metadata": {
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "source": "article_02.json",
+              "doc_type": "news",
+              "title": "Undergraduate students and staff - Library",
+              "chunk_index": 3
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_02.md::chunk-4",
+            "content": "Requests and Holds\nYou can request books from the VinUni Library online library catalogue. Requests will take one to two business days. You will be notified by e-mail when your items are ready for pick up. Up-to-date status reports are also available in your library account. You can borrow the books from the VinUni Library circulation counter. Two Self-check machines are also available for borrowing books.\nRequested items will be held for two days for you to pick up.\nEquipment loans:",
+            "score": 0.031746031746031744,
+            "metadata": {
+              "chunk_index": 4,
+              "source": "article_02.json",
+              "title": "Undergraduate students and staff - Library",
+              "doc_type": "news",
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_02.md::chunk-1",
+            "content": "Information for Undergraduate students and Staff\nBorrowing | Resources\nMy library card | Find resources\nBorrowing privileges | Remote access to resource\nRequest and holds | Use online resources\nFines and other charges | Suggest a purchase\nEquipment loans |\nServices | Spaces\nAccessibility services | Spaces\nPrinting, copying, and scanning | Location\nComputers | Hours\n| Group study Rooms\nGet Help | Contact us\nAsk a librarian | Contact us\nResearch guides | News and Events",
+            "score": 0.01639344262295082,
+            "metadata": {
+              "source": "article_02.json",
+              "title": "Undergraduate students and staff - Library",
+              "doc_type": "news",
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "chunk_index": 1
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_02.md::chunk-5",
+            "content": "Equipment loans:\nEquipment can be borrowed during 1 working day. Due time is 15 minutes before library’s closing time.\nEquipment overdue for more than 05 days will be considered lost, and the borrower will be charged for a replacement.\nEquipment must be returned directly to the library and received by a library staff at the circulation desk on the first floor. The library reserves the right to recall equipment for regular maintenance or for any reason the librarian may deem appropriate.",
+            "score": 0.01639344262295082,
+            "metadata": {
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "chunk_index": 5,
+              "doc_type": "news",
+              "title": "Undergraduate students and staff - Library",
+              "source": "article_02.json"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_03.md::chunk-8",
+            "content": "Items of lesser value such as notebooks, umbrellas, and articles of clothing are not required to be placed in a locked location. However, these items will be kept in a controlled area accessible to library staff only.\nLibrary staff will take unclaimed IDs to Student Affair Management once a week on Friday.",
+            "score": 0.015625,
+            "metadata": {
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/",
+              "title": "Ask a librarian - Library",
+              "source": "article_03.json",
+              "doc_type": "news",
+              "chunk_index": 8
+            },
+            "retrieval_method": "hybrid"
+          }
+        ],
+        "retrieved_sources": [
+          "news/article_02.md::chunk-3",
+          "news/article_02.md::chunk-4",
+          "news/article_02.md::chunk-1",
+          "news/article_02.md::chunk-5",
+          "news/article_03.md::chunk-8"
+        ],
+        "latency_sec": 3.190975699995761
+      },
+      {
+        "id": 12,
+        "question": "Thiết bị mượn tại thư viện nếu quá hạn bao nhiêu ngày thì bị coi là mất và người mượn phải thanh toán chi phí thay thế?",
+        "expected_answer": "Thiết bị quá hạn hơn 5 ngày sẽ bị coi là mất và người mượn phải thanh toán chi phí thay thế.",
+        "expected_context": "Equipment overdue for more than 05 days will be considered lost, and the borrower will be charged for a replacement.",
+        "source_ids": [
+          "news/article_02.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.07692307692307693,
+          "answer_relevance": 0.88,
+          "context_recall": 1.0,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Thiết bị mượn tại thư viện nếu quá hạn hơn 05 ngày sẽ bị coi là mất, và người mượn sẽ phải thanh toán chi phí để thay thế [news/article_02.md::chunk-5].",
+        "sources": [
+          {
+            "id": "legal/student_handbook.md::chunk-61",
+            "content": "• Pathway English Advanced (non-credit) \n• Academic English 1 (3 credits) \n• Academic English 2 (3 credits) \nHumanities & Arts \nand Social \nSciences \nHASS • Marxism-Leninism Political Economy (Global Political \nEconomy) (2 credits)  \n• History of the Communist Party (Vietnam: History and Culture \nI) (2 credits)  \n• Ho Chi Minh Ideology (Vietnam: History and Culture II) (2 \ncredits)",
+            "score": 0.01639344262295082,
+            "metadata": {
+              "source": "student_handbook.pdf",
+              "title": "VinUni Undergraduate Student Handbook (2020 historical edition)",
+              "doc_type": "legal",
+              "url": "https://vinuni.edu.vn/wp-content/uploads/2020/10/201001_VinUni_Undergraduate_Student_Handbook.pdf",
+              "chunk_index": 61
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_02.md::chunk-5",
+            "content": "Equipment loans:\nEquipment can be borrowed during 1 working day. Due time is 15 minutes before library’s closing time.\nEquipment overdue for more than 05 days will be considered lost, and the borrower will be charged for a replacement.\nEquipment must be returned directly to the library and received by a library staff at the circulation desk on the first floor. The library reserves the right to recall equipment for regular maintenance or for any reason the librarian may deem appropriate.",
+            "score": 0.01639344262295082,
+            "metadata": {
+              "doc_type": "news",
+              "chunk_index": 5,
+              "source": "article_02.json",
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "title": "Undergraduate students and staff - Library"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_02.md::chunk-6",
+            "content": "All mercies regarding fines and loan periods need to be approved by university senior leaders.\nThe following equipment is available for loan from the Circulation desk at 1st floor:\nLatop\nIPad\nCharger\nMouse\nHeadphone\nAdapter\nPointer\nMarker and Eraser\nLocker\nFines and other charges:\nPatrons will be charged fines for overdue materials/equipment or material/equipment repair and replacement fees. For more detailed, please read it in\nLibrary Policies for users\n.\nThese fines and fees are regulated in",
+            "score": 0.016129032258064516,
+            "metadata": {
+              "chunk_index": 6,
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "doc_type": "news",
+              "source": "article_02.json",
+              "title": "Undergraduate students and staff - Library"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_02.md::chunk-3",
+            "content": "Borrowing privileges:\nUndergraduate students may borrow up to 3 items during two weeks per item. Books may be renewed once for one week if they are not overdue and there has been no request for them by any other patrons. Books can be renewed online through library’s website or onsite with Self-check machines at 1st floor or 2nd floor in library.\nPolicy | Borrowed items | Borrowing time | Renewal\nUndergraduate student | 3 | 2 weeks | 1 week (one time only)\nRequests and Holds",
+            "score": 0.015873015873015872,
+            "metadata": {
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "title": "Undergraduate students and staff - Library",
+              "doc_type": "news",
+              "source": "article_02.json",
+              "chunk_index": 3
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_03.md::chunk-8",
+            "content": "Items of lesser value such as notebooks, umbrellas, and articles of clothing are not required to be placed in a locked location. However, these items will be kept in a controlled area accessible to library staff only.\nLibrary staff will take unclaimed IDs to Student Affair Management once a week on Friday.",
+            "score": 0.015625,
+            "metadata": {
+              "source": "article_03.json",
+              "title": "Ask a librarian - Library",
+              "doc_type": "news",
+              "chunk_index": 8,
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/"
+            },
+            "retrieval_method": "hybrid"
+          }
+        ],
+        "retrieved_sources": [
+          "legal/student_handbook.md::chunk-61",
+          "news/article_02.md::chunk-5",
+          "news/article_02.md::chunk-6",
+          "news/article_02.md::chunk-3",
+          "news/article_03.md::chunk-8"
+        ],
+        "latency_sec": 3.1638862999971025
+      },
+      {
+        "id": 13,
+        "question": "Các đồ vật bị bỏ quên (Lost and Found) có giá trị trên 500.000 VNĐ tại thư viện được quy định bảo quản như thế nào?",
+        "expected_answer": "Các đồ vật có giá trị trên 500.000 VNĐ như ví, ba lô, thiết bị điện tử bắt buộc phải được đặt ở vị trí có khóa an toàn.",
+        "expected_context": "Items of value > 500.000 VNĐ such as wallets, purses, backpacks, and electronic devices are required to be placed in a locked location.",
+        "source_ids": [
+          "news/article_03.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.1,
+          "answer_relevance": 0.5555555555555556,
+          "context_recall": 1.0,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Các đồ vật có giá trị trên 500.000 VNĐ (như ví, túi xách, ba lô và thiết bị điện tử) được quy định phải được đặt ở một nơi có khóa [news/article_03.md::chunk-7].",
+        "sources": [
+          {
+            "id": "news/article_03.md::chunk-7",
+            "content": "Record items in the online Lost & Found Logbook at the time they are turned in. Information in it will help to ensure items are accounted for and returned to the rightful owners. Fill out the online Lost and Found Logbook completely and accurately.\nItems of value > 500.000 VNĐ such as wallets, purses, backpacks, and electronic devices are required to be placed in a locked location.",
+            "score": 0.03278688524590164,
+            "metadata": {
+              "doc_type": "news",
+              "source": "article_03.json",
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/",
+              "chunk_index": 7,
+              "title": "Ask a librarian - Library"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_03.md::chunk-6",
+            "content": "Turn lost items in to Lost and Found as soon as possible, but not later than the end of the business day on which they were found. Until lost items are turned in to Lost and Found they will be kept in a controlled holding area accessible to library staff only.",
+            "score": 0.03225806451612903,
+            "metadata": {
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/",
+              "doc_type": "news",
+              "title": "Ask a librarian - Library",
+              "chunk_index": 6,
+              "source": "article_03.json"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_03.md::chunk-9",
+            "content": "To attempt to ensure lost items are returned to the rightful owners, persons claiming items will be asked to describe the items and to provide identification. Claimants must sign for items that have been entered into the Lost and Found logbook before the items will be released to them.\nItems in Lost and Found which are not claimed after 30 days are transferred to the Operation Department.",
+            "score": 0.03125763125763126,
+            "metadata": {
+              "title": "Ask a librarian - Library",
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/",
+              "chunk_index": 9,
+              "doc_type": "news",
+              "source": "article_03.json"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_03.md::chunk-10",
+            "content": "Items in Lost and Found such as food and beverages that will be kept for 1 day before being sorted and thrown away. Opened food and beverages will be discarded at the end of the business day.",
+            "score": 0.030776515151515152,
+            "metadata": {
+              "title": "Ask a librarian - Library",
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/",
+              "chunk_index": 10,
+              "doc_type": "news",
+              "source": "article_03.json"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_03.md::chunk-5",
+            "content": "*The library’s Circulation Desk is located near the main entrance on the first floor.\nAll lost and found items will be kept in a secure location until they are either claimed by the owners or turned over to Student Affair Management, Operation Department. Listed below are procedures to be followed:",
+            "score": 0.030776515151515152,
+            "metadata": {
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/",
+              "chunk_index": 5,
+              "source": "article_03.json",
+              "doc_type": "news",
+              "title": "Ask a librarian - Library"
+            },
+            "retrieval_method": "hybrid"
+          }
+        ],
+        "retrieved_sources": [
+          "news/article_03.md::chunk-7",
+          "news/article_03.md::chunk-6",
+          "news/article_03.md::chunk-9",
+          "news/article_03.md::chunk-10",
+          "news/article_03.md::chunk-5"
+        ],
+        "latency_sec": 3.043522699997993
+      },
+      {
+        "id": 14,
+        "question": "Sau bao nhiêu ngày đồ thất lạc không có người nhận sẽ được chuyển giao từ thư viện sang Phòng Vận hành (Operation Department)?",
+        "expected_answer": "Đồ thất lạc không được nhận sau 30 ngày sẽ được chuyển giao cho Phòng Vận hành.",
+        "expected_context": "Items in Lost and Found which are not claimed after 30 days are transferred to the Operation Department.",
+        "source_ids": [
+          "news/article_03.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.15,
+          "answer_relevance": 0.75,
+          "context_recall": 1.0,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Đồ thất lạc không có người nhận sau 30 ngày sẽ được chuyển giao cho Phòng Vận hành (Operation Department) [news/article_03.md::chunk-9].",
+        "sources": [
+          {
+            "id": "news/article_03.md::chunk-5",
+            "content": "*The library’s Circulation Desk is located near the main entrance on the first floor.\nAll lost and found items will be kept in a secure location until they are either claimed by the owners or turned over to Student Affair Management, Operation Department. Listed below are procedures to be followed:",
+            "score": 0.032266458495966696,
+            "metadata": {
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/",
+              "chunk_index": 5,
+              "title": "Ask a librarian - Library",
+              "doc_type": "news",
+              "source": "article_03.json"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_03.md::chunk-9",
+            "content": "To attempt to ensure lost items are returned to the rightful owners, persons claiming items will be asked to describe the items and to provide identification. Claimants must sign for items that have been entered into the Lost and Found logbook before the items will be released to them.\nItems in Lost and Found which are not claimed after 30 days are transferred to the Operation Department.",
+            "score": 0.03225806451612903,
+            "metadata": {
+              "doc_type": "news",
+              "chunk_index": 9,
+              "source": "article_03.json",
+              "title": "Ask a librarian - Library",
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_03.md::chunk-6",
+            "content": "Turn lost items in to Lost and Found as soon as possible, but not later than the end of the business day on which they were found. Until lost items are turned in to Lost and Found they will be kept in a controlled holding area accessible to library staff only.",
+            "score": 0.01639344262295082,
+            "metadata": {
+              "url": "https://library.vinuni.edu.vn/help/ask-a-librarian/",
+              "source": "article_03.json",
+              "doc_type": "news",
+              "title": "Ask a librarian - Library",
+              "chunk_index": 6
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-36",
+            "content": "charts, prescriptions, etc.) are in Vietnamese language. Also, all formal communication \nin the operation of these facilities (between health professionals as well as between \npatients and health professionals) is in Vietnamese.",
+            "score": 0.015873015873015872,
+            "metadata": {
+              "source": "academic_regulations.pdf",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "doc_type": "legal",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "chunk_index": 36
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/assessment_guidelines.md::chunk-1",
+            "content": "1 \n \n \nReference number \nPublished date. \nApplicable department \n: VUNI.39 \n: 12/06/2024 \n: College of Health Sciences – Undergraduate Programs \nAccess level : Public  \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nRevision Date Author / Editor Description \nV1.0 Dec 15, 2022 \nDeveloped by: MD Education team \nReviewed by: Office of Registrar \nApproved by: Dean of College of Health Sciences, \nProvost \n1st released \nV2.0 Jan 23, 2024 \nDeveloped by: MD, BN team",
+            "score": 0.015625,
+            "metadata": {
+              "source": "assessment_guidelines.pdf",
+              "title": "Assessment Guidelines for Undergraduate Programs (2024-06-12)",
+              "doc_type": "legal",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VUNI.39_240612_Assessment-policy-for-Undergrade_CHS.pdf",
+              "chunk_index": 1
+            },
+            "retrieval_method": "hybrid"
+          }
+        ],
+        "retrieved_sources": [
+          "news/article_03.md::chunk-5",
+          "news/article_03.md::chunk-9",
+          "news/article_03.md::chunk-6",
+          "legal/academic_regulations.md::chunk-36",
+          "legal/assessment_guidelines.md::chunk-1"
+        ],
+        "latency_sec": 3.0778735999920173
+      },
+      {
+        "id": 15,
+        "question": "Theo trang Policy & Regulations của Phòng Đào tạo VinUni, quy chế Academic Regulations for Full-time Undergraduate Programs định nghĩa những nội dung gì?",
+        "expected_answer": "Định nghĩa cơ cấu, hệ thống tín chỉ, thang điểm, quy tắc tiến độ học tập, xếp loại học lực và yêu cầu tốt nghiệp cho sinh viên đại học chính quy.",
+        "expected_context": "Defines the structure, credit system, grading scale, progression rules, academic standing, and graduation requirements for all full-time undergraduate students.",
+        "source_ids": [
+          "news/article_04.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.18,
+          "answer_relevance": 0.782608695652174,
+          "context_recall": 1.0,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Theo trang Policy & Regulations của VinUni, quy chế *Academic Regulations for Full-time Undergraduate Programs* định nghĩa các nội dung sau: cấu trúc chương trình, hệ thống tín dụng, thang điểm, quy tắc tiến độ học tập, tình trạng học tập và các yêu cầu tốt nghiệp đối với tất cả sinh viên hệ đại học chính quy [news/article_04.md::chunk-3].",
+        "sources": [
+          {
+            "id": "legal/academic_regulations.md::chunk-0",
+            "content": "# Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)\n\n**Source:** https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf\n\n**File:** academic_regulations.pdf\n\n**Verified:** true\n\n**Crawled:** 2026-09-26T02:28:30.755639+00:00\n\n---\n\n## Page 1",
+            "score": 0.03252247488101534,
+            "metadata": {
+              "source": "academic_regulations.pdf",
+              "doc_type": "legal",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "chunk_index": 0,
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_04.md::chunk-3",
+            "content": "Defines the structure, credit system, grading scale, progression rules, academic standing, and graduation requirements for all full-time undergraduate students.\nRead more\n2. Academic Regulations for Master’s Program\nOutlines the academic framework, credit and grading system, progression requirements, and graduation criteria applicable to all full-time Master’s students at VinUni.\nRead more\n3. Academic Regulations for Doctoral Degree Program",
+            "score": 0.032018442622950824,
+            "metadata": {
+              "url": "https://registrar.vinuni.edu.vn/academics/policy-regulations/",
+              "chunk_index": 3,
+              "doc_type": "news",
+              "title": "Policy & Regulations",
+              "source": "article_04.json"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_04.md::chunk-2",
+            "content": "This section provides all key policies and regulations that guide your academic life at VinUni. We’ve gathered all student-related policies in one place for easy access.\nKey Student Policies:\nBelow is the list of policies you may need throughout your studies. Click to view the full policy document:\n1. Academic Regulations for Full-time Undergraduate Programs",
+            "score": 0.03200204813108039,
+            "metadata": {
+              "source": "article_04.json",
+              "chunk_index": 2,
+              "title": "Policy & Regulations",
+              "url": "https://registrar.vinuni.edu.vn/academics/policy-regulations/",
+              "doc_type": "news"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_04.md::chunk-1",
+            "content": "Policy & Regulations\nHome\nAcademics\nPolicy & Regulations\nPolicy & Regulations\nPolicy & Regulations\nRequest Transcripts & Certifications\nClass Schedule & Course Registration\nTransfer Credit\nExams & Grades\nProgram Change\nTime Away from VinUni: Leave, Withdraw, Return\nGraduation\nForms & Petitions\nPolicies & Academic Regulations for VinUniversity students",
+            "score": 0.03125763125763126,
+            "metadata": {
+              "url": "https://registrar.vinuni.edu.vn/academics/policy-regulations/",
+              "doc_type": "news",
+              "title": "Policy & Regulations",
+              "chunk_index": 1,
+              "source": "article_04.json"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/academic_regulations.md::chunk-5",
+            "content": "Program Directors  \nApproved by: Provost  \n \nArticle 07:  Additional provision c) Independent \nStudy Week \nArticle 11: The minimum number of credits \nrequired to register for one semester is 12 credits \nfor full-time undergraduate students.  \n \nACADEMIC REGULATIONS FOR FULL -TIME         \nUNDERGRADUATE PROGRAMS  \nReference Number  : VU_HT03.EN \nIssuing By : The Office of University Registrar  \nIssuing Date : 30/10/2024 \nApplying for : All VinUniversity",
+            "score": 0.030309988518943745,
+            "metadata": {
+              "doc_type": "legal",
+              "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+              "source": "academic_regulations.pdf",
+              "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+              "chunk_index": 5
+            },
+            "retrieval_method": "hybrid"
+          }
+        ],
+        "retrieved_sources": [
+          "legal/academic_regulations.md::chunk-0",
+          "news/article_04.md::chunk-3",
+          "news/article_04.md::chunk-2",
+          "news/article_04.md::chunk-1",
+          "legal/academic_regulations.md::chunk-5"
+        ],
+        "latency_sec": 3.105890699996962
+      },
+      {
+        "id": 16,
+        "question": "Cổng thông tin Gateway for VinUnians liệt kê các nguồn tài nguyên học thuật chung (General Academic Resources) nào?",
+        "expected_answer": "Bao gồm Lịch học thuật (Academic Calendar), Danh mục học thuật (Academic Catalog), Liêm chính học thuật (Academic Integrity), Thư viện (Library), Dịch vụ đăng ký (Registry services & forms) và Chính sách từ A đến Z.",
+        "expected_context": "GENERAL ACADEMIC RESOURCES Academic Calendar Key academic dates and important milestones Academic Catalog Information on degrees and requirements Academic Integrity Principles, policies, and expectations for academic honesty Library Collections, study spaces, learning resources, and support services Registry services & forms Enrollment, academic records, and registry services Policy from A - Z Quick access to all regulations, policies, and guidelines",
+        "source_ids": [
+          "news/article_05.md"
+        ],
+        "status": "ok",
+        "metrics": {
+          "faithfulness": 0.23076923076923078,
+          "answer_relevance": 0.9473684210526315,
+          "context_recall": 0.5609756097560976,
+          "context_precision": 0.0
+        },
+        "generated_answer": "Dựa trên tài liệu được cung cấp, cổng thông tin Gateway for VinUnians liệt kê các nguồn tài nguyên học thuật chung (General Academic Resources) sau đây:\n\n* **Academic Calendar**: Các ngày học tập quan trọng và các mốc quan trọng [news/article_05.md::chunk-1].\n* **Academic Catalog**: Thông tin về các bằng cấp và yêu cầu [news/article_05.md::chunk-1].\n* **Academic Integrity** [news/article_05.md::chunk-1].",
+        "sources": [
+          {
+            "id": "news/article_05.md::chunk-0",
+            "content": "# Gateway for VinUnians\n\n**Source:** https://vinuni.edu.vn/student-gateway/\n\n**File:** article_05.json\n\n**Verified:** true\n\n**Crawled:** 2026-09-26T02:29:12.339451+00:00\n\n---",
+            "score": 0.03225806451612903,
+            "metadata": {
+              "doc_type": "news",
+              "title": "Gateway for VinUnians",
+              "url": "https://vinuni.edu.vn/student-gateway/",
+              "source": "article_05.json",
+              "chunk_index": 0
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_05.md::chunk-1",
+            "content": "Gateway for VinUnians\nYour journey at VinUni, in one place\nEmail\nAccess Your VinUni Email\nCanvas\nLearning Management System\nSIS\nStudent Information System\nCampus Services\nEssential Services And Facilities\nVinUni Legacy: HONORING THE PAST, SHAPING THE FUTURE\nAn e-book created by students of the VinUni Legacy Project\nGENERAL ACADEMIC RESOURCES\nAcademic Calendar\nKey academic dates and important milestones\nAcademic Catalog\nInformation on degrees and requirements\nAcademic Integrity",
+            "score": 0.03177805800756621,
+            "metadata": {
+              "title": "Gateway for VinUnians",
+              "url": "https://vinuni.edu.vn/student-gateway/",
+              "chunk_index": 1,
+              "doc_type": "news",
+              "source": "article_05.json"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_02.md::chunk-8",
+            "content": "Research Guides:\nProvides resources and tips for students to complete their research.\nE-journals:\nAccess the library’s subscription e-journals on a variety of subjects.\nNew Arrivals:\nFind resources to access current and older news sources.\nRemote Access to Resources:\nCurrent students, faculty, staff, and certain community users may access online resources from anywhere.\nTo log into resources from off campus you must use your VinUni ID.",
+            "score": 0.03131881575727918,
+            "metadata": {
+              "source": "article_02.json",
+              "chunk_index": 8,
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "title": "Undergraduate students and staff - Library",
+              "doc_type": "news"
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "legal/student_handbook.md::chunk-6",
+            "content": "1. Academic Calendar ................................ ................................ ................................ ................................ ................................ .. 8 \n2. Academic Resources ................................ ................................ ................................ ................................ ...............................  9",
+            "score": 0.015873015873015872,
+            "metadata": {
+              "source": "student_handbook.pdf",
+              "title": "VinUni Undergraduate Student Handbook (2020 historical edition)",
+              "doc_type": "legal",
+              "url": "https://vinuni.edu.vn/wp-content/uploads/2020/10/201001_VinUni_Undergraduate_Student_Handbook.pdf",
+              "chunk_index": 6
+            },
+            "retrieval_method": "hybrid"
+          },
+          {
+            "id": "news/article_02.md::chunk-10",
+            "content": "Use Online Resources:\nThe use of electronic resources (databases, e-journals, etc.) is limited to the VinUni authorized users (VinUni’s students, faculty, and staff, staff from Vingroup’s P&Ls and other counterparts) and is governed by license agreements negotiated between VinUni and the publishers/providers.\nUsers accessing library databases both on and off campus will be required to log in with their VinUni ID.",
+            "score": 0.015873015873015872,
+            "metadata": {
+              "source": "article_02.json",
+              "doc_type": "news",
+              "chunk_index": 10,
+              "url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "title": "Undergraduate students and staff - Library"
+            },
+            "retrieval_method": "hybrid"
+          }
+        ],
+        "retrieved_sources": [
+          "news/article_05.md::chunk-0",
+          "news/article_05.md::chunk-1",
+          "news/article_02.md::chunk-8",
+          "legal/student_handbook.md::chunk-6",
+          "news/article_02.md::chunk-10"
+        ],
+        "latency_sec": 3.185400299989851
+      }
+    ]
+  }
+}

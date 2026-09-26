@@ -1,0 +1,130 @@
+[
+  {
+    "question": "Theo Quy chế đào tạo đại học năm 2024, số tín chỉ tối thiểu để một sinh viên được xếp loại sinh viên toàn thời gian trong một học kỳ chính là bao nhiêu?",
+    "expected_answer": "Sinh viên phải đăng ký tối thiểu 80% khối lượng học tập toàn thời gian bình thường trong học kỳ chính, tương đương 12 tín chỉ.",
+    "expected_context": "To be classified as a full-time student, s/he must be enrolled in at a minimum, 80% of a normal full-time load in a regular Semester (equivalent to 12 credits).",
+    "source_ids": [
+      "legal/academic_regulations.md"
+    ]
+  },
+  {
+    "question": "Theo Quy chế đào tạo đại học năm 2024, hạn chót để sinh viên thêm một học phần (add course) vào thời khóa biểu học kỳ chính là khi nào?",
+    "expected_answer": "Hạn chót thêm học phần là trước khi kết thúc ngày làm việc thứ 10 của học kỳ chính và ngày làm việc thứ 5 của học kỳ rút gọn (mini semester).",
+    "expected_context": "Students are allowed to add a course to their schedule no later than the close of the 10 th business day of the regular semester and no later than the close of the 5 th business day of the mini semesters (Fall A/B, or Spring A/B).",
+    "source_ids": [
+      "legal/academic_regulations.md"
+    ]
+  },
+  {
+    "question": "Thời hạn rút học phần không bị ghi vào hồ sơ học tập (drop deadline) trong học kỳ chính là ngày làm việc thứ mấy?",
+    "expected_answer": "Hạn drop học phần là trước khi kết thúc ngày làm việc thứ 15 của học kỳ chính (và ngày thứ 10 của kỳ Hè), các thay đổi trong giai đoạn này không bị lưu vào hồ sơ học tập.",
+    "expected_context": "The drop deadline for a regular semester is no later than the close of the 15th business day of the semester and no later than the close of the 10th business day of the Summer semester. Changes made in this period will not be included in the academic record of the students.",
+    "source_ids": [
+      "legal/academic_regulations.md"
+    ]
+  },
+  {
+    "question": "Khối lượng học tập toàn thời gian thông thường (normal full-time load) trải đều trong một năm học là bao nhiêu tín chỉ?",
+    "expected_answer": "Khối lượng học tập toàn thời gian bình thường là 30 tín chỉ trải đều trong một năm học.",
+    "expected_context": "A normal full-time load is 30 credits spread over an academic year. The student may be able to increase or decrease his/her study load to help meet his/her academic goals.",
+    "source_ids": [
+      "legal/academic_regulations.md"
+    ]
+  },
+  {
+    "question": "Sinh viên thuộc đối tượng nào được áp dụng khối lượng học tập ít nhất 10 tín chỉ và không quá 14 tín chỉ trong học kỳ chính?",
+    "expected_answer": "Sinh viên có học lực yếu kém (poor academic standing) trong học kỳ trước đó.",
+    "expected_context": "At least 10 credits and no more than 14 credits, applicable to students with poor academic standing in the previous semester.",
+    "source_ids": [
+      "legal/academic_regulations.md"
+    ]
+  },
+  {
+    "question": "Hướng dẫn đánh giá VUNI.39 ban hành ngày 12/06/2024 áp dụng cho các chương trình đào tạo đại học nào của VinUni?",
+    "expected_answer": "Áp dụng cho các chương trình đại học bao gồm Bác sĩ Y khoa (Medical Doctor) và Cử nhân Điều dưỡng (Bachelor of Nursing) tại Viện Khoa học Sức khỏe (College of Health Sciences).",
+    "expected_context": "This guideline specifies the assessment policy for courses offered for undergraduate programs (including the Medical Doctor and Bachelor of Nursing) at the College of Health Sciences.",
+    "source_ids": [
+      "legal/assessment_guidelines.md"
+    ]
+  },
+  {
+    "question": "Văn bản Assessment Guidelines của Viện Khoa học Sức khỏe được phê duyệt bởi ai trong phiên bản V2.0 ngày 23/01/2024?",
+    "expected_answer": "Được phê duyệt bởi Hiệu trưởng Viện Khoa học Sức khỏe (Dean of College of Health Sciences) và Phó Hiệu trưởng Đào tạo (Provost).",
+    "expected_context": "Approved by: Dean of College of Health Sciences, Provost",
+    "source_ids": [
+      "legal/assessment_guidelines.md"
+    ]
+  },
+  {
+    "question": "Sổ tay sinh viên VinUni (Student Handbook) phiên bản lịch sử năm 2020 đưa ra lưu ý gì về tính chính xác và thay đổi của thông tin?",
+    "expected_answer": "Thông tin được xem là chính xác tại thời điểm xuất bản và có thể thay đổi theo thời gian.",
+    "expected_context": "Please note that the information is believed to be accurate as of the date of publication and is subject to change.",
+    "source_ids": [
+      "legal/student_handbook.md"
+    ]
+  },
+  {
+    "question": "Thư viện VinUni cung cấp những dịch vụ gì trong phòng media studio?",
+    "expected_answer": "Thư viện có 2 phòng media studio bao gồm One Button Studio hỗ trợ thiết bị công nghệ tạo dự án số, quay video, làm podcast và số hóa nội dung.",
+    "expected_context": "Two media studios, including a One Button Studio provides access to state-of-the-art technology required for the creation of digital projects. Library staff are here to support you in the development of digital literacy and media creation skills, including videos, digital storytelling, podcasts, blogging and more.",
+    "source_ids": [
+      "news/article_01.md"
+    ]
+  },
+  {
+    "question": "Sinh viên đại học được mượn tối đa bao nhiêu tài liệu thư viện và trong thời hạn bao lâu mỗi tài liệu?",
+    "expected_answer": "Sinh viên đại học được mượn tối đa 3 tài liệu trong 2 tuần mỗi tài liệu, và được gia hạn 1 lần thêm 1 tuần nếu chưa quá hạn và chưa có người khác yêu cầu.",
+    "expected_context": "Undergraduate students may borrow up to 3 items during two weeks per item. Books may be renewed once for one week if they are not overdue and there has been no request for them by any other patrons.",
+    "source_ids": [
+      "news/article_02.md"
+    ]
+  },
+  {
+    "question": "Tài liệu yêu cầu mượn trước (holds) sẽ được lưu giữ tại quầy lưu hành trong bao lâu để người mượn đến nhận?",
+    "expected_answer": "Tài liệu được giữ trong 2 ngày để người mượn đến lấy.",
+    "expected_context": "Requested items will be held for two days for you to pick up.",
+    "source_ids": [
+      "news/article_02.md"
+    ]
+  },
+  {
+    "question": "Thiết bị mượn tại thư viện nếu quá hạn bao nhiêu ngày thì bị coi là mất và người mượn phải thanh toán chi phí thay thế?",
+    "expected_answer": "Thiết bị quá hạn hơn 5 ngày sẽ bị coi là mất và người mượn phải thanh toán chi phí thay thế.",
+    "expected_context": "Equipment overdue for more than 05 days will be considered lost, and the borrower will be charged for a replacement.",
+    "source_ids": [
+      "news/article_02.md"
+    ]
+  },
+  {
+    "question": "Các đồ vật bị bỏ quên (Lost and Found) có giá trị trên 500.000 VNĐ tại thư viện được quy định bảo quản như thế nào?",
+    "expected_answer": "Các đồ vật có giá trị trên 500.000 VNĐ như ví, ba lô, thiết bị điện tử bắt buộc phải được đặt ở vị trí có khóa an toàn.",
+    "expected_context": "Items of value > 500.000 VNĐ such as wallets, purses, backpacks, and electronic devices are required to be placed in a locked location.",
+    "source_ids": [
+      "news/article_03.md"
+    ]
+  },
+  {
+    "question": "Sau bao nhiêu ngày đồ thất lạc không có người nhận sẽ được chuyển giao từ thư viện sang Phòng Vận hành (Operation Department)?",
+    "expected_answer": "Đồ thất lạc không được nhận sau 30 ngày sẽ được chuyển giao cho Phòng Vận hành.",
+    "expected_context": "Items in Lost and Found which are not claimed after 30 days are transferred to the Operation Department.",
+    "source_ids": [
+      "news/article_03.md"
+    ]
+  },
+  {
+    "question": "Theo trang Policy & Regulations của Phòng Đào tạo VinUni, quy chế Academic Regulations for Full-time Undergraduate Programs định nghĩa những nội dung gì?",
+    "expected_answer": "Định nghĩa cơ cấu, hệ thống tín chỉ, thang điểm, quy tắc tiến độ học tập, xếp loại học lực và yêu cầu tốt nghiệp cho sinh viên đại học chính quy.",
+    "expected_context": "Defines the structure, credit system, grading scale, progression rules, academic standing, and graduation requirements for all full-time undergraduate students.",
+    "source_ids": [
+      "news/article_04.md"
+    ]
+  },
+  {
+    "question": "Cổng thông tin Gateway for VinUnians liệt kê các nguồn tài nguyên học thuật chung (General Academic Resources) nào?",
+    "expected_answer": "Bao gồm Lịch học thuật (Academic Calendar), Danh mục học thuật (Academic Catalog), Liêm chính học thuật (Academic Integrity), Thư viện (Library), Dịch vụ đăng ký (Registry services & forms) và Chính sách từ A đến Z.",
+    "expected_context": "GENERAL ACADEMIC RESOURCES Academic Calendar Key academic dates and important milestones Academic Catalog Information on degrees and requirements Academic Integrity Principles, policies, and expectations for academic honesty Library Collections, study spaces, learning resources, and support services Registry services & forms Enrollment, academic records, and registry services Policy from A - Z Quick access to all regulations, policies, and guidelines",
+    "source_ids": [
+      "news/article_05.md"
+    ]
+  }
+]

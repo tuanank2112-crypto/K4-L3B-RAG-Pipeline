@@ -1,0 +1,20 @@
+﻿Legal count: 3
+  academic_regulations.pdf sha_ok: True ver: True
+  assessment_guidelines.pdf sha_ok: True ver: True
+  student_handbook.pdf sha_ok: True ver: True
+News count: 5
+  article_01.json ver: True
+  article_02.json ver: True
+  article_03.json ver: True
+  article_04.json ver: True
+  article_05.json ver: True
+Verified docs loaded: 8
+  legal/academic_regulations.md Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)
+  legal/assessment_guidelines.md Assessment Guidelines for Undergraduate Programs (2024-06-12)
+  legal/student_handbook.md VinUni Undergraduate Student Handbook (2020 historical edition)
+  news/article_01.md Learning support - Library
+  news/article_02.md Undergraduate students and staff - Library
+  news/article_03.md Ask a librarian - Library
+  news/article_04.md Policy & Regulations
+  news/article_05.md Gateway for VinUnians
+exit: 0

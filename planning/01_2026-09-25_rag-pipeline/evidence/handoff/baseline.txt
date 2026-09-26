@@ -1,0 +1,6 @@
+Command: python -m pytest -q -p no:cacheprovider
+Timestamp: 2026-09-26T09:32:19.495362+07:00
+..........................................                               [100%]
+42 passed in 1.07s
+
+Exit code: 0

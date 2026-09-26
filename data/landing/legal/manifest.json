@@ -1,0 +1,32 @@
+[
+  {
+    "filename": "academic_regulations.pdf",
+    "title": "Academic Regulations for Full-Time Undergraduate Programs (2024-10-30)",
+    "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+    "resolved_url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VU_HT03.EN_Academic-Regulations-For-Full-Time-Undergraduate-Programs_30102024.pdf",
+    "date_crawled": "2026-09-26T02:28:30.755639+00:00",
+    "sha256": "292fbda6b008625116de0c1a0b27f297ab73ce329a8b1fb6e35c9dc1506b6f10",
+    "bytes": 471704,
+    "verified": true
+  },
+  {
+    "filename": "assessment_guidelines.pdf",
+    "title": "Assessment Guidelines for Undergraduate Programs (2024-06-12)",
+    "url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VUNI.39_240612_Assessment-policy-for-Undergrade_CHS.pdf",
+    "resolved_url": "https://policy.vinuni.edu.vn/wp-content/uploads/2023/05/VUNI.39_240612_Assessment-policy-for-Undergrade_CHS.pdf",
+    "date_crawled": "2026-09-26T02:28:31.685061+00:00",
+    "sha256": "10a72c3db767a1e39b4aa4bc598d18e3e0e0714c5be958c4630e29edb242b9e2",
+    "bytes": 176409,
+    "verified": true
+  },
+  {
+    "filename": "student_handbook.pdf",
+    "title": "VinUni Undergraduate Student Handbook (2020 historical edition)",
+    "url": "https://vinuni.edu.vn/wp-content/uploads/2020/10/201001_VinUni_Undergraduate_Student_Handbook.pdf",
+    "resolved_url": "https://vinuni.edu.vn/wp-content/uploads/2020/10/201001_VinUni_Undergraduate_Student_Handbook.pdf",
+    "date_crawled": "2026-09-26T02:28:32.812244+00:00",
+    "sha256": "460f66bc60aee1cf51a6dc8bfffebcb1e33e61a2c9c0fccb04bd3dc9f9b8a32d",
+    "bytes": 1795207,
+    "verified": true
+  }
+]
